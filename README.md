@@ -1,2 +1,2 @@
 # Kranztc
-Main repository for all testing
+Main repository for all testing.  Working on DocumentHours first...
