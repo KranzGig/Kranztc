@@ -1,0 +1,8 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "arcturial/clickatell": "^3.0",
+        "ctrlaltdylan/courier": "^1.1",
+        "twilio/sdk": "^8.2"
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    var xhr = new XMLHttpRequest(),
+body = JSON.stringify(
+    {
+        "messages": [
+            {
+                "channel": "whatsapp",
+                "to": "9705678863",
+                "content": "Test WhatsApp Message Text"
+            },
+            {
+                "channel": "sms",
+                "to": "9705678863",
+                "content": "Test SMS Message Text"
+            }
+        ]
+    }
+);
+xhr.open('POST', 'https://platform.clickatell.com/v1/message', true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.setRequestHeader('Authorization', '8QJH85sOQMyX-Df-i4eSeQ==');
+xhr.onreadystatechange = function(){
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        console.log('success');
+    }
+};
+
+xhr.send(body);
+</script>
+
+
+<p id="demo">Yes</p>
+
+</body>
+</html> 
