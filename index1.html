@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Time Tracker Login</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Time Tracker</h1>
+  <img src="clock.png" alt="clock icon"
+   srcset="clock.png 2400w"
+   sizes="80vw";
+  >
+  <div class="form">
+  <p>Username:
+    <form action="/action_page.php">
+      <input type="text" id="uname" name="uname">
+    </form>
+  </p>
+  <p>Password:
+    <form action="/action_page.php">
+      <input type="text" id="pword" name="pword">
+    </form>
+  </p>
+  </div>
+  <p id="small"><a href="forgot.html">Forgot Password?</a></p>
+  <div class="button">
+    <form action="authenticate.php" method="post">
+      <input type="submit" value="Enter">
+    </form>
+  </div>
+</body>
+</html>
