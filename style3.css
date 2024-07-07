@@ -60,4 +60,10 @@ body p {
   text-align: center;
   font-size: 25px;
 }
+#pass {
+  font-family: "Josefin Sans", Tacoma;
+  color: #3f6c96;
+  text-align: center;
+  font-size: 25px;
+}
 }
