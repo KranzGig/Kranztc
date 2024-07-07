@@ -24,7 +24,7 @@
 	<th>Paid Vacation:</th>
       </tr>
       <tr>
-	<td>6/1/24</td>
+	<td id = "Sun"></td>
 	<td>
 	  <form>
 	    <select name="hours" id="numhours">
@@ -61,7 +61,7 @@
 	</td>
       </tr>
       <tr>
-	<td>6/2/24</td>
+	<td id="Mon"></td>
 	<td>
 	  <form>
 	    <select name="hours" id="numhours">
@@ -98,7 +98,7 @@
 	</td>
       </tr>
       <tr>
-	<td>6/-/24</td>
+	<td id="Tue"></td>
 	<td>
 	  <form>
 	    <select name="hours" id="numhours">
@@ -135,7 +135,7 @@
 	</td>
       </tr>
       <tr>
-	<td>6/-/24</td>
+	<td id="Wed"></td>
 	<td>
 	  <form>
 	    <select name="hours" id="numhours">
@@ -172,7 +172,7 @@
 	</td>
       </tr>
       <tr>
-	<td>6/-/24</td>
+	<td id="Thur"></td>
 	<td>
 	  <form>
 	    <select name="hours" id="numhours">
@@ -209,7 +209,7 @@
 	</td>
       </tr>
       <tr>
-	<td>6/-/24</td>
+	<td id="Fri"></td>
 	<td>
 	  <form>
 	    <select name="hours" id="numhours">
@@ -246,7 +246,7 @@
 	</td>
       </tr>
       <tr>
-	<td>6/-/24</td>
+	<td id="Sat"></td>
 	<td>
 	  <form>
 	    <select name="hours" id="numhours">
@@ -285,6 +285,25 @@
     </thead>
   </table>
 </div>
+
+<script>
+    const name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    const now = Date.now();
+    const DAY = 60 * 60 * 24 * 1000;
+    const today = new Date(now).getDay();
+
+    for (let i = today; i >= 0; i--) {
+        const date = new Date(now - DAY * i);
+        //console.log("*",name[date.getDay()], date.getDate());
+        document.getElementById(name[date.getDay()]).innerHTML = name[date.getDay()].concat(" ", date.getMonth() + 1, "/", date.getDate());
+    }
+    for (let i = 1; i < 7 - today; i++) {
+        const date = new Date(now + DAY * i);
+        //console.log(name[date.getDay()], date.getDate());
+        document.getElementById(name[date.getDay()]).innerHTML = name[date.getDay()].concat(" ", date.getMonth() + 1, "/", date.getDate());
+    }
+</script>
+	
 <div class="button">
   <form>
     <input type="submit" value="Save">
