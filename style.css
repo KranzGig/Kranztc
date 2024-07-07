@@ -34,6 +34,9 @@ input[type=submit] {
   background-color: #3f6c96;
   margin-bottom: 15px;
 }
+input[type=submit]:hover {
+  background-color: #1d4060;
+}
 input[type=checkbox] {
   width: 20px;
   height: 20px;
