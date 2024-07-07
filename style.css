@@ -1,5 +1,23 @@
+.button {
+  display: block;
+  text-align: center;
+  font-family: "Josefin Sans", Tacoma;
+}
+td, th {
+  text-align: center;
+  width: 100px;
+  font-family: "Josefin Sans", Tacoma;
+  color: #1d4060;
+}
+table {
+  margin: auto;
+  margin-bottom: 25px;
+}
 body {
   background-color: #94c2dc;
+}
+#clock2 {
+  margin-top: 50px;
 }
 #small {
   font-size: 15px;
@@ -14,9 +32,11 @@ input[type=submit] {
   box-sizing: border-box;
   color: #fff;
   background-color: #3f6c96;
+  margin-bottom: 15px;
 }
-input[type=submit]:hover {
-  background-color: #1d4060;
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
 }
 input[type=text], select {
   width: 400px;
@@ -25,10 +45,10 @@ input[type=text], select {
   border-radius: 4px;
   box-sizing: border-box;
 }
-.button {
-  display: block;
-  text-align: center;
+td input[type=text], select {
+  width: 100px;
 }
+
 .form {
   display: block;
   text-align: center;
