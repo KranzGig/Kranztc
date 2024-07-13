@@ -279,12 +279,13 @@
 	
 <div class="button">
     <input type="submit" value="Save">
-   
+    <input type="submit" value="Log Out" onclick="index.html">
 	</div>
   </form>
 <?php
 	header('Location: index.html');
-	echo $_POST['Date'];
+	exit;
+	//echo $_POST['Date'];
 ?>
 </body>
 </html>
