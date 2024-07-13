@@ -271,8 +271,8 @@
         //console.log("*",name[date.getDay()], date.getDate());
 	const days = document.getElementsByClassName(name[date.getDay()]);
 	for (let i = 0; i < days.length; i++) {
-  		days[i].value = name[date.getDay()].concat(" ", date.getMonth() + 1, "/", date.getDate();
-		days[i].innerHTML = name[date.getDay()].concat(" ", date.getMonth() + 1, "/", date.getDate();
+  		days[i].value = name[date.getDay()].concat(" ", date.getMonth() + 1, "/", date.getDate());
+		days[i].innerHTML = name[date.getDay()].concat(" ", date.getMonth() + 1, "/", date.getDate());
 	}
     }
     for (let i = 1; i < 7 - today; i++) {
