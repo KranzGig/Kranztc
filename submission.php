@@ -1,5 +1,5 @@
 <?php
 	//header('Location: index.html');
 	//exit;
-	echo $_POST['hours1'];
+	echo $_POST['Date'];
 ?>
