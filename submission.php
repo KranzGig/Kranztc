@@ -1,5 +1,5 @@
 <?php
-	header('Location: index.html');
-	exit;
-	//echo $_POST['Date'];
+	//header('Location: index.html');
+	//exit;
+	echo $_POST['Date'];
 ?>
