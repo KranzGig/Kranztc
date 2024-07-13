@@ -5,6 +5,7 @@ body {
 #small {
   font-size: 15px;
   margin-top: -20px;
+  text-align: center;
 }
 input[type=submit] {
   width: 100px;
