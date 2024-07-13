@@ -269,7 +269,7 @@
         const date = new Date(now - DAY * i);
         //console.log("*",name[date.getDay()], date.getDate());
         document.getElementById(name[date.getDay()]).value = name[date.getDay()].concat(" ", date.getMonth() + 1, "/", date.getDate());
-	document.getElementById(name[date.getDay()]).value = name[date.getDay()].concat(" ", date.getMonth() + 1, "/", date.getDate());
+	document.getElementById(name[date.getDay()]).innerHTML = name[date.getDay()].concat(" ", date.getMonth() + 1, "/", date.getDate());
     }
     for (let i = 1; i < 7 - today; i++) {
         const date = new Date(now + DAY * i);
