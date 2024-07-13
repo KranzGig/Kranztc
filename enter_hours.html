@@ -25,7 +25,7 @@
 	<th>Paid Vacation:</th>
       </tr>
       <tr>
-	<td><label id="Sun" name="Date"></label></td>
+	<td><input type="hidden" name="Date" value="" id="Sun"/></td>
 	<td>
 	  
 	    <select name="hours1" id="numhours">
@@ -268,7 +268,7 @@
     for (let i = today; i >= 0; i--) {
         const date = new Date(now - DAY * i);
         //console.log("*",name[date.getDay()], date.getDate());
-        document.getElementById(name[date.getDay()]).innerHTML = name[date.getDay()].concat(" ", date.getMonth() + 1, "/", date.getDate());
+        document.getElementById(name[date.getDay()]).value = name[date.getDay()].concat(" ", date.getMonth() + 1, "/", date.getDate());
     }
     for (let i = 1; i < 7 - today; i++) {
         const date = new Date(now + DAY * i);
