@@ -32,14 +32,7 @@
         <th>Hours:</th>
 	<th>Paid Vacation:</th>
       </tr>
-	
-      <tr>
-	<td class="Sun"></td>
-	<input type="hidden" name="Sundate" value="" class="Sun"/>
-	<td>
-	  
-	    <select name="Sunhours" id="numhours">
-	      <?php
+	<?php
 		$servername = "127.0.0.1:3306";
 		$username = "u751975974_kranz";
 		$password = "Dradbgon12";
@@ -50,19 +43,20 @@
 		$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 		$mins = 24 * 60 * 60;
 		$time = time() - 4 * $mins;
-		$date = $name[date("w",$time)]." ".date("m/d",$time);
+		$day = $name[date("w",$time)];
+		$date = $day." ".date("m/d",$time);
+
+		echo "<tr><td class='$day'></td>";
+		echo "<input type='hidden' name='$day.date' value='$date' class='$day'/>";
+		echo "<td><select name='$day.hours' id='numhours'></td>";
 		echo "<option value='0'>$date</option>";
 		for ($i=1;$i<=24;$i++) {
 			echo "<option value='$i'>$i</option>";
 		}
-	?>
-		    
+		echo "<td><input type='checkbox' id='pvacation' name='$day.pvacation' value='Paid'></td></tr>";
 		
-	</td>
-	<td>
-	    <input type="checkbox" id="pvacation" name="Sunpvacation" value="Paid">
-	</td>
-      </tr>
+	?>
+      
       <tr>
 	<td class="Mon"></td>
 	<input type="hidden" name="Mondate" value="" class="Mon"/>
