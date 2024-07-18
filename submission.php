@@ -22,6 +22,7 @@
 		if ($hours == '') {
 			$hours = 0;
 		}
+		echo "Y".$hours."Y";
 		$vacation = $_POST[$day . 'pvacation'];
 		$sql = "SELECT * FROM Hours WHERE Date=$date AND EmpID=$id;";
 		//echo $sql;
@@ -30,7 +31,7 @@
 			echo "True";
 		} else {
 			$sql = "INSERT INTO Hours VALUES ($date, $hours, $vacation, $id)";
-			echo $sql;
+			//echo $sql;
 			//$conn->query($sql);
 		}
 	}
