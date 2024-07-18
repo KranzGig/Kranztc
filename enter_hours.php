@@ -55,16 +55,21 @@
 			$sql = "SELECT Hours FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
 			
 			$result = $conn->query($sql);
+			$num = 0;
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
-				echo $row["Hours"];
+				$num = $row["Hours"];
 			}
 			echo "<tr><td class='$day'>$date</td>";
 			echo "<input type='hidden' name='".$day."date' value='".$date."' class='$day'/>";
 			echo "<td><select name='".$day."hours' id='numhours'>";
 			echo "<option value='0'></option>";
 			for ($i=1;$i<=24;$i++) {
-				echo "<option value='$i'>$i</option>";
+				if ($i == $num) {
+					echo "<option value='$i' selected>$i</option>";
+				} else {
+					echo "<option value='$i'>$i</option>";
+				}
 			}
 			echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid'></td></tr>";
 		}
