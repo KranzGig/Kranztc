@@ -70,7 +70,7 @@
       </tr>
       <tr>
 	<td class="Mon"></td>
-	<input type="hidden" name="mondate" value="" class="Mon"/>
+	<input type="hidden" name="Mondate" value="" class="Mon"/>
 	<td>
 	    <select name="Monhours" id="numhours">
 	      <option value="0"> </option>
