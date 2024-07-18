@@ -17,7 +17,6 @@
 		header('Location: index.html');
 		exit;
 	}
-	echo "Logged in";
 ?>
   <img id="clock2" src="clock.png" alt="clock icon"
    srcset="clock.png 2400w"
