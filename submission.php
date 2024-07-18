@@ -15,17 +15,17 @@
 	$days = array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
 	foreach ($days as $day) {
 		$date = $_POST[$day . 'date'];
-		echo $date;
+		//echo $date;
 		$date = substr($date, strpos($date, ' '));
 		$id = $_SESSION['id'];
 		$sql = "SELECT * FROM Hours WHERE Date=$date AND EmpID=$id;";
 		//echo $sql;
-		//$result = $conn->query($sql);
-		//if ($result->num_rows > 0) {
-		//	echo "True";
-		//} else {
-		//	echo "False";
-		//}
+		$result = $conn->query($sql);
+		if ($result->num_rows > 0) {
+			echo "True";
+		} else {
+			echo "False";
+		}
 	}
 	//echo $_POST[$days[0] . "date"];
 ?>
