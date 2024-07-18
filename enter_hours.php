@@ -40,7 +40,7 @@
 	    <select name="Sunhours" id="numhours">
 	      <!--<option value="0"> </option>-->
 		<?php
-			for ($i=1;$i<=24;$i++) {
+			for ($i=0;$i<=24;$i++) {
 				echo "<option value='$i'>$i</option>";
 			}
 		?>
