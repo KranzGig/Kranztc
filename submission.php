@@ -12,5 +12,6 @@
 	if ($conn->connect_error) {
  		die("Connection failed: " . $conn->connect_error);
 	}
-	echo $_SESSION['id'];
+	$days = array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+	echo $_POST[$days[0] + "date"];
 ?>
