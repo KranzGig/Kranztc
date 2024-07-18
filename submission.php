@@ -18,14 +18,17 @@
 		//echo $date;
 		$date = substr($date, strpos($date, ' '));
 		$id = $_SESSION['id'];
+		$hours = $_POST[$day . 'hours'];
+		$vacation = $_POST[$day . 'pvacation'];
 		$sql = "SELECT * FROM Hours WHERE Date=$date AND EmpID=$id;";
 		//echo $sql;
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			echo "True";
 		} else {
-			echo "False";
+			$sql = "INSERT INTO Hours VALUES ($date, $hours, $vacation, $id)";
+			$conn->query($sql);
 		}
 	}
-	//echo $_POST[$days[0] . "date"];
+	echo $_POST[$days[0] . "date"];
 ?>
