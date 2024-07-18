@@ -13,5 +13,5 @@
  		die("Connection failed: " . $conn->connect_error);
 	}
 	$days = array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
-	echo $_POST[$days[0] + "date"];
+	echo $_POST[$days[0] . "date"];
 ?>
