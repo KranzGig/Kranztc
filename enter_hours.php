@@ -50,7 +50,7 @@
 		$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 		$mins = 24 * 60 * 60;
 		$time = time() - 4 * $mins;
-		//$date = name[date("w",$time)].concat(" ", date("m/d",$time));
+		$date = $name[date("w",$time)]." ".date("m/d",$time);
 		//echo "<option value='0'>$date</option>";
 		for ($i=1;$i<=24;$i++) {
 			echo "<option value='$i'>$i</option>";
