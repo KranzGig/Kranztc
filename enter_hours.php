@@ -33,6 +33,7 @@
 	<th>Paid Vacation:</th>
       </tr>
 	<?php
+		session_start();
 		$servername = "127.0.0.1:3306";
 		$username = "u751975974_kranz";
 		$password = "Dradbgon12";
@@ -40,13 +41,19 @@
 
 		$conn = new mysqli($servername, $username, $password, $dbname);
 
+		$id = $_SESSION['id'];
+		
+
 		$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 		$mins = 24 * 60 * 60;
 
 		for ($x = date("w"); $x >= 0; $x--) {
 			$time = time() - $x * $mins;
 			$day = $name[date("w",$time)];
+			$timestamp = date("m/d",$time);
 			$date = $day." ".date("m/d",$time);
+			$sql = "SELECT Hours FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
+			$result = $conn->query($sql);
 			echo "<tr><td class='$day'>$date</td>";
 			echo "<input type='hidden' name='".$day."date' value='".$date."' class='$day'/>";
 			echo "<td><select name='".$day."hours' id='numhours'>";
