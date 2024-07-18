@@ -56,7 +56,8 @@
 			
 			$result = $conn->query($sql);
 			if ($result->num_rows > 0) {
-				echo $result;
+				$row = $result->fetch_assoc();
+				echo $row["Hours"];
 			}
 			echo "<tr><td class='$day'>$date</td>";
 			echo "<input type='hidden' name='".$day."date' value='".$date."' class='$day'/>";
