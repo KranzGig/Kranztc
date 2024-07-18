@@ -20,7 +20,7 @@
 		$id = $_SESSION['id'];
 		$hours = $_POST[$day . 'hours'];
 		if ($hours == '') {
-			$hours = 0;
+			//$hours = 0;
 		}
 		$vacation = $_POST[$day . 'pvacation'];
 		$sql = "SELECT * FROM Hours WHERE Date=$date AND EmpID=$id;";
