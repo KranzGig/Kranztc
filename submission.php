@@ -18,7 +18,11 @@
 		$id = $_SESSION['id'];
 		$sql = "SELECT * FROM Hours WHERE Date= . $date . AND EmpID= . $id";
 		$result = $conn->query($sql);
-		echo $result . " is result";
+		if ($result->num_rows > 0) {
+			echo "True";
+		} else {
+			echo "False";
+		}
 	}
 	//echo $_POST[$days[0] . "date"];
 ?>
