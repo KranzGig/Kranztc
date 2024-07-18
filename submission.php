@@ -1,6 +1,4 @@
 <?php
-	//header('Location: index.html');
-	//exit;
 	session_start();
 	$servername = "127.0.0.1:3306";
 	$username = "u751975974_kranz";
