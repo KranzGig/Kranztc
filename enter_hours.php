@@ -48,12 +48,12 @@
 
 		echo "<tr><td class='$day'></td>";
 		echo "<input type='hidden' name='$day.date' value='$date' class='$day'/>";
-		echo "<td><select name='$day.hours' id='numhours'></td>";
+		echo "<td><select name='$day.hours' id='numhours'>";
 		echo "<option value='0'>$date</option>";
 		for ($i=1;$i<=24;$i++) {
 			echo "<option value='$i'>$i</option>";
 		}
-		echo "<td><input type='checkbox' id='pvacation' name='$day.pvacation' value='Paid'></td></tr>";
+		echo "</td><td><input type='checkbox' id='pvacation' name='$day.pvacation' value='Paid'></td></tr>";
 		
 	?>
       
