@@ -14,7 +14,7 @@
 	}
 	$days = array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
 	foreach ($days as $day) {
-		$sql = "SELECT * FROM Hours WHERE Date=$_POST[$day . 'date'] AND EmpID=$_SESSION['id']";
+		//$sql = "SELECT * FROM Hours WHERE Date=$_POST[$day . 'date'] AND EmpID=$_SESSION['id']";
 	}
 	echo $_POST[$days[0] . "date"];
 ?>
