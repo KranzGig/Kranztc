@@ -16,7 +16,7 @@
 	foreach ($days as $day) {
 		$date = $_POST[$day . 'date'];
 		//echo $date;
-		$date = substr($date, strpos($date, ' '));
+		$date = '"'.substr($date, strpos($date, ' ')).'"';
 		$id = $_SESSION['id'];
 		$hours = $_POST[$day . 'hours'];
 		$vacation = "False";
@@ -31,8 +31,8 @@
 			echo "True";
 		} else {
 			$sql = "INSERT INTO Hours VALUES ($date, $hours, $vacation, $id)";
-			//echo $sql;
-			$conn->query($sql);
+			echo $sql;
+			//$conn->query($sql);
 		}
 	}
 	echo $_POST[$days[0] . "date"];
