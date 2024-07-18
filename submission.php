@@ -25,5 +25,5 @@
 		//	echo "False";
 		//}
 	}
-	//echo $_POST[$days[0] . "date"];
+	echo $_POST[$days[0] . "date"];
 ?>
