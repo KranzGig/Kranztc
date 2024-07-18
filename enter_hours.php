@@ -45,7 +45,7 @@
 		$time = time() - 4 * $mins;
 		$day = $name[date("w",$time)];
 		$date = $day." ".date("m/d",$time);
-		for ($x = date("w",$time); $x >= 0; $x--) {
+		for ($x = date("w"); $x >= 0; $x--) {
 			$time = time() - $x * $mins;
 			$day = $name[date("w",$time)];
 			$date = $day." ".date("m/d",$time);
