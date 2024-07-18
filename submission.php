@@ -19,7 +19,7 @@
 		$date = substr($date, strpos($date, ' '));
 		$id = $_SESSION['id'];
 		$hours = $_POST[$day . 'hours'];
-		if ($hours == ' ') {
+		if ($hours == '') {
 			$hours = 0;
 		}
 		$vacation = $_POST[$day . 'pvacation'];
