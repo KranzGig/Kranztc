@@ -97,12 +97,16 @@
 			echo "<option value='0'></option>";
 			for ($i=1;$i<=24;$i++) {
 				if ($i == $num) {
-					echo "<option value='$i' selected disabled>$i</option>";
+					echo "<option value='$i' selected>$i</option>";
 				} else {
-					echo "<option value='$i' disabled>$i</option>";
+					echo "<option value='$i'>$i</option>";
 				}
 			}
-			echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid'></td></tr>";
+			if ($vacation) {
+				echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid' checked disabled></td></tr>";
+			} else {
+				echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid' disabled></td></tr>";
+			}
 		}
 		
 		
