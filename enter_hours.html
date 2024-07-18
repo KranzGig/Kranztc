@@ -10,6 +10,14 @@
   <link rel="stylesheet" type="text/css" href="style.css?v=1.6">
 </head>
 <body>
+ <?php
+	session_start();
+	// If the user is not logged in redirect to the login page...
+	if (!isset($_SESSION['loggedin'])) {
+		header('Location: index.html');
+		exit;
+	}
+?>
   <img id="clock2" src="clock.png" alt="clock icon"
    srcset="clock.png 2400w"
    sizes="80vw";
