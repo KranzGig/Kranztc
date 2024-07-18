@@ -115,7 +115,7 @@
 	
 <div class="button">
     <input type="submit" value="Save">
-    <a href="logout.php"><button>"Logout"</button></a>
+    <a href="logout.php"><input type="submit" value="Logout"></a>
 	</div>
   </form>
 </body>
