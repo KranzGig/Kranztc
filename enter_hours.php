@@ -93,7 +93,7 @@
 			}
 			echo "<tr><td class='$day'>$date</td>";
 			echo "<input type='hidden' name='".$day."date' value='".$date."' class='$day'/>";
-			echo "<td><select name='".$day."hours' id='numhours'>";
+			echo "<td><select name='".$day."hours' id='numhours' disabled>";
 			echo "<option value='0'></option>";
 			for ($i=1;$i<=24;$i++) {
 				if ($i == $num) {
