@@ -28,11 +28,12 @@
 		//echo $sql;
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
-			echo "True";
+			$sql = "UPDATE Hours SET Hours=$hours, Vacation=$vacation WHERE Date=$date AND EmpID=$id)";
+			$conn->query($sql);
 		} else {
 			$sql = "INSERT INTO Hours VALUES ($date, $hours, $vacation, $id)";
-			echo $sql;
-			//$conn->query($sql);
+			//echo $sql;
+			$conn->query($sql);
 		}
 	}
 	echo $_POST[$days[0] . "date"];
