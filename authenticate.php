@@ -36,7 +36,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
     		    $_SESSION['loggedin'] = TRUE;
     		    $_SESSION['uname'] = $_POST['uname'];
     		    $_SESSION['id'] = $id;
-    		    header('Location: enter_hours.html');
+    		    header('Location: enter_hours.php');
     	    }
     	    
     	}
@@ -48,7 +48,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE email = ?'))
     		$_SESSION['loggedin'] = TRUE;
     		$_SESSION['uname'] = $_POST['uname'];
     		$_SESSION['id'] = $id;
-    		header('Location: enter_hours.html');
+    		header('Location: enter_hours.php');
     	} else {
     		// Incorrect password
     		echo 'Incorrect email and/or password!';
