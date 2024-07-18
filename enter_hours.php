@@ -32,7 +32,15 @@
         <th>Hours:</th>
 	<th>Paid Vacation:</th>
       </tr>
-	<?php
+	
+      <tr>
+	<td class="Sun"></td>
+	<input type="hidden" name="Sundate" value="" class="Sun"/>
+	<td>
+	  
+	    <select name="Sunhours" id="numhours">
+	      <!--<option value="0"> </option>-->
+		    <?php
 		$servername = "127.0.0.1:3306";
 		$username = "u751975974_kranz";
 		$password = "Dradbgon12";
@@ -49,13 +57,6 @@
 			echo "<option value='$i'>$i</option>";
 		}
 	?>
-      <tr>
-	<td class="Sun"></td>
-	<input type="hidden" name="Sundate" value="" class="Sun"/>
-	<td>
-	  
-	    <select name="Sunhours" id="numhours">
-	      <!--<option value="0"> </option>-->
 		
 	</td>
 	<td>
