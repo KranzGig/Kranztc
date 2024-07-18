@@ -16,7 +16,7 @@
 	foreach ($days as $day) {
 		$date = $_POST[$day . 'date'];
 		$id = $_SESSION['id'];
-		$sql = "SELECT * FROM Hours WHERE Date=$date AND EmpID=$id";
+		$sql = "SELECT * FROM Hours WHERE Date=$date AND EmpID=$id;";
 		//echo $sql;
 		$result = $conn->query($sql);
 		//if ($result->num_rows > 0) {
