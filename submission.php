@@ -17,6 +17,8 @@
 		$date = $_POST[$day . 'date'];
 		$id = $_SESSION['id'];
 		$sql = "SELECT * FROM Hours WHERE Date= . $date . AND EmpID= . $id";
+		$result = $conn->query($sql);
+		echo $result . " is result";
 	}
-	echo $_POST[$days[0] . "date"];
+	//echo $_POST[$days[0] . "date"];
 ?>
