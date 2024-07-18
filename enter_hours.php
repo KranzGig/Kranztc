@@ -48,8 +48,8 @@
 			$day = $name[date("w",$time)];
 			$date = $day." ".date("m/d",$time);
 			echo "<tr><td class='$day'>$date</td>";
-			echo "<input type='hidden' name='$day.date' value='$date' class='$day'/>";
-			echo "<td><select name='$day.hours' id='numhours'>";
+			echo "<input type='hidden' name='".$day."date' value='".$date"' class='$day'/>";
+			echo "<td><select name='".$day."hours' id='numhours'>";
 			echo "<option value='0'></option>";
 			for ($i=1;$i<=24;$i++) {
 				echo "<option value='$i'>$i</option>";
