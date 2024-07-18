@@ -27,7 +27,8 @@
 			echo "True";
 		} else {
 			$sql = "INSERT INTO Hours VALUES ($date, $hours, $vacation, $id)";
-			$conn->query($sql);
+			echo $sql;
+			//$conn->query($sql);
 		}
 	}
 	echo $_POST[$days[0] . "date"];
