@@ -53,8 +53,11 @@
 			$timestamp = date("m/d",$time);
 			$date = $day." ".date("m/d",$time);
 			$sql = "SELECT Hours FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
+			
 			$result = $conn->query($sql);
-			echo $result;
+			if ($result->num_rows > 0) {
+				echo $result;
+			}
 			echo "<tr><td class='$day'>$date</td>";
 			echo "<input type='hidden' name='".$day."date' value='".$date."' class='$day'/>";
 			echo "<td><select name='".$day."hours' id='numhours'>";
