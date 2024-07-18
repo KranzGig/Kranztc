@@ -20,7 +20,7 @@
 		$id = $_SESSION['id'];
 		$sql = "SELECT * FROM Hours WHERE Date=$date AND EmpID=$id;";
 		//echo $sql;
-		$result = $conn->query($sql);
+		//$result = $conn->query($sql);
 		//if ($result->num_rows > 0) {
 		//	echo "True";
 		//} else {
