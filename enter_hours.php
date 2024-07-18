@@ -32,6 +32,23 @@
         <th>Hours:</th>
 	<th>Paid Vacation:</th>
       </tr>
+	<?php
+		$servername = "127.0.0.1:3306";
+		$username = "u751975974_kranz";
+		$password = "Dradbgon12";
+		$dbname = "u751975974_TestDB";
+
+		$conn = new mysqli($servername, $username, $password, $dbname);
+
+		$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+		$mins = 24 * 60 * 60;
+		$time = time() - 4 * $mins;
+		$date = name[date("w",$time)].concat(" ", date("m/d",$time));
+		echo "<option value='0'>$date</option>";
+		for ($i=1;$i<=24;$i++) {
+			echo "<option value='$i'>$i</option>";
+		}
+	?>
       <tr>
 	<td class="Sun"></td>
 	<input type="hidden" name="Sundate" value="" class="Sun"/>
@@ -39,21 +56,7 @@
 	  
 	    <select name="Sunhours" id="numhours">
 	      <!--<option value="0"> </option>-->
-		<?php
-			$servername = "127.0.0.1:3306";
-			$username = "u751975974_kranz";
-			$password = "Dradbgon12";
-			$dbname = "u751975974_TestDB";
-
-			$conn = new mysqli($servername, $username, $password, $dbname);
-
-			$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-			
-			echo "<option value='0'></option>";
-			for ($i=1;$i<=24;$i++) {
-				echo "<option value='$i'>$i</option>";
-			}
-		?>
+		
 	</td>
 	<td>
 	    <input type="checkbox" id="pvacation" name="Sunpvacation" value="Paid">
