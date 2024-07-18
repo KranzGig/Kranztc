@@ -23,7 +23,7 @@
 		if (isset($_POST[$day . 'pvacation'])) {
 			$vacation = "True";
 		}
-		$vacation = $_POST[$day . 'pvacation'];
+		//$vacation = $_POST[$day . 'pvacation'];
 		$sql = "SELECT * FROM Hours WHERE Date=$date AND EmpID=$id;";
 		//echo $sql;
 		$result = $conn->query($sql);
