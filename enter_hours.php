@@ -52,13 +52,14 @@
 			$day = $name[date("w",$time)];
 			$timestamp = date("m/d",$time);
 			$date = $day." ".date("m/d",$time);
-			$sql = "SELECT Hours FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
+			$sql = "SELECT Hours,Vacation FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
 			
 			$result = $conn->query($sql);
 			$num = 0;
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
 				$num = $row["Hours"];
+				$vacation = $row["Vacation"];
 			}
 			echo "<tr><td class='$day'>$date</td>";
 			echo "<input type='hidden' name='".$day."date' value='".$date."' class='$day'/>";
@@ -71,7 +72,11 @@
 					echo "<option value='$i'>$i</option>";
 				}
 			}
-			echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid'></td></tr>";
+			if ($vacation) {
+				echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid' checked></td></tr>";
+			} else {
+				echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid'></td></tr>";
+			}
 		}
 		for ($x = 1; $x < 7-date("w"); $x++) {
 			$time = time() + $x * $mins;
