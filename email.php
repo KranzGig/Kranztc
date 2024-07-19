@@ -12,9 +12,8 @@
     $stmt->execute();
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
-	echo "OKK";
+	echo $_POST['email'];
 	$stmt->bind_result($id);
-	echo $id." cool";
 	$code = uniqid();
 	if ($stmt = $conn->prepare("UPDATE accounts SET code=? WHERE id=$id")) {
 		$stmt->bind_param('s', password_hash($code,PASSWORD_DEFAULT));
