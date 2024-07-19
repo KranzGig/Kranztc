@@ -11,8 +11,8 @@
     $stmt->bind_param('s', $_POST['email']);
     $stmt->execute();
     $stmt->store_result();
-    echo "OK";
     if ($stmt->num_rows > 0) {
+	echo "OK";
 	$stmt->bind_result($id);
 	echo $id;
 	$code = uniqid();
