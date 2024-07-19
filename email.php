@@ -1,6 +1,4 @@
 <?php
-  require 'vendor/autoload.php';
-   use PHPMailer\PHPMailer\PHPMailer;
   $servername = "127.0.0.1:3306";
   $username = "u751975974_kranz";
   $password = "Dradbgon12";
