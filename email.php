@@ -12,7 +12,6 @@
     $stmt->execute();
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
-	echo $_POST['email'];
 	$stmt->bind_result($id);
 	$stmt->fetch();
 	echo $id;
