@@ -13,6 +13,7 @@
 	  $stmt->store_result();
     if ($stmt->num_rows > 0) {
 	$stmt->bind_result($id);
+	echo $id;
 	$code = uniqid();
 	if ($stmt = $conn->prepare("UPDATE accounts SET code=? WHERE id=$id")) {
 		$stmt->bind_param('s', password_hash($code,PASSWORD_DEFAULT));
