@@ -10,7 +10,7 @@
 </head>
 <body>
   <p>
-      <form action="email.php" method="post">
+      <form action="" method="post">
           <input type="text" id="email" name="email" placeholder="email">
           <input type="submit" value="Enter">
       </form>
