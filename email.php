@@ -12,7 +12,7 @@
     $stmt->execute();
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
-	echo "OK";
+	echo "OKK";
 	$stmt->bind_result($id);
 	echo $id;
 	$code = uniqid();
