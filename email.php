@@ -10,7 +10,8 @@
   if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE email = ?')) {
     $stmt->bind_param('s', $_POST['email']);
     $stmt->execute();
-	  $stmt->store_result();
+    $stmt->store_result();
+    echo "OK";
     if ($stmt->num_rows > 0) {
 	$stmt->bind_result($id);
 	echo $id;
