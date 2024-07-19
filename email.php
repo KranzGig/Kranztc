@@ -1,4 +1,7 @@
 <?php
+  require 'vendor/autoload.php';
+  use PHPMailer\PHPMailer\PHPMailer;
+
   $servername = "127.0.0.1:3306";
   $username = "u751975974_kranz";
   $password = "Dradbgon12";
@@ -19,9 +22,7 @@
 		$stmt->bind_param('s', password_hash($code,PASSWORD_DEFAULT));
 		$stmt->execute();
 		echo 'Check your email for the reset link';
-		require 'vendor/autoload.php';
-	        use PHPMailer\PHPMailer\PHPMailer;
-	        $mail = new PHPMailer;
+	        /*$mail = new PHPMailer;
 		   $mail->isSMTP();
 		   $mail->SMTPDebug = 2;
 		   $mail->Host = 'smtp.hostinger.com';
@@ -37,7 +38,7 @@
 		   $mail->addAttachment('result.csv');
 		   if (!$mail->send()) {
 		       echo 'Mailer Error: ' . $mail->ErrorInfo;
-		   } 
+		   } */
 	} else {
 		      echo 'Incorrect email!';
 		    }
