@@ -10,10 +10,10 @@
 </head>
 <body>
 <form action="" method="post">
-      <p>"New Password:"
+      <p>New Password:
       <input type="text" id="pword" name="pword">
       </p>
-      <p>"Re Enter Password:"
+      <p>Re Enter Password:
       <input type="text" id="repword" name="repword">
       </p>
       <input type="submit" value="Enter">
