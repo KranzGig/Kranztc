@@ -23,6 +23,7 @@ $url_components = parse_url($url);
 // string passed via URL
 parse_str($url_components['query'], $params);
 //echo "<input type='hidden' name='URLid' value=$params['id']/>";
+echo $params['id'];
  
 ?>
       New Password:<br />
