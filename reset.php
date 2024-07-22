@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
-<form action="" method="post">
+<form action="reset_submit.php" method="post">
     <?php
 // Initialize URL to the variable
 $url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
