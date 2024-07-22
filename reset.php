@@ -10,11 +10,7 @@
 </head>
 <body>
 <form action="" method="post">
-      New Password:<br />
-      <input type="password" id="pword" name="pword" placeholder="Password"><br /><br />
-      Re Enter Password:<br />
-      <input type="password" id="repword" name="repword" placeholder="Password"><br /><br />
-              <?php
+    <?php
 // Initialize URL to the variable
 $url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
      
@@ -26,10 +22,14 @@ $url_components = parse_url($url);
 // Use parse_str() function to parse the
 // string passed via URL
 parse_str($url_components['query'], $params);
-echo "input type='hidden' name='URLid' value=$params['id'] class='URLid'";
+echo "input type=hidden name=URLid value=$params['id'] class=URLid";
 //echo $params['id'];
  
-?>
+?>  
+    New Password:<br />
+      <input type="password" id="pword" name="pword" placeholder="Password"><br /><br />
+      Re Enter Password:<br />
+      <input type="password" id="repword" name="repword" placeholder="Password"><br /><br />
       <input type="submit" value="Enter">
 </form>
 
