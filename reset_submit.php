@@ -15,8 +15,8 @@ if ($_POST['pword'] != $_POST['repword']) {
 }
 echo "one";
 if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
-	echo password_hash($_POST['URLid'],PASSWORD_DEFAULT);
-	$stmt->bind_param('s', password_hash($_POST['URLid'],PASSWORD_DEFAULT));
+	echo md5($_POST['URLid']);
+	$stmt->bind_param('s', md5($_POST['URLid']));
 	$stmt->execute();
 	$stmt->store_result();
 	echo "three";
