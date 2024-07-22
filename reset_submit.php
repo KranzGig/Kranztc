@@ -10,6 +10,26 @@ if ( !isset($_POST['pword'], $_POST['repword']) ) {
 	// Could not get the data that should have been sent.
 	exit('Please fill both fields!');
 }
-//if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
-echo $_POST['URLid'];
+if ($_POST['pword'] != $_POST['repword']) {
+	exit('Passwords do not match');
+}
+if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
+	$stmt->bind_param('s', password_hash($_POST['URLid'],PASSWORD_DEFAULT));
+	$stmt->execute();
+	$stmt->store_result();
+	if ($stmt->num_rows > 0) {
+		$stmt->bind_result($id);
+    		$stmt->fetch();
+		if ($stmt = $conn->prepare("UPDATE accounts SET password=? WHERE id=$id")) {
+    	            $stmt->bind_param('s', password_hash($_POST['pword'],PASSWORD_DEFAULT));
+	            $stmt->execute();
+	            session_regenerate_id();
+    		    $_SESSION['loggedin'] = TRUE;
+    		    $_SESSION['uname'] = $_POST['uname'];
+    		    $_SESSION['id'] = $id;
+    		    header('Location: enter_hours.php');
+    	    }
+	}
+}
+//echo $_POST['URLid'];
 ?>
