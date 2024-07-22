@@ -10,7 +10,11 @@
 </head>
 <body>
 <form action="" method="post">
-      <?php
+      New Password:<br />
+      <input type="password" id="pword" name="pword" placeholder="Password"><br /><br />
+      Re Enter Password:<br />
+      <input type="password" id="repword" name="repword" placeholder="Password"><br /><br />
+              <?php
 // Initialize URL to the variable
 $url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
      
@@ -26,10 +30,6 @@ echo "<input type='hidden' name='URLid' value=$params['id']/>";
 //echo $params['id'];
  
 ?>
-      New Password:<br />
-      <input type="password" id="pword" name="pword" placeholder="Password"><br /><br />
-      Re Enter Password:<br />
-      <input type="password" id="repword" name="repword" placeholder="Password"><br /><br />
       <input type="submit" value="Enter">
 </form>
 
