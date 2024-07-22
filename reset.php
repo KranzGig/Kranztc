@@ -10,12 +10,10 @@
 </head>
 <body>
 <form action="" method="post">
-      <p>New Password:
-      <input type="pword" id="pword" name="pword">
-      </p>
-      <p>Re Enter Password:
-      <input type="pword" id="repword" name="repword">
-      </p>
+      New Password:<br />
+      <input type="password" id="pword" name="pword" placeholder="Password"><br /><br />
+      Re Enter Password:<br />
+      <input type="password" id="repword" name="repword" placeholder="Password"><br /><br />
       <input type="submit" value="Enter">
 </form>
 <?php
