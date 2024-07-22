@@ -13,11 +13,15 @@ if ( !isset($_POST['pword'], $_POST['repword']) ) {
 if ($_POST['pword'] != $_POST['repword']) {
 	exit('Passwords do not match');
 }
+echo "one";
 if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
+	echo "two";
 	$stmt->bind_param('s', password_hash($_POST['URLid'],PASSWORD_DEFAULT));
 	$stmt->execute();
 	$stmt->store_result();
+	echo "three";
 	if ($stmt->num_rows > 0) {
+		echo "four";
 		$stmt->bind_result($id);
     		$stmt->fetch();
 		if ($stmt = $conn->prepare("UPDATE accounts SET password=? WHERE id=$id")) {
@@ -27,6 +31,7 @@ if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
     		    $_SESSION['loggedin'] = TRUE;
     		    $_SESSION['uname'] = $_POST['uname'];
     		    $_SESSION['id'] = $id;
+			echo "five";
     		    header('Location: enter_hours.php');
     	    }
 	}
