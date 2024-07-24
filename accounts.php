@@ -58,10 +58,10 @@
 		}
 	 }
 ?>
-	<tr id="add" hidden>
-		<form hidden>
+	<tr id="add">
+		<form>
 			<tr>
-				<th>Email:</th>
+				<th hidden>Email:</th>
 				<td><input type="text" id="email" name="email"> </td>
 			</tr>
 			<tr>
