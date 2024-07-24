@@ -61,15 +61,15 @@
 	<tr id="add">
 		<form>
 			<tr>
-				<th hidden>Email:</th>
-				<td><input type="text" id="email" name="email" hidden> </td>
+				<th class="hidden" hidden>Email:</th>
+				<td><input type="text" id="email" name="email" class="hidden" hidden> </td>
 			</tr>
 			<tr>
-				<th hidden>Caretaker:</th>
-				<td><input type="checkbox" id="caretaker" name="caretaker" hidden> </td>
+				<th class="hidden" hidden>Caretaker:</th>
+				<td><input type="checkbox" id="caretaker" name="caretaker" class="hidden" hidden> </td>
 			</tr>
 			<tr>
-				 <td><input type="submit" value="Save" hidden></td>
+				 <td><input type="submit" value="Save" class="hidden" hidden></td>
 			</tr>
 		</form>
 	</tr>
