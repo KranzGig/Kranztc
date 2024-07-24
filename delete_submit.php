@@ -11,11 +11,11 @@
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
-  echo "Email: ";
-  echo $_POST['email'];
+  //echo "Email: ";
+  //echo $_POST['email'];
   $email = $_POST['email'];
   $sql = "DELETE FROM accounts WHERE email='".$email."'";
-  echo $sql;
-  //$conn->query($sql);
-  //header('Location: accounts.php');
+  //echo $sql;
+  $conn->query($sql);
+  header('Location: accounts.php');
 ?>
