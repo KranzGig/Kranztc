@@ -58,7 +58,7 @@
 		}
 	 }
 ?>
-	<tr>
+	<tr id="add" hidden>
 		<form>
 			<tr>
 				<th>Email:</th>
