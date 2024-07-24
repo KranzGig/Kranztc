@@ -28,16 +28,12 @@
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
-	if ($stmt = $conn->prepare('SELECT email, admin FROM accounts')) {
-		$stmt->execute();
-		// Store the result so we can check if the account exists in the database.
-		$stmt->store_result();
-		
-	}
-	 if ($stmt->num_rows > 0) {
-    		$stmt->bind_result($email, $admin);
-    		$stmt->fetch();
-		 echo $email[0];
+	$sql = 'SELECT email, admin FROM accounts';
+	$result = $conn->query($sql);
+	 if ($result->num_rows > 0) {
+    		while($row = $result->fetch_assoc()) {
+			echo $row['email'];
+		}
 	 }
 ?>
   <!--<table class="table table-borderless table-responsive">
