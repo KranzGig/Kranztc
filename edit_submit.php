@@ -21,7 +21,7 @@
 	  echo 'email-'.str_replace(".","_",$email_orig);
 	//echo "email-".$email_orig;
 	//echo $_POST['email-'.$email_orig];
-	//print_r($_POST);
+	print_r($_POST);
           $email = $_POST["email-".$email_orig];
           $admin = 1;
           if (isset($_POST["admin-".$email])) {
