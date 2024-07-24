@@ -59,7 +59,7 @@
 	 }
 ?>
 	<tr id="add" hidden>
-		<form>
+		<form hidden>
 			<tr>
 				<th>Email:</th>
 				<td><input type="text" id="email" name="email"> </td>
