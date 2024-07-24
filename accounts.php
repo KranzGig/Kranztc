@@ -19,8 +19,10 @@
 <div class="line">
 </div>
 <div class="long">
+<table class="table table-borderless table-responsive">
 <?php
 	session_start();
+	
 	$servername = "127.0.0.1:3306";
 	$username = "u751975974_kranz";
 	$password = "Dradbgon12";
@@ -32,7 +34,11 @@
 	$result = $conn->query($sql);
 	 if ($result->num_rows > 0) {
     		while($row = $result->fetch_assoc()) {
+			echo "<tr>";
+			echo "<th>Email:</th>";
+			echo "<td>";
 			echo $row['email'];
+			echo "</td></tr>";
 		}
 	 }
 ?>
@@ -72,6 +78,7 @@
       </td>
     </tr>
   </table>-->
+</table>
 </div>
   <div class="button1">
   <button class="square_current">
