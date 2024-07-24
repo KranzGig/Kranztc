@@ -37,7 +37,7 @@
     		while($row = $result->fetch_assoc()) {
 			echo "<tr>";
 			echo "<th>Email:</th>";
-			echo "<td><input type='text' value='".$row['email']."' name='email-".$row['email']."'></td>";
+			echo "<td><input type='text' name='email-".$row['email']."'value='".$row['email']."'></td>";
 			//echo $row['email'];
 			echo "</td></tr>";
 			echo "<tr>";
