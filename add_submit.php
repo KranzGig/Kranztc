@@ -18,6 +18,6 @@
   echo "Admin: ". $admin;
   $sql = "INSERT INTO accounts (email, admin)
   VALUES ('". $_POST['email'] . "','" . $admin ."')";
-  $conn->query($sql);
+  //$conn->query($sql);
   //header('Location: accounts.php');
 ?>
