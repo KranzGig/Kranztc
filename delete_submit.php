@@ -13,8 +13,9 @@
   }
   echo "Email: ";
   echo $_POST['email'];
-  //$sql = "DELETE FROM accounts WHERE email='".$_POST['email']."'";
-  //echo $sql;
+  $email = $_POST['email'];
+  $sql = "DELETE FROM accounts WHERE email='".$email."'";
+  echo $sql;
   //$conn->query($sql);
   //header('Location: accounts.php');
 ?>
