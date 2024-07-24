@@ -42,7 +42,12 @@
 			echo "<tr>";
 			echo "<th>Caretaker:</th>";
 			echo "<td>";
-			echo "<input type=checkbox id='".$row['email']."'>";
+			if ($row['admin'] == 0) {
+				echo "<input type=checkbox id='".$row['email']."' checked>";
+			}
+			if ($row['admin'] == 1) {
+				echo "<input type=checkbox id='".$row['email']."'>";
+			}
 			echo "</td></tr>";
 			echo "<tr><td>";
 			echo "<input type='submit' value='Delete'><br/>";
