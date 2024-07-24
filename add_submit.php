@@ -15,9 +15,10 @@
   if (isset($_POST['caretaker'])) {
     $admin = 0;
   }
-  echo "Admin: ". $admin;
+  //echo "Admin: ". $admin;
   $sql = "INSERT INTO accounts (email, admin)
   VALUES ('". $_POST['email'] . "','" . $admin ."')";
+  echo $sql;
   //$conn->query($sql);
   //header('Location: accounts.php');
 ?>
