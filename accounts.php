@@ -69,7 +69,7 @@
 				<td><input type="checkbox" id="caretaker" name="caretaker"> </td>
 			</tr>
 			<tr>
-				 <input type="submit" value="Save">
+				 <td><input type="submit" value="Save"></td>
 			</tr>
 		</form>
 	</tr>
