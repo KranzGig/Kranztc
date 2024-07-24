@@ -19,7 +19,7 @@
 <div class="line">
 </div>
 <div class="long">
-<table class="table table-borderless table-responsive"><form action='' method='post'>
+<table class="table table-borderless table-responsive"><form action='edit_submit.php' method='post'>
 <?php
 	session_start();
 	
