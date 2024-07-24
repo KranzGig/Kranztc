@@ -18,17 +18,12 @@
     		while($row = $result->fetch_assoc()) {
           $email_orig = $row['email'];
 	  $email = $_POST['email-'.str_replace(".","_",$email_orig).'_'];
-	  echo $email;
-	//echo "email-".$email_orig;
-	//echo $_POST['email-'.$email_orig];
-	//print_r($_POST);
-          $email = $_POST["email-".$email_orig];
           $admin = 1;
-          if (isset($_POST["admin-".$email])) {
+          if (isset($_POST["admin-".str_replace(".","_",$email_orig).'_'])) {
 			      $admin = 0;
 		      }
           $sql = "UPDATE accounts SET email=$email, admin=$admin WHERE email=$email_orig";
-          //echo $sql;
+          echo $sql;
         }
    }
 ?>
