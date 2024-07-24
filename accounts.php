@@ -39,6 +39,15 @@
 			echo "<td>";
 			echo $row['email'];
 			echo "</td></tr>";
+			echo "<tr>";
+			echo "<th>Caretaker:</th>";
+			echo "<td>";
+			if ($row['admin'] == 0) {
+				echo "Yes";
+			} else {
+				echo "No";
+			}
+			echo "</td></tr>";
 		}
 	 }
 ?>
