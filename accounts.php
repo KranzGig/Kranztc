@@ -34,10 +34,10 @@
 	$result = $conn->query($sql);
 	 if ($result->num_rows > 0) {
     		while($row = $result->fetch_assoc()) {
-			echo "/*<form action='delete_submit.php'>*/<tr>";
+			echo "<form action='delete_submit.php'><tr>";
 			echo "<th>Email:</th>";
 			echo "<td>";
-			//echo "<input type='hidden' name='email' value='".$row['email']."'/>";
+			echo "<input type='hidden' name='email' value='".$row['email']."'/>";
 			echo $row['email'];
 			echo "</td></tr>";
 			echo "<tr>";
@@ -50,10 +50,10 @@
 			}
 			echo "</td></tr>";
 			echo "<tr><td>";
-			echo "<input type="submit" value="X">";
+			echo "<input type='submit' value='X'>";
   			echo "Delete Profile<br>";
   			echo "</div>";
-			echo "</tr>/*</form>*/</td>";
+			echo "</tr></form></td>";
 		}
 	 }
 ?>
