@@ -36,17 +36,17 @@
     		while($row = $result->fetch_assoc()) {
 			echo "<tr>";
 			echo "<th>Email:</th>";
-			echo "<td><input type='text' value='".$row['email']."' id='email-".$row['email']."'></td>";
+			echo "<td><input type='text' value='".$row['email']."' name='email-".$row['email']."'></td>";
 			//echo $row['email'];
 			echo "</td></tr>";
 			echo "<tr>";
 			echo "<th>Caretaker:</th>";
 			echo "<td>";
 			if ($row['admin'] == 0) {
-				echo "<input type=checkbox id='admin-".$row['email']."' checked>";
+				echo "<input type=checkbox name='admin-".$row['email']."' checked>";
 			}
 			if ($row['admin'] == 1) {
-				echo "<input type=checkbox id='admin-".$row['email']."'>";
+				echo "<input type=checkbox name='admin-".$row['email']."'>";
 			}
 			echo "</td></tr>";
   			echo "</div>";
