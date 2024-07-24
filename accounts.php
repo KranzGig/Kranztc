@@ -94,7 +94,7 @@
 	function removeHidden() {
 		const hidden = document.getElementsByClassName("hidden");
 		for (let j = 0; j < hidden.length; j++) {
-	  		hidden[j].style.removeProperty('hidden');
+	  		hidden[j].removeAttribute("hidden");
 		}
 	}
 </script>
