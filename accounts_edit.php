@@ -49,10 +49,7 @@
 				echo "<input type=checkbox id='".$row['email']."'>";
 			}
 			echo "</td></tr>";
-			echo "<tr><td>";
-			echo "<input type='submit' value='Delete'><br/>";
   			echo "</div>";
-			echo "</tr></td>";
 		}
 	 }
 ?>
