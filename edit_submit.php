@@ -17,9 +17,9 @@
 	 if ($result->num_rows > 0) {
     		while($row = $result->fetch_assoc()) {
           $email_orig = $row['email'];
-	echo "email-".$email_orig;
+	//echo "email-".$email_orig;
 	//echo $_POST['email-'.$email_orig];
-	echo $_POST;
+	print_r($_POST);
           $email = $_POST["email-".$email_orig];
           $admin = 1;
           if (isset($_POST["admin-".$email])) {
