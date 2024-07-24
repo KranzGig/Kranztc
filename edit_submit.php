@@ -14,18 +14,18 @@
 	}
   $sql = 'SELECT email FROM accounts';
 	$result = $conn->query($sql);
-	print_r($_POST);
+	//print_r($_POST);
 	 if ($result->num_rows > 0) {
     		while($row = $result->fetch_assoc()) {
           $email_orig = $row['email'];
 	  $email = $_POST['email-'.str_replace(".","_",$email_orig).'_'];
           $admin = 1;
-          if (isset($_POST["admin-".str_replace(".","_",$email_orig).'_'])) {
+          if (isset($_POST["admin-".str_replace(".","_",$email_orig)])) {
 			      $admin = 0;
 		      }
           $sql = "UPDATE accounts SET email=$email, admin=$admin WHERE email=$email_orig";
 	
-          //echo $sql;
+          echo $sql;
         }
    }
 ?>
