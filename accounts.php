@@ -50,8 +50,7 @@
 			}
 			echo "</td></tr>";
 			echo "<tr><td>";
-			echo "<input type='submit' value='X'>";
-  			echo "Delete Profile<br>";
+			echo "<input type='submit' value='Delete'><br/>";
   			echo "</div>";
 			echo "</tr></form></td>";
 		}
