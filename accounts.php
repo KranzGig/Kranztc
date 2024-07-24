@@ -48,6 +48,11 @@
 				echo "No";
 			}
 			echo "</td></tr>";
+			echo "<button class='square' id='delete'>";
+    			echo "X";
+  			echo "</button>";
+  			echo "Delete Profile<br>";
+  			echo "</div>";
 		}
 	 }
 ?>
@@ -94,11 +99,7 @@
     /
   </button>
   Edit Profile<br>
-  <button class="square" id="delete">
-    X
-  </button>
-  Delete Profile<br>
-  </div>
+  
   <div class="line">
   </div>
   <div class="button1">
