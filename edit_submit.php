@@ -18,7 +18,7 @@
     		while($row = $result->fetch_assoc()) {
           $email_orig = $row['email'];
 	  $email = $_POST['email-'.str_replace(".","_",$email_orig)];
-	  echo $email;
+	  echo str_replace(".","_",$email_orig);
 	//echo "email-".$email_orig;
 	//echo $_POST['email-'.$email_orig];
 	//print_r($_POST);
