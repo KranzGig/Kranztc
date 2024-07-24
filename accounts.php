@@ -70,7 +70,7 @@
 			</tr>
 			<tr>
 				 <td><input type="submit" value="Save" class="hidden" hidden></td>
-				 <td><button onclick="addHidden()" hidden>Cancel</button></td>
+				 <td><button onclick="addHidden()" class="hidden" hidden>Cancel</button></td>
 			</tr>
 		</form>
 	</tr>
