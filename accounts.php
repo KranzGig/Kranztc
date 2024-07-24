@@ -70,6 +70,7 @@
 			</tr>
 			<tr>
 				 <td><input type="submit" value="Save" class="hidden" hidden></td>
+				 <td><button onclick="addHidden()">Cancel</button></td>
 			</tr>
 		</form>
 	</tr>
@@ -95,6 +96,12 @@
 		const hidden = document.getElementsByClassName("hidden");
 		for (let j = 0; j < hidden.length; j++) {
 	  		hidden[j].removeAttribute("hidden");
+		}
+	}
+	function addHidden() {
+		const hidden = document.getElementsByClassName("hidden");
+		for (let j = 0; j < hidden.length; j++) {
+	  		hidden[j].setAttribute("hidden","true");
 		}
 	}
 </script>
