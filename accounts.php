@@ -84,10 +84,21 @@
   <div class="line">
   </div>
   <div class="button1">
-  <button class="square">
+  <button class="square" onclick="removeHidden()">
     +
   </button>
   Add Profile
   </div>
+
+<script>
+	function removeHidden() {
+		const hidden = document.getElementsByClassName("hidden");
+		for (let j = 0; j < days.length; j++) {
+	  		hidden[j].style.removeProperty('hidden');
+		}
+	}
+</script>
+
+	  
 </body>
 </html>
