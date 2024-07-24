@@ -19,7 +19,8 @@
 <div class="line">
 </div>
 <div class="long">
-<table class="table table-borderless table-responsive"><form action='edit_submit.php' method='post'>
+<form action='edit_submit.php' method='post'>
+<table class="table table-borderless table-responsive">
 <?php
 	session_start();
 	
@@ -56,7 +57,7 @@
 			echo "</td></tr>";
 	 }
 ?>
-</form></table>
+</table></form>
 </div>
 	  
 </body>
