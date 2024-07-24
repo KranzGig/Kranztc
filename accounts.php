@@ -58,42 +58,21 @@
 		}
 	 }
 ?>
-  <!--<table class="table table-borderless table-responsive">
-    <tr>
-      <th>Name:</th>
-      <td>
-	<form class>
-	  <input type="text" id="name" name="name">
-	</form>
-      </td>
-    </tr>
-    <tr>
-      <th>Phone:</th>
-      <td>
-	<form>
-	  <input type="text" id="phone" name="phone">
-	</form>
-      </td>
-    </tr>
-    <tr>
-      <th>Email:</th>
-      <td>
-	<form>
-	  <input type="text" id="email" name="email">
-	</form>
-      </td>
-    </tr>
-    <tr>
-      <th>Role:</th>
-      <td>
-	<form>
-          <select name="role" id="role">
-	    <option value="Caretaker">Caretaker</option>
-	    <option value="Admin">Admin</option>
-	</form>
-      </td>
-    </tr>
-  </table>-->
+	<tr>
+		<form>
+			<tr>
+				<th>Email:</th>
+				<td><input type="text" id="email" name="email"> </td>
+			</tr>
+			<tr>
+				<th>Caretaker:</th>
+				<td><input type="checkbox" id="caretaker" name="caretaker"> </td>
+			</tr>
+			<tr>
+				 <input type="submit" value="Save">
+			</tr>
+		</form>
+	</tr>
 </table>
 </div>
   <div class="button1">
