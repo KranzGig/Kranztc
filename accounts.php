@@ -37,7 +37,7 @@
 			echo "<form action='delete_submit.php'><tr>";
 			echo "<th>Email:</th>";
 			echo "<td>";
-			echo "<input type='hidden' name='email' value='".$row['email']."'/>";
+			//echo "<input type='hidden' name='email' value='".$row['email']."'/>";
 			echo $row['email'];
 			echo "</td></tr>";
 			echo "<tr>";
