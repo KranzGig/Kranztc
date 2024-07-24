@@ -48,11 +48,13 @@
 				echo "No";
 			}
 			echo "</td></tr>";
+			echo "<tr><td>";
 			echo "<button class='square' id='delete'>";
     			echo "X";
   			echo "</button>";
   			echo "Delete Profile<br>";
   			echo "</div>";
+			echo "</tr></td>";
 		}
 	 }
 ?>
