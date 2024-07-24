@@ -12,7 +12,8 @@
     die("Connection failed: " . $conn->connect_error);
   }
 
-  $sql = "DELETE FROM accounts WHERE email=".$_POST['email'];
-  $conn->query($sql);
-  header('Location: accounts.php');
+  $sql = "DELETE FROM accounts WHERE email='".$_POST['email']."'";
+  echo $sql;
+  //$conn->query($sql);
+  //header('Location: accounts.php');
 ?>
