@@ -20,5 +20,5 @@
   VALUES ('". $_POST['email'] . "'," . $admin . ")";
   //echo $sql;
   $conn->query($sql);
-  //header('Location: accounts.php');
+  header('Location: accounts.php');
 ?>
