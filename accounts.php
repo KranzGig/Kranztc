@@ -59,7 +59,7 @@
 	 }
 ?>
 	<tr id="add">
-		<form>
+		<form action="add_submit.php" method="post">
 			<tr>
 				<th class="hidden" hidden>Email:</th>
 				<td><input type="text" id="email" name="email" class="hidden" hidden> </td>
