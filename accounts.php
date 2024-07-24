@@ -76,7 +76,7 @@
 </table>
 </div>
   <div class="button1">
-  <button class="square_current">
+  <button class="square_current" onclick="window.location.href='accounts_edit.php'">
     /
   </button>
   Edit Profile<br>
