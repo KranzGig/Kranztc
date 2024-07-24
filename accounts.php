@@ -62,14 +62,14 @@
 		<form>
 			<tr>
 				<th hidden>Email:</th>
-				<td><input type="text" id="email" name="email"> </td>
+				<td><input type="text" id="email" name="email" hidden> </td>
 			</tr>
 			<tr>
-				<th>Caretaker:</th>
-				<td><input type="checkbox" id="caretaker" name="caretaker"> </td>
+				<th hidden>Caretaker:</th>
+				<td><input type="checkbox" id="caretaker" name="caretaker" hidden> </td>
 			</tr>
 			<tr>
-				 <td><input type="submit" value="Save"></td>
+				 <td><input type="submit" value="Save" hidden></td>
 			</tr>
 		</form>
 	</tr>
