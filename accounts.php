@@ -19,7 +19,28 @@
 <div class="line">
 </div>
 <div class="long">
-  <table class="table table-borderless table-responsive">
+<?php
+	session_start();
+	$servername = "127.0.0.1:3306";
+	$username = "u751975974_kranz";
+	$password = "Dradbgon12";
+	$dbname = "u751975974_TestDB";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	if ($stmt = $conn->prepare('SELECT email, admin FROM accounts')) {
+		$stmt->execute();
+		// Store the result so we can check if the account exists in the database.
+		$stmt->store_result();
+		
+	}
+	 if ($stmt->num_rows > 0) {
+    		$stmt->bind_result($email, $admin);
+    		$stmt->fetch();
+		 echo $email[0];
+	 }
+?>
+  <!--<table class="table table-borderless table-responsive">
     <tr>
       <th>Name:</th>
       <td>
@@ -54,7 +75,7 @@
 	</form>
       </td>
     </tr>
-  </table>
+  </table>-->
 </div>
   <div class="button1">
   <button class="square_current">
