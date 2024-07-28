@@ -10,6 +10,91 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <p>Haven't done this yet you'll have to wait for it</p>
+  <ul>
+    <li><a href="accounts.html">Accounts</a></li>
+    <li id="current_tab"><a href="history.html">History</a></li>
+    <li id="right"><a href="login.html">Log Out</a></li>
+  </ul>
+  <h1>Caretaker History</h1>
+  <div class="line">
+  </div>
+  <div class="long">
+    <table>
+       <tr>
+        <th>Caretaker:</th>
+       <td>
+	<form>
+	  <select name="caretakers" id="caretakers">
+	    <option value="caretaker1">caretaker1</option>
+            <option value="caretaker2">caretaker2</option>
+	</form>
+      </td>
+      </tr>
+      <tr>
+        <th>Pick Date:</th>
+       <td>
+	<form>
+	  <select name="date" id="date">
+	    <option value="date1">date1</option>
+            <option value="date2">date2</option>
+	</form>
+      </td>
+      </tr>
+    </table>
+  </div>
+  <div class="line">
+  </div>
+  <table id="history_table">
+    <tr>
+      <th>Date:</th>
+      <th>Hours:</th>
+      <th>Paid Vacation:</th>
+    </tr>
+    <tr>
+      <td>date1</td>
+      <td>hours</td>
+      <td>paidvaca?y/n</td>
+    </tr>
+    <tr>
+      <td>date2</td>
+      <td>hours</td>
+      <td>paidvaca?y/n</td>
+    </tr>
+    <tr>
+      <td>date3</td>
+      <td>hours</td>
+      <td>paidvaca?y/n</td>
+    </tr>
+    <tr>
+      <td>date4</td>
+      <td>hours</td>
+      <td>paidvaca?y/n</td>
+    </tr>
+    <tr>
+      <td>date5</td>
+      <td>hours</td>
+      <td>paidvaca?y/n</td>
+    </tr>
+    <tr>
+      <td>date6</td>
+      <td>hours</td>
+      <td>paidvaca?y/n</td>
+    </tr>
+    <tr>
+      <td>date7</td>
+      <td>hours</td>
+      <td>paidvaca?y/n</td>
+    </tr>
+  </table>
+  <div class="button1">
+  <button class="square" id="history_edit">
+    /
+  </button>
+  Edit
+  <button class="square_current" id="history_show">
+    *
+  </button>
+  Show All
+  </div>
 </body>
 </html>
