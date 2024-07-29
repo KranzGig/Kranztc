@@ -128,10 +128,6 @@
     /
   </button>
   Edit
-  <button class="square_current" id="history_show">
-    *
-  </button>
-  Show All
   </div>
 </body>
 </html>
