@@ -23,6 +23,10 @@
           if (isset($_POST["admin-".str_replace(".","_",$email_orig)])) {
 			      $admin = 0;
 		      }
+	  if ($email == "''") {
+		  header('Location:empty.html');
+		  exit();
+	  }
           $sql = "UPDATE accounts SET email='$email', admin=$admin WHERE email='$email_orig'";
 	//echo $sql;  
 	$conn->query($sql);
