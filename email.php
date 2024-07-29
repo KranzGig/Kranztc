@@ -18,6 +18,8 @@ s<?php
 		$stmt->bind_param('s', md5($code));
 		$stmt->execute();
 	}
+        require 'vendor/autoload.php';
+   	use PHPMailer\PHPMailer\PHPMailer;
 	echo "kranztc.com/reset.php?id=".$code;
     } else {
       echo 'Incorrect email!';
