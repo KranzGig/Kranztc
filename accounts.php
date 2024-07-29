@@ -18,7 +18,7 @@
 	$name = $_SESSION['name'];
 	echo "<li>".$name."</li>";
     ?>
-    <li id="right"><a href="login.html">Log Out</a></li>
+    <li id="right"><a href="logout.php">Log Out</a></li>
   </ul>
   <h1>Account Management</h1>
 <div class="line">
