@@ -20,9 +20,22 @@
 		$stmt->bind_param('s', md5($code));
 		$stmt->execute();
 	}
-	echo "kranztc.com/reset.php?id=".$code;
-    } else {
-      echo 'Incorrect email!';
-    }
+	$mail = new PHPMailer;
+	   $mail->isSMTP();
+	   $mail->SMTPDebug = 2;
+	   $mail->Host = 'smtp.hostinger.com';
+	   $mail->Port = 587;
+	   $mail->SMTPAuth = true;
+	   $mail->Username = 'automail@kranztc.com';
+	   $mail->Password = 'DragonSandd0gs-';
+	   $mail->setFrom('automail@kranztc.com', 'Kranz Tech Consulting');
+	   $mail->addReplyTo('automail@kranztc.com', 'Kranz Tech Consulting');
+	   $mail->addAddress('kranz.amber1@gmail.com', 'Amber Kranz');
+	   $mail->Subject = 'Reset Time Tracking Password';
+	   $mail->Body = "kranztc.com/reset.php?id=".$code;
+	   if (!$mail->send()) {
+	       echo 'Mailer Error: ' . $mail->ErrorInfo;
+	   }
+	    echo "Check your email for a link to reset your password";
   }
 ?>
