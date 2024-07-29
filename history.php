@@ -122,8 +122,9 @@
 				}
 			}
 		}
-		echo "<tr><td><input type='submit' value='Save' class='hidden' hidden></td><td><button class='hidden' onclick=addHidden() hidden>Cancel</button></td></tr>";
+		echo "<tr><td><input type='submit' value='Save' class='hidden' hidden></td></tr>";
 		echo "</form>";
+		echo "<td><button class='hidden' onclick=addHidden() hidden>Cancel</button></td>";
     ?>
   </table>
   <div class="button1">
