@@ -1,5 +1,13 @@
-.long td input[type=text], form select {
-  width: 350px;
+#history_table tr{
+  height: 35px;
+}
+
+#history_edit {
+  margin-left: 150px;
+}
+
+#history_show {
+  margin-left: 25px;
 }
 
 ul{
@@ -119,23 +127,6 @@ input[type=submit] {
   background-color: #3f6c96;
   margin-bottom: 15px;
 }
-input[type=submit]:hover {
-  background-color: #1d4060;
-}
-input[type=button] {
-  width: 100px;
-  padding: 6px 10px;
-  margin: 8px 0;
-  border: 1px solid #3f6c96;
-  border-radius: 4px;
-  box-sizing: border-box;
-  color: #fff;
-  background-color: #3f6c96;
-  margin-bottom: 15px;
-}
-input[type=button]:hover {
-  background-color: #1d4060;
-}
 input[type=checkbox] {
   width: 20px;
   height: 20px;
@@ -174,4 +165,6 @@ body p {
   text-align: center;
   font-size: 25px;
 }
+.long #date, #caretakers {
+  width: 350px;
 }
