@@ -76,7 +76,7 @@
 			$timestamp = date("m/d",$time);
 			$date = $day." ".date("m/d",$time);
 			$sql = "SELECT Hours,Vacation FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
-			
+			echo $timestamp;
 			$result = $conn->query($sql);
 			$num = 0;
 			if ($result->num_rows > 0) {
