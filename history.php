@@ -44,17 +44,17 @@
 			}
 		 }
 	    ?>
-	</form>
       </td>
       </tr>
       <tr>
         <th>Pick Date:</th>
        <td>
-	<form>
 	  <input type="date" name="date" id="date">
-	</form>
       </td>
       </tr>
+      <tr><td>
+	      <input type="submit" value="Go">
+      </td></tr>
     </table>
   </div>
   <div class="line">
