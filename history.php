@@ -80,9 +80,9 @@
 				echo "<tr><td class='$day'>$date</td>";
 				echo "<td>$num</td>";
 				if ($vacation) {
-					echo "<td>Yes</td>";
+					echo "<td>Yes</td></tr>";
 				} else {
-					echo "<td>No</td>";
+					echo "<td>No</td></tr>";
 				}
 			}
 			
@@ -103,9 +103,9 @@
 				echo "<tr><td class='$day'>$date</td>";
 				echo "<td>$num</td>";
 				if ($vacation) {
-					echo "<td>Yes</td>";
+					echo "<td>Yes</td></tr>";
 				} else {
-					echo "<td>No</td>";
+					echo "<td>No</td></tr>";
 				}
 			}
 		}
