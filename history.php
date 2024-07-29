@@ -76,7 +76,7 @@
 		$mins = 24 * 60 * 60;
 		//$new_date = strtotime($_POST['date']);
 		//echo $new_date;
-		echo "<form>";
+		echo "<form action='history_submit.php' method='post'>";
 		echo "<input type='hidden' name='id' value=$id>";
 		for ($x = date("w"); $x >= 0; $x--) {
 			$time = strtotime($_POST['date']) - $x * $mins;
@@ -91,12 +91,12 @@
 				$row = $result->fetch_assoc();
 				$num = $row["Hours"];
 				$vacation = $row["Vacation"];
-				echo "<tr><td><input type='hidden' name=$day."-date" value=$date>$date</td>";
-				echo "<td><input type='text' name=$day."-hours" value=$num class='hidden' hidden><p class='unhidden'>$num</p></td>";
+				echo "<tr><td><input type='hidden' name=$day-date value=$date>$date</td>";
+				echo "<td><input type='text' name=$day-hours value=$num class='hidden' hidden><p class='unhidden'>$num</p></td>";
 				if ($vacation) {
-					echo "<td><input type='checkbox' class='hidden' name=$day."-vacation" checked hidden><p class='unhidden'>Yes</p></td></tr>";
+					echo "<td><input type='checkbox' class='hidden' name=$day-vacation checked hidden><p class='unhidden'>Yes</p></td></tr>";
 				} else {
-					echo "<td><input type='checkbox' class='hidden' name=$day."-vacation" hidden><p class='unhidden'>No</p></td></tr>";
+					echo "<td><input type='checkbox' class='hidden' name=$day-vacation hidden><p class='unhidden'>No</p></td></tr>";
 				}
 			}
 			
@@ -114,12 +114,12 @@
 				$row = $result->fetch_assoc();
 				$num = $row["Hours"];
 				$vacation = $row["Vacation"];
-				echo "<tr><td class='$day'>$date</td>";
-				echo "<td><input type='text' value=$num class='hidden' hidden><p class='unhidden'>$num</p></td>";
+				echo "<tr><td><input type='hidden' name=$day-date value=$date>$date</td>";
+				echo "<td><input type='text' name=$day-hours value=$num class='hidden' hidden><p class='unhidden'>$num</p></td>";
 				if ($vacation) {
-					echo "<td><input type='checkbox' class='hidden' name='vacation' checked hidden><p class='unhidden'>Yes</p></td></tr>";
+					echo "<td><input type='checkbox' class='hidden' name=$day-vacation checked hidden><p class='unhidden'>Yes</p></td></tr>";
 				} else {
-					echo "<td><input type='checkbox' class='hidden' name='vacation' hidden><p class='unhidden'>No</p></td></tr>";
+					echo "<td><input type='checkbox' class='hidden' name=$day-vacation hidden><p class='unhidden'>No</p></td></tr>";
 				}
 			}
 		}
