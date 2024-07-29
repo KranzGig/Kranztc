@@ -20,8 +20,8 @@
 		$stmt->bind_param('s', md5($code));
 		$stmt->execute();
 	}
-	//$mail = new PHPMailer;
-	   /*$mail->isSMTP();
+	$mail = new PHPMailer;
+	   $mail->isSMTP();
 	   $mail->SMTPDebug = 2;
 	   $mail->Host = 'smtp.hostinger.com';
 	   $mail->Port = 587;
@@ -35,7 +35,7 @@
 	   $mail->Body = "kranztc.com/reset.php?id=".$code;
 	   if (!$mail->send()) {
 	       echo 'Mailer Error: ' . $mail->ErrorInfo;
-	   }*/
+	   }
 	    echo "Check your email for a link to reset your password";
     } else {
 	echo "Enter a valid email";
