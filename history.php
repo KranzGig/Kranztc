@@ -11,9 +11,9 @@
 </head>
 <body>
   <ul>
-    <li><a href="accounts.html">Accounts</a></li>
-    <li id="current_tab"><a href="history.html">History</a></li>
-    <li id="right"><a href="login.html">Log Out</a></li>
+    <li><a href="accounts.php">Accounts</a></li>
+    <li id="current_tab"><a href="history.php">History</a></li>
+    <li id="right"><a href="logout.php">Log Out</a></li>
   </ul>
   <h1>Weekly Caretaker History</h1>
   <div class="line">
