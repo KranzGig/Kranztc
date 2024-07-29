@@ -16,7 +16,7 @@ if ( !isset($_POST['uname'], $_POST['pword']) ) {
 	// Could not get the data that should have been sent.
 	exit('Please fill both the username and password fields!');
 }
-if ($stmt = $conn->prepare('SELECT id, password, admin FROM accounts WHERE email = ?')) {
+if ($stmt = $conn->prepare('SELECT id, password, admin, name FROM accounts WHERE email = ?')) {
 	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
 	$stmt->bind_param('s', $_POST['uname']);
 	$stmt->execute();
@@ -24,7 +24,7 @@ if ($stmt = $conn->prepare('SELECT id, password, admin FROM accounts WHERE email
 	$stmt->store_result();
 	
     if ($stmt->num_rows > 0) {
-    	$stmt->bind_result($id, $password, $admin);
+    	$stmt->bind_result($id, $password, $admin, $name);
     	$stmt->fetch();
     	// Account exists, now we verify the password.
     	// Note: remember to use password_hash in your registration file to store the hashed passwords.
@@ -36,6 +36,7 @@ if ($stmt = $conn->prepare('SELECT id, password, admin FROM accounts WHERE email
     		    $_SESSION['loggedin'] = TRUE;
     		    $_SESSION['uname'] = $_POST['uname'];
     		    $_SESSION['id'] = $id;
+		    $_SESSION['name'] = $name;
 		    if ($admin == 0) {
     		    	header('Location: enter_hours.php');
 		    } else {
@@ -52,6 +53,7 @@ if ($stmt = $conn->prepare('SELECT id, password, admin FROM accounts WHERE email
     		$_SESSION['loggedin'] = TRUE;
     		$_SESSION['uname'] = $_POST['uname'];
     		$_SESSION['id'] = $id;
+		$_SESSION['name'] = $name;
     		if ($admin == 0) {
     		    	header('Location: enter_hours.php');
 		    } else {
