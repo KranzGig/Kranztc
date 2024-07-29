@@ -31,7 +31,7 @@
           $sql = "UPDATE accounts SET email='$email', admin=$admin WHERE email='$email_orig'";
 	//echo $sql;  
 	$conn->query($sql);
-	  //header('Location: accounts.php');
+	  header('Location: accounts.php');
 	
           
         }
