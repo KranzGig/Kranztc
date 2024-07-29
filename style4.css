@@ -1,0 +1,177 @@
+.long td input[type=text], form select {
+  width: 350px;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #d2e7f3;
+  position: sticky;
+  top: 0;
+}
+
+li{
+  float: left;
+  font-family: "Josefin Sans", Tacoma;
+}
+
+li a {
+  display: block;
+  color: #3f6c96;
+  text-align: center;
+  padding: 14px 25px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #c1d4df;
+}
+
+#current_tab a{
+  color: #fff;
+  background-color: #68b2f8;
+}
+
+#right {
+  float: right;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  font-family: "Josefin Sans", Tacoma;
+}
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: #3f6c96;
+  border: none;
+  margin-right: 0;
+}
+.square {
+  width: 30px;
+  height: 30px;
+  background-color: #3f6c96;
+  border: none;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-top: 30px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+#delete {
+  margin-top: -5px;
+  margin-bottom: 25px;
+  margin-left: 16px;
+}
+
+.square_current {
+  width: 30px;
+  height: 30px;
+  background-color: #68b2f8;
+  border: 2px solid #3f6c96;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Josefin Sans", Tacoma;
+}
+
+.button1 {
+  text-align: center;
+  font-family: "Josefin Sans", Tacoma;
+  color: #3f6c96;
+  margin-right: 110px;
+}
+
+td, th {
+  text-align: center;
+  width: 100px;
+  font-family: "Josefin Sans", Tacoma;
+  color: #1d4060;
+}
+table {
+  margin: auto;
+  margin-bottom: 25px;
+}
+body {
+  background-color: #94c2dc;
+}
+#clock2 {
+  margin-top: 50px;
+}
+#small {
+  font-size: 15px;
+  margin-top: -20px;
+}
+input[type=submit] {
+  width: 100px;
+  padding: 6px 10px;
+  margin: 8px 0;
+  border: 1px solid #3f6c96;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #3f6c96;
+  margin-bottom: 15px;
+}
+input[type=submit]:hover {
+  background-color: #1d4060;
+}
+input[type=button] {
+  width: 100px;
+  padding: 6px 10px;
+  margin: 8px 0;
+  border: 1px solid #3f6c96;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #3f6c96;
+  margin-bottom: 15px;
+}
+input[type=button]:hover {
+  background-color: #1d4060;
+}
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+input[type=text], select {
+  width: 400px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+td input[type=text], select {
+  width: 100px;
+}
+
+.form {
+  display: block;
+  text-align: center;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  margin-bottom: 50px;
+}
+h1 {
+  color: #1d4060;
+  text-align: center;
+  font-family: "Josefin Sans", Tacoma;
+  font-size: 55px;
+}
+body p {
+  font-family: "Josefin Sans", Tacoma;
+  color: #3f6c96;
+  text-align: center;
+  font-size: 25px;
+}
+}
