@@ -31,10 +31,15 @@
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
-	$sql = 'SELECT email, admin FROM accounts';
+	$sql = 'SELECT email, admin, name FROM accounts';
 	$result = $conn->query($sql);
 	 if ($result->num_rows > 0) {
     		while($row = $result->fetch_assoc()) {
+			echo "<tr>";
+			echo "<th>Name:</th>";
+			echo "<td><input type='text' name='name-".$row['email']." 'value='".$row['name']."'></td>";
+			//echo $row['email'];
+			echo "</td></tr>";
 			echo "<tr>";
 			echo "<th>Email:</th>";
 			echo "<td><input type='text' name='email-".$row['email']." 'value='".$row['email']."'></td>";
