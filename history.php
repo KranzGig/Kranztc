@@ -91,7 +91,7 @@
 				$row = $result->fetch_assoc();
 				$num = $row["Hours"];
 				$vacation = $row["Vacation"];
-				echo "<tr><td>$date</td>";
+				echo "<tr><td><input type='hidden' name=$day."-date" value=$date>$date</td>";
 				echo "<td><input type='text' name=$day."-hours" value=$num class='hidden' hidden><p class='unhidden'>$num</p></td>";
 				if ($vacation) {
 					echo "<td><input type='checkbox' class='hidden' name=$day."-vacation" checked hidden><p class='unhidden'>Yes</p></td></tr>";
