@@ -23,7 +23,7 @@
        <tr>
         <th>Caretaker:</th>
        <td>
-	<form method="post" name="info">
+	<form method="post" id="info">
 	  <select name="caretakers" id="caretakers">
 	    <?php
 		$servername = "127.0.0.1:3306";
