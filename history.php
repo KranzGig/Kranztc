@@ -144,12 +144,6 @@
 	  		unhidden[j].setAttribute("hidden","true");
 		}
 	}
-	function addHidden() {
-		const hidden = document.getElementsByClassName("hidden");
-		for (let j = 0; j < hidden.length; j++) {
-	  		hidden[j].setAttribute("hidden","true");
-		}
-	}
 </script>
 		  
 </body>
