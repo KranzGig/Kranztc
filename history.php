@@ -59,9 +59,6 @@
   </div>
   <div class="line">
   </div>
-  <?php
-	echo "<form action='history_submit.php' method='post'>";
-?>
   <table id="history_table">
 	  <tr>
       <th>Date:</th>
@@ -79,7 +76,7 @@
 		$mins = 24 * 60 * 60;
 		//$new_date = strtotime($_POST['date']);
 		//echo $new_date;
-		
+		echo "<form action='history_submit.php' method='post'>";
 		echo "<input type='hidden' name='id' value=$id>";
 		for ($x = date("w"); $x >= 0; $x--) {
 			$time = strtotime($_POST['date']) - $x * $mins;
@@ -126,11 +123,11 @@
 				}
 			}
 		}
-		echo "<tr><td><input type='submit' value='Save' class='hidden' hidden></td></tr>";
-		echo "</table>";
+		echo "<tr><td><input type='submit' value='Save' class='hidden' hidden></td>";
 		echo "</form>";
-		echo "<button class='hidden' onclick=addHidden() hidden>Cancel</button>";
+		echo "<td><button class='hidden' onclick=addHidden() hidden>Cancel</button></td></tr>";
     ?>
+  </table>
   <div class="button1">
   <button class="square" id="history_edit" class="unhidden" onclick=removeHidden()>
     /
