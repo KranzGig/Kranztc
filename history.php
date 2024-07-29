@@ -76,6 +76,7 @@
 		$mins = 24 * 60 * 60;
 		//$new_date = strtotime($_POST['date']);
 		//echo $new_date;
+		echo "<form>";
 		for ($x = date("w"); $x >= 0; $x--) {
 			$time = strtotime($_POST['date']) - $x * $mins;
 			$day = $name[date("w",$time)];
@@ -89,11 +90,13 @@
 				$row = $result->fetch_assoc();
 				$num = $row["Hours"];
 				$vacation = $row["Vacation"];
-				echo "<tr><form><td class='$day'><input type='text' value=$date hidden>$date</td></form>";
-				echo "<td>$num</td>";
+				echo "<tr><td class='$day'>$date</td>";
+				echo "<td><input type='text' value=$date hidden>$num</td>";
 				if ($vacation) {
+					echo "<input type='checkbox' class='hidden' name='vacation' checked hidden>";	
 					echo "<td>Yes</td></tr>";
 				} else {
+					echo "<input type='checkbox' class='hidden' name='vacation' checked hidden>";
 					echo "<td>No</td></tr>";
 				}
 			}
@@ -121,6 +124,7 @@
 				}
 			}
 		}
+		echo "</form>";
     ?>
   </table>
   <div class="button1">
