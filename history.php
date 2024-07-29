@@ -77,6 +77,7 @@
 		//$new_date = strtotime($_POST['date']);
 		//echo $new_date;
 		echo "<form>";
+		echo "<input type='hidden' name='id' value=$id>";
 		for ($x = date("w"); $x >= 0; $x--) {
 			$time = strtotime($_POST['date']) - $x * $mins;
 			$day = $name[date("w",$time)];
