@@ -33,7 +33,7 @@
 			$conn->query($sql);
 		} else {
 			$sql = "INSERT INTO Hours VALUES ($date, $hours, $vacation, $id)";
-			//echo $sql;
+			echo $sql;
 			$conn->query($sql);
 		}
 	}
