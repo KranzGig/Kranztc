@@ -60,50 +60,56 @@
   <div class="line">
   </div>
   <table id="history_table">
-    <tr>
-      <th>Date:</th>
-      <th>Hours:</th>
-      <th>Paid Vacation:</th>
-    </tr>
-    <tr>
-      <!--<td>date1</td>-->
-      <?php
-	$date = $_POST['date'];
-	echo "<td>$date</td>";
-      ?>
-      <td>hours</td>
-      <td>paidvaca?y/n</td>
-    </tr>
-    <tr>
-      <td>date2</td>
-      <td>hours</td>
-      <td>paidvaca?y/n</td>
-    </tr>
-    <tr>
-      <td>date3</td>
-      <td>hours</td>
-      <td>paidvaca?y/n</td>
-    </tr>
-    <tr>
-      <td>date4</td>
-      <td>hours</td>
-      <td>paidvaca?y/n</td>
-    </tr>
-    <tr>
-      <td>date5</td>
-      <td>hours</td>
-      <td>paidvaca?y/n</td>
-    </tr>
-    <tr>
-      <td>date6</td>
-      <td>hours</td>
-      <td>paidvaca?y/n</td>
-    </tr>
-    <tr>
-      <td>date7</td>
-      <td>hours</td>
-      <td>paidvaca?y/n</td>
-    </tr>
+    <?php
+	$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+		$mins = 24 * 60 * 60;
+
+		for ($x = date("w"); $x >= 0; $x--) {
+			$time = time() - $x * $mins;
+			$day = $name[date("w",$time)];
+			$timestamp = date("m/d",$time);
+			$date = $day." ".date("m/d",$time);
+			$sql = "SELECT Hours,Vacation FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
+			
+			$result = $conn->query($sql);
+			$num = 0;
+			if ($result->num_rows > 0) {
+				$row = $result->fetch_assoc();
+				$num = $row["Hours"];
+				$vacation = $row["Vacation"];
+				echo "<tr><td class='$day'>$date</td>";
+				echo "<td>$num</td>";
+				if ($vacation) {
+					echo "<td>Yes</td>";
+				} else {
+					echo "<td>No</td>";
+				}
+			}
+			
+		}
+		for ($x = 1; $x < 7-date("w"); $x++) {
+			$time = time() + $x * $mins;
+			$day = $name[date("w",$time)];
+			$timestamp = date("m/d",$time);
+			$date = $day." ".date("m/d",$time);
+			$sql = "SELECT Hours,Vacation FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
+			
+			$result = $conn->query($sql);
+			$num = 0;
+			if ($result->num_rows > 0) {
+				$row = $result->fetch_assoc();
+				$num = $row["Hours"];
+				$vacation = $row["Vacation"];
+				echo "<tr><td class='$day'>$date</td>";
+				echo "<td>$num</td>";
+				if ($vacation) {
+					echo "<td>Yes</td>";
+				} else {
+					echo "<td>No</td>";
+				}
+			}
+		}
+    ?>
   </table>
   <div class="button1">
   <button class="square" id="history_edit">
