@@ -22,7 +22,11 @@
    srcset="clock.png 2400w"
    sizes="80vw";
   >
-  <h1>Enter Hours</h1>
+<?php
+	session_start();
+	$name = $_SESSION['name'];
+	echo "<h1>$name Enter Hours</h1>";
+?>
 <div class="container">
   <table class="table table-borderless table-responsive">
     <form action="submission.php" method="POST">
