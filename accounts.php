@@ -15,7 +15,8 @@
     <li><a href="history.html">History</a></li>
     <?php
 	session_start();
-	echo "<li>$_SESSION['name']</li>";
+	$name = $_SESSION['name'];
+	echo "<li>".$name."</li>";
     ?>
     <li id="right"><a href="login.html">Log Out</a></li>
   </ul>
