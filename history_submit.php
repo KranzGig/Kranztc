@@ -19,9 +19,9 @@
 		$date = '"'.substr($date, strpos($date, ' ')).'"';
 		$id = $_POST['id'];
 		$hours = $_POST[$day . '-hours'];
-		$vacation = "False";
+		$vacation = 0;
 		if (isset($_POST[$day . '-vacation'])) {
-			$vacation = "True";
+			$vacation = 1;
 		}
 		//$vacation = $_POST[$day . 'pvacation'];
 		$sql = "SELECT * FROM Hours WHERE Date=$date AND EmpID=$id;";
