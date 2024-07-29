@@ -138,6 +138,10 @@
 		for (let j = 0; j < hidden.length; j++) {
 	  		hidden[j].removeAttribute("hidden");
 		}
+		const unhidden = document.getElementsByClassName("unhidden");
+		for (let j = 0; j < unhidden.length; j++) {
+	  		unhidden[j].setAttribute("hidden","true");
+		}
 	}
 	function addHidden() {
 		const hidden = document.getElementsByClassName("hidden");
