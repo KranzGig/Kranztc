@@ -19,6 +19,7 @@
     		while($row = $result->fetch_assoc()) {
           $email_orig = $row['email'];
 	  $email = $_POST['email-'.str_replace(".","_",$email_orig).'_'];
+	  $name = $_POST['name-'.str_replace(".","_",$email_orig).'_'];
           $admin = 1;
           if (isset($_POST["admin-".str_replace(".","_",$email_orig)])) {
 			      $admin = 0;
