@@ -122,6 +122,7 @@
 				}
 			}
 		}
+		echo "<input type='submit' value='Save' class='hidden' hidden>";
 		echo "</form>";
     ?>
   </table>
