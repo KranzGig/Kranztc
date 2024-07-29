@@ -51,7 +51,7 @@
         <th>Pick Date:</th>
        <td>
 	<form>
-	  <input type="date" name="date">
+	  <input type="date" name="date" id="date">
 	</form>
       </td>
       </tr>
