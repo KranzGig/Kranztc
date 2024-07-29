@@ -122,7 +122,7 @@
 				}
 			}
 		}
-		echo "<tr><td><input type='submit' value='Save' class='hidden' hidden></td></tr>";
+		echo "<tr><td><input type='submit' value='Save' class='hidden' hidden></td><td><button>Cancel</button></td></tr>";
 		echo "</form>";
     ?>
   </table>
