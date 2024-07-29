@@ -115,6 +115,7 @@ body {
 #small {
   font-size: 15px;
   margin-top: -20px;
+  text-align: center;
 }
 input[type=submit] {
   width: 100px;
@@ -131,7 +132,7 @@ input[type=checkbox] {
   width: 20px;
   height: 20px;
 }
-input[type=text], select {
+input[type=text], select, #pass {
   width: 400px;
   padding: 12px 20px;
   margin: 8px 0;
