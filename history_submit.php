@@ -38,5 +38,5 @@
 		}
 	}
 	//header('Location: history.php');
-		exit;
+		//exit;
 ?>
