@@ -68,7 +68,7 @@
     <?php
 	$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 		$mins = 24 * 60 * 60;
-		echo $_POST['date'].getTimestamp();
+		echo $_POST['date'];
 		for ($x = date("w"); $x >= 0; $x--) {
 			$time = time() - $x * $mins;
 			$day = $name[date("w",$time)];
