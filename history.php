@@ -23,7 +23,7 @@
        <tr>
         <th>Caretaker:</th>
        <td>
-	<form method="post">
+	<form method="post" name="info">
 	  <select name="caretakers" id="caretakers">
 	    <?php
 		$servername = "127.0.0.1:3306";
@@ -33,14 +33,7 @@
 
 			$defname = '';
 			$url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-     
-			// Use parse_url() function to parse the URL 
-			// and return an associative array which
-			// contains its various components
 			$url_components = parse_url($url);
-			 
-			// Use parse_str() function to parse the
-			// string passed via URL
 			parse_str($url_components['query'], $params);
 		    if (isset($params['name']))
 		{
@@ -70,6 +63,25 @@
       <tr>
         <th>Pick Date:</th>
        <td>
+          <?php
+			$url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+			$url_components = parse_url($url);
+			parse_str($url_components['query'], $params);
+		    if (isset($params['date']))
+		{
+			$date = $params['date'];
+			echo "<input type='date' name='date' id='date' value=$date>"; ?>
+			
+
+			<script type="text/javascript">
+			    document.getElementById('info').submit(); // SUBMIT FORM
+			</script>
+		<?php
+
+		} else {
+			echo "<input type='date' name='date' id='date'>";
+		}
+	  ?>
 	  <input type="date" name="date" id="date">
       </td>
       </tr>
