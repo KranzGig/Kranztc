@@ -30,11 +30,11 @@
 		if ($result->num_rows > 0) {
 			$sql = "UPDATE Hours SET Hours=$hours, Vacation=$vacation WHERE Date=$date AND EmpID=$id";
 			echo $sql;
-			$conn->query($sql);
+			//$conn->query($sql);
 		} else {
 			$sql = "INSERT INTO Hours VALUES ($date, $hours, $vacation, $id)";
-			//echo $sql;
-			$conn->query($sql);
+			echo $sql;
+			//$conn->query($sql);
 		}
 	}
 	//header('Location: history.php');
