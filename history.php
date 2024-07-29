@@ -127,7 +127,7 @@
     ?>
   </table>
   <div class="button1">
-  <button class="square" id="history_edit" onclick=removeHidden()>
+  <button class="square" id="history_edit" class="unhidden" onclick=removeHidden()>
     /
   </button>
   Edit
