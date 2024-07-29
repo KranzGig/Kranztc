@@ -37,6 +37,7 @@
 			$conn->query($sql);
 		}
 	}
+	echo "done";
 	//header('Location: history.php');
 		//exit;
 ?>
