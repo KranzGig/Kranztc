@@ -82,7 +82,7 @@
 			echo "<input type='date' name='date' id='date'>";
 		}
 	  ?>
-	  <input type="date" name="date" id="date">
+	  <!--<input type="date" name="date" id="date">-->
       </td>
       </tr>
       <tr><td>
