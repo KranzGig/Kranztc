@@ -55,6 +55,7 @@
       <tr><td>
 	      <input type="submit" value="Go">
       </td></tr>
+	  </form>
     </table>
   </div>
   <div class="line">
