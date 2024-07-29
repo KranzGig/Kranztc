@@ -23,7 +23,7 @@
        <tr>
         <th>Caretaker:</th>
        <td>
-	<form>
+	<form method="post">
 	  <select name="caretakers" id="caretakers">
 	    <?php
 		$servername = "127.0.0.1:3306";
@@ -66,7 +66,11 @@
       <th>Paid Vacation:</th>
     </tr>
     <tr>
-      <td>date1</td>
+      <!--<td>date1</td>-->
+      <?php
+	$date = $_POST['date'];
+	echo "<td>$date</td>";
+      ?>
       <td>hours</td>
       <td>paidvaca?y/n</td>
     </tr>
