@@ -66,6 +66,8 @@
       <th>Paid Vacation:</th>
     </tr>
     <?php
+	session_start();
+	$id = $_SESSION['id'];
 	$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 		$mins = 24 * 60 * 60;
 		//$new_date = strtotime($_POST['date']);
@@ -76,7 +78,7 @@
 			$timestamp = date("m/d",$time);
 			$date = $day." ".date("m/d",$time);
 			$sql = "SELECT Hours,Vacation FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
-			echo $timestamp;
+			//echo $timestamp;
 			$result = $conn->query($sql);
 			$num = 0;
 			if ($result->num_rows > 0) {
@@ -99,7 +101,7 @@
 			$timestamp = date("m/d",$time);
 			$date = $day." ".date("m/d",$time);
 			$sql = "SELECT Hours,Vacation FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
-			
+			//echo $timestamp;
 			$result = $conn->query($sql);
 			$num = 0;
 			if ($result->num_rows > 0) {
