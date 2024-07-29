@@ -38,7 +38,7 @@
 		 if ($result->num_rows > 0) {
     			while($row = $result->fetch_assoc()) {
 				$name = $row['name'];
-				echo "<option value ='".$name.">".$name."</option>";
+				echo "<option value ='".$name."'>".$name."</option>";
 			}
 		 }
 	    ?>
