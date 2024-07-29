@@ -68,10 +68,10 @@
     <?php
 	$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 		$mins = 24 * 60 * 60;
-		$new_date = strtotime($_POST['date']);
-		echo $new_date;
+		//$new_date = strtotime($_POST['date']);
+		//echo $new_date;
 		for ($x = date("w"); $x >= 0; $x--) {
-			$time = time() - $x * $mins;
+			$time = strtotime($_POST['date']) - $x * $mins;
 			$day = $name[date("w",$time)];
 			$timestamp = date("m/d",$time);
 			$date = $day." ".date("m/d",$time);
@@ -94,7 +94,7 @@
 			
 		}
 		for ($x = 1; $x < 7-date("w"); $x++) {
-			$time = time() + $x * $mins;
+			$time = strtotime($_POST['date']) + $x * $mins;
 			$day = $name[date("w",$time)];
 			$timestamp = date("m/d",$time);
 			$date = $day." ".date("m/d",$time);
