@@ -89,7 +89,7 @@
 				$row = $result->fetch_assoc();
 				$num = $row["Hours"];
 				$vacation = $row["Vacation"];
-				echo "<tr><form><td class='$day'><input type="text">$date</td></form>";
+				echo "<tr><form><td class='$day'><input type='text' value=$date>$date</td></form>";
 				echo "<td>$num</td>";
 				if ($vacation) {
 					echo "<td>Yes</td></tr>";
