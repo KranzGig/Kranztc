@@ -33,12 +33,14 @@
 	
 		// Create connection
 		$conn = new mysqli($servername, $username, $password, $dbname);
-		$sql = 'SELECT name FROM accounts';
+		$sql = 'SELECT name, admin FROM accounts';
 		$result = $conn->query($sql);
 		 if ($result->num_rows > 0) {
     			while($row = $result->fetch_assoc()) {
 				$name = $row['name'];
-				echo "<option value ='".$name."'>".$name."</option>";
+				if (!$row['admin']) {
+					echo "<option value ='".$name."'>".$name."</option>";
+				}
 			}
 		 }
 	    ?>
