@@ -93,11 +93,9 @@
 				echo "<tr><td class='$day'>$date</td>";
 				echo "<td><input type='text' value=$date hidden>$num</td>";
 				if ($vacation) {
-					echo "<input type='checkbox' class='hidden' name='vacation' checked hidden>";	
-					echo "<td>Yes</td></tr>";
+					echo "<td><input type='checkbox' class='hidden' name='vacation' checked hidden>Yes</td></tr>";
 				} else {
-					echo "<input type='checkbox' class='hidden' name='vacation' checked hidden>";
-					echo "<td>No</td></tr>";
+					echo "<td><input type='checkbox' class='hidden' name='vacation' hidden>No</td></tr>";
 				}
 			}
 			
@@ -116,11 +114,11 @@
 				$num = $row["Hours"];
 				$vacation = $row["Vacation"];
 				echo "<tr><td class='$day'>$date</td>";
-				echo "<td>$num</td>";
+				echo "<td><input type='text' value=$date hidden>$num</td>";
 				if ($vacation) {
-					echo "<td>Yes</td></tr>";
+					echo "<td><input type='checkbox' class='hidden' name='vacation' checked hidden>Yes</td></tr>";
 				} else {
-					echo "<td>No</td></tr>";
+					echo "<td><input type='checkbox' class='hidden' name='vacation' hidden>No</td></tr>";
 				}
 			}
 		}
