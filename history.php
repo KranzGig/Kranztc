@@ -67,7 +67,7 @@
     </tr>
     <?php
 	session_start();
-	$name = $_POST['name'];
+	$name = $_POST['caretakers'];
 	$sql = "SELECT id FROM accounts WHERE name=$name";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
