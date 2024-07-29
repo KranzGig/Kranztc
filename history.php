@@ -68,7 +68,7 @@
     <?php
 	$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 		$mins = 24 * 60 * 60;
-		$new_date = date('Y-m-d', strtotime($_POST['date']));
+		$new_date = strtotime($_POST['date']);
 		echo $new_date;
 		for ($x = date("w"); $x >= 0; $x--) {
 			$time = time() - $x * $mins;
