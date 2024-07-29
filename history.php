@@ -25,8 +25,23 @@
        <td>
 	<form>
 	  <select name="caretakers" id="caretakers">
-	    <option value="caretaker1">caretaker1</option>
-            <option value="caretaker2">caretaker2</option>
+	    <?php
+		$servername = "127.0.0.1:3306";
+		$username = "u751975974_kranz";
+		$password = "Dradbgon12";
+		$dbname = "u751975974_TestDB";
+	
+		// Create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		$sql = 'SELECT name FROM accounts';
+		$result = $conn->query($sql);
+		 if ($result->num_rows > 0) {
+    			while($row = $result->fetch_assoc()) {
+				$name = $row['name'];
+				echo "<option value ='".$name.">".$name."</option>";
+			}
+		 }
+	    ?>
 	</form>
       </td>
       </tr>
