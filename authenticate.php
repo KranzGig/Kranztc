@@ -54,11 +54,10 @@ if ($stmt = $conn->prepare('SELECT id, password, admin, name FROM accounts WHERE
     		$_SESSION['uname'] = $_POST['uname'];
     		$_SESSION['id'] = $id;
 		$_SESSION['name'] = $name;
-		echo $name;
     		if ($admin == 0) {
-    		    	//header('Location: enter_hours.php');
+    		    	header('Location: enter_hours.php');
 		    } else {
-			//header('Location: accounts.php');
+			header('Location: accounts.php');
 		    }
     	} else {
     		// Incorrect password
