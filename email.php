@@ -22,7 +22,7 @@
 	}
 	$mail = new PHPMailer;
 	   $mail->isSMTP();
-	   $mail->SMTPDebug = 2;
+	   //$mail->SMTPDebug = 2;
 	   $mail->Host = 'smtp.hostinger.com';
 	   $mail->Port = 587;
 	   $mail->SMTPAuth = true;
