@@ -60,6 +60,11 @@
   <div class="line">
   </div>
   <table id="history_table">
+	  <tr>
+      <th>Date:</th>
+      <th>Hours:</th>
+      <th>Paid Vacation:</th>
+    </tr>
     <?php
 	$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 		$mins = 24 * 60 * 60;
