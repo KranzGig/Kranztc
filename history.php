@@ -30,7 +30,24 @@
 		$username = "u751975974_kranz";
 		$password = "Dradbgon12";
 		$dbname = "u751975974_TestDB";
-	
+
+			$defname = '';
+			$url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+     
+			// Use parse_url() function to parse the URL 
+			// and return an associative array which
+			// contains its various components
+			$url_components = parse_url($url);
+			 
+			// Use parse_str() function to parse the
+			// string passed via URL
+			parse_str($url_components['query'], $params);
+		    if (isset($params['name']))
+		{
+			$defname = $params['name'];
+		}
+		
+		
 		// Create connection
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		$sql = 'SELECT name, admin FROM accounts';
@@ -39,7 +56,11 @@
     			while($row = $result->fetch_assoc()) {
 				$name = $row['name'];
 				if (!$row['admin']) {
-					echo "<option value ='".$name."'>".$name."</option>";
+					if ($name == $defname) {
+						echo "<option value ='".$name."' selected>".$name."</option>";
+					} else {
+						echo "<option value ='".$name."'>".$name."</option>";
+					}
 				}
 			}
 		 }
