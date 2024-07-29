@@ -67,7 +67,11 @@
     </tr>
     <?php
 	session_start();
-	$id = $_SESSION['id'];
+	$name = $_POST['name'];
+	$sql = "SELECT id FROM accounts WHERE name=$name";
+	$result = $conn->query($sql);
+	$row = $result->fetch_assoc();
+	$id = $row['id'];
 	$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 		$mins = 24 * 60 * 60;
 		//$new_date = strtotime($_POST['date']);
