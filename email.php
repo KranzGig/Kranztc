@@ -1,4 +1,6 @@
-s<?php
+<?php
+  require 'vendor/autoload.php';
+   use PHPMailer\PHPMailer\PHPMailer;
   $servername = "127.0.0.1:3306";
   $username = "u751975974_kranz";
   $password = "Dradbgon12";
@@ -18,8 +20,6 @@ s<?php
 		$stmt->bind_param('s', md5($code));
 		$stmt->execute();
 	}
-        require 'vendor/autoload.php';
-   	use PHPMailer\PHPMailer\PHPMailer;
 	echo "kranztc.com/reset.php?id=".$code;
     } else {
       echo 'Incorrect email!';
