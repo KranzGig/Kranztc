@@ -132,7 +132,7 @@ input[type=checkbox] {
   width: 20px;
   height: 20px;
 }
-input[type=text], select, #pass {
+input[type=text], select, {
   width: 400px;
   padding: 12px 20px;
   margin: 8px 0;
