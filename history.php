@@ -15,7 +15,7 @@
     <li id="current_tab"><a href="history.html">History</a></li>
     <li id="right"><a href="login.html">Log Out</a></li>
   </ul>
-  <h1>Caretaker History</h1>
+  <h1>Weekly Caretaker History</h1>
   <div class="line">
   </div>
   <div class="long">
