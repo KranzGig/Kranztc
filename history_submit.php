@@ -15,7 +15,7 @@
 	$days = array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
 	foreach ($days as $day) {
 		$date = $_POST[$day . '-date'];
-		echo $date;
+		//echo $date;
 		$date = '"'.substr($date, strpos($date, ' ')).'"';
 		$id = $_POST['id'];
 		$hours = $_POST[$day . '-hours'];
@@ -29,7 +29,7 @@
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			$sql = "UPDATE Hours SET Hours=$hours, Vacation=$vacation WHERE Date=$date AND EmpID=$id";
-			echo $sql;
+			//echo $sql;
 			$conn->query($sql);
 		} else {
 			$sql = "INSERT INTO Hours VALUES ($date, $hours, $vacation, $id)";
@@ -37,6 +37,6 @@
 			$conn->query($sql);
 		}
 	}
-	//header('Location: history.php');
-		//exit;
+	header('Location: history.php');
+		exit;
 ?>
