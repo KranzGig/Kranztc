@@ -126,10 +126,26 @@
     ?>
   </table>
   <div class="button1">
-  <button class="square" id="history_edit">
+  <button class="square" id="history_edit" onclick=removeHidden()>
     /
   </button>
   Edit
   </div>
+
+<script>
+	function removeHidden() {
+		const hidden = document.getElementsByClassName("hidden");
+		for (let j = 0; j < hidden.length; j++) {
+	  		hidden[j].removeAttribute("hidden");
+		}
+	}
+	function addHidden() {
+		const hidden = document.getElementsByClassName("hidden");
+		for (let j = 0; j < hidden.length; j++) {
+	  		hidden[j].setAttribute("hidden","true");
+		}
+	}
+</script>
+		  
 </body>
 </html>
