@@ -92,11 +92,11 @@
 				$num = $row["Hours"];
 				$vacation = $row["Vacation"];
 				echo "<tr><td>$date</td>";
-				echo "<td><input type='text' value=$num class='hidden' hidden><p class='unhidden'>$num</p></td>";
+				echo "<td><input type='text' name=$day."-hours" value=$num class='hidden' hidden><p class='unhidden'>$num</p></td>";
 				if ($vacation) {
-					echo "<td><input type='checkbox' class='hidden' name='vacation' checked hidden><p class='unhidden'>Yes</p></td></tr>";
+					echo "<td><input type='checkbox' class='hidden' name=$day."-vacation" checked hidden><p class='unhidden'>Yes</p></td></tr>";
 				} else {
-					echo "<td><input type='checkbox' class='hidden' name='vacation' hidden><p class='unhidden'>No</p></td></tr>";
+					echo "<td><input type='checkbox' class='hidden' name=$day."-vacation" hidden><p class='unhidden'>No</p></td></tr>";
 				}
 			}
 			
