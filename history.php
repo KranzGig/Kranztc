@@ -122,7 +122,7 @@
 				}
 			}
 		}
-		echo "<tr><td><input type='submit' value='Save' class='hidden' hidden></td><td><button class='hidden' hidden>Cancel</button></td></tr>";
+		echo "<tr><td><input type='submit' value='Save' class='hidden' hidden></td><td><button class='hidden' onclick=addHidden() hidden>Cancel</button></td></tr>";
 		echo "</form>";
     ?>
   </table>
@@ -142,6 +142,16 @@
 		const unhidden = document.getElementsByClassName("unhidden");
 		for (let j = 0; j < unhidden.length; j++) {
 	  		unhidden[j].setAttribute("hidden","true");
+		}
+	}
+	function addHidden() {
+		const hidden = document.getElementsByClassName("hidden");
+		for (let j = 0; j < hidden.length; j++) {
+	  		hidden[j].setAttribute("hidden","true");
+		}
+		const unhidden = document.getElementsByClassName("unhidden");
+		for (let j = 0; j < unhidden.length; j++) {
+	  		unhidden[j].removeAttribute("hidden");
 		}
 	}
 </script>
