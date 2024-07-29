@@ -39,7 +39,7 @@ if ($stmt = $conn->prepare('SELECT id, password, admin FROM accounts WHERE email
 		    if ($admin == 0) {
     		    	header('Location: enter_hours.php');
 		    } else {
-			header('Location: accounts.html');
+			header('Location: accounts.php');
 		    }
     	    }
     	    
@@ -55,7 +55,7 @@ if ($stmt = $conn->prepare('SELECT id, password, admin FROM accounts WHERE email
     		if ($admin == 0) {
     		    	header('Location: enter_hours.php');
 		    } else {
-			header('Location: accounts.html');
+			header('Location: accounts.php');
 		    }
     	} else {
     		// Incorrect password
