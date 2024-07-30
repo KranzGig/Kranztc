@@ -30,9 +30,10 @@
     $myfile = fopen("result.csv", "w");
     fwrite($myfile, "Date, Hours, Vacation, Name\n");
     while($row = $result->fetch_assoc()) {
+        echo $row['Date'];
         $id = $row["EmpID"];
-        $sql = "SELECT name FROM accounts WHERE id=$id";
-        $result = $conn->query($sql);
+        $sql2 = "SELECT name FROM accounts WHERE id=$id";
+        $result = $conn->query($sql2);
         $nrow = $result->fetch_assoc();
         $name = $nrow['name'];
         fwrite($myfile, $row["Date"] . ", ");
@@ -45,7 +46,7 @@
    
    
    
-   require 'vendor/autoload.php';
+   /*require 'vendor/autoload.php';
    use PHPMailer\PHPMailer\PHPMailer;
    $mail = new PHPMailer;
    $mail->isSMTP();
@@ -65,7 +66,7 @@
        echo 'Mailer Error: ' . $mail->ErrorInfo;
    } else {
        echo 'The email message was sent.';
-   }
+   }*/
 ?>
 </body>
 </html>
