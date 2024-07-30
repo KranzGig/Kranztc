@@ -35,7 +35,7 @@
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
-	$sql = 'SELECT email, admin, name FROM accounts';
+	$sql = 'SELECT email, admin, name, phone FROM accounts';
 	$result = $conn->query($sql);
 	 if ($result->num_rows > 0) {
     		while($row = $result->fetch_assoc()) {
@@ -44,10 +44,15 @@
 			echo "<td>";
 			echo $row['name'];
 			echo "</td></tr>";
-			echo "<th>Email:</th>";
+			echo "<tr><th>Email:</th>";
 			echo "<td>";
 			echo "<input type='hidden' name='email' value='".$row['email']."'/>";
 			echo $row['email'];
+			echo "</td></tr>";
+			echo "<tr><th>Phone Number:</th>";
+			echo "<td>";
+			echo "<input type='hidden' name='phone' value='".$row['phone']."'/>";
+			echo $row['phone'];
 			echo "</td></tr>";
 			echo "<tr>";
 			echo "<th>Caretaker:</th>";
