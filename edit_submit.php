@@ -30,6 +30,10 @@
 		  header('Location:empty.html');
 		  exit();
 	  }
+	if ($phone == '') {
+		  header('Location:empty.html');
+		  exit();
+	  }
           $sql = "UPDATE accounts SET email='$email', admin=$admin, phone='$phone' WHERE email='$email_orig'";
 	//echo $sql;  
 	$conn->query($sql);
