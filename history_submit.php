@@ -33,6 +33,7 @@
 			$conn->query($sql);
 		}
 	}
+	$date = $_POST['Sun-date'];
 	$sql = "SELECT name FROM accounts WHERE id=$id";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
