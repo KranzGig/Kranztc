@@ -148,7 +148,7 @@
   </button>
   Edit
   </div>
-  <p></p><p></p>
+  <br /><br /><br /><br />
 
 <script>
 	function removeHidden() {
