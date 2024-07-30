@@ -24,22 +24,17 @@
     $week = 7*24*60*60;
     $firstdate = date("m/d",time()-2*$week);
     $seconddate = date("m/d",time());
-    $sql = "SELECT * FROM Hours WHERE Date>=' $firstdate' AND Date<=' $seconddate' ORDER BY Date, EmpID";
+    $sql = "SELECT Hours.Date, Hours.Hours, Hours.Vacation, accounts.name FROM Hours INNER JOIN accounts ON Hours.EmpID=accounts.id WHERE Date>=' $firstdate' AND Date<=' $seconddate' ORDER BY Date, EmpID";
     echo $sql;
     $result = $conn->query($sql);
     $myfile = fopen("result.csv", "w");
-    fwrite($myfile, "Date, Hours, Vacation\n");
+    fwrite($myfile, "Date, Hours, Vacation, Name\n");
     while($row = $result->fetch_assoc()) {
         echo $row['Date'];
-        //$id = $row["EmpID"];
-        /*$sql2 = "SELECT name FROM accounts WHERE id=$id";
-        $result = $conn->query($sql2);
-        $nrow = $result->fetch_assoc();
-        $name = $nrow['name'];*/
         fwrite($myfile, $row["Date"] . ", ");
         fwrite($myfile, $row["Hours"] . ", ");
         fwrite($myfile, $row["Vacation"] . ", ");
-        //fwrite($myfile, $name . ", \n");
+        fwrite($myfile, $row["name"] . ", \n");
     }
     
     fclose($myfile);
