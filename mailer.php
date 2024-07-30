@@ -24,7 +24,7 @@
     $week = 7*24*60*60;
     $firstdate = date("m/d",time()-2*$week);
     $seconddate = date("m/d",time());
-    $sql = "SELECT * FROM Hours ORDER BY Date, EmpID WHERE Date>=$firstdate AND Date<=$seconddate";
+    $sql = "SELECT * FROM Hours WHERE Date>=$firstdate AND Date<=$seconddate ORDER BY Date, EmpID";
     echo $sql;
     $result = $conn->query($sql);
     $myfile = fopen("result.csv", "w");
