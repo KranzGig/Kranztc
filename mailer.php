@@ -28,18 +28,18 @@
     echo $sql;
     $result = $conn->query($sql);
     $myfile = fopen("result.csv", "w");
-    fwrite($myfile, "Date, Hours, Vacation, Name\n");
+    fwrite($myfile, "Date, Hours, Vacation\n");
     while($row = $result->fetch_assoc()) {
         echo $row['Date'];
-        $id = $row["EmpID"];
-        $sql2 = "SELECT name FROM accounts WHERE id=$id";
+        //$id = $row["EmpID"];
+        /*$sql2 = "SELECT name FROM accounts WHERE id=$id";
         $result = $conn->query($sql2);
         $nrow = $result->fetch_assoc();
-        $name = $nrow['name'];
+        $name = $nrow['name'];*/
         fwrite($myfile, $row["Date"] . ", ");
         fwrite($myfile, $row["Hours"] . ", ");
         fwrite($myfile, $row["Vacation"] . ", ");
-        fwrite($myfile, $name . ", \n");
+        //fwrite($myfile, $name . ", \n");
     }
     
     fclose($myfile);
