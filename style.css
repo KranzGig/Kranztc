@@ -117,28 +117,7 @@ body {
   margin-top: -20px;
   text-align: center;
 }
-input[type=submit], button {
-  width: 100px;
-  padding: 6px 10px;
-  margin: 8px 0;
-  border: 1px solid #3f6c96;
-  border-radius: 4px;
-  box-sizing: border-box;
-  color: #fff;
-  background-color: #3f6c96;
-  margin-bottom: 15px;
-}
-input[type=checkbox] {
-  width: 20px;
-  height: 20px;
-}
-input[type=text], select, #uname, #pword {
-  width: 350px;
-  padding: 12px 20px;
-  margin: 8px 0;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+
 td input[type=text], select {
   width: 100px;
 }
@@ -172,4 +151,26 @@ h1 {
 }
 .long {
   text-align: center;
+}
+input[type=submit], button {
+  width: 100px;
+  padding: 6px 10px;
+  margin: 8px 0;
+  border: 1px solid #3f6c96;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #3f6c96;
+  margin-bottom: 15px;
+}
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+input[type=text], select, #uname, #pword {
+  width: 350px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
