@@ -20,6 +20,7 @@
           $email_orig = $row['email'];
 	  $email = $_POST['email-'.str_replace(".","_",$email_orig).'_'];
 	  $name = $_POST['name-'.str_replace(".","_",$email_orig).'_'];
+	  $phone = $_POST['phone-'.str_replace(".","_",$email_orig).'_'];
           $admin = 1;
           if (isset($_POST["admin-".str_replace(".","_",$email_orig)])) {
 			      $admin = 0;
@@ -29,7 +30,7 @@
 		  header('Location:empty.html');
 		  exit();
 	  }
-          $sql = "UPDATE accounts SET email='$email', admin=$admin WHERE email='$email_orig'";
+          $sql = "UPDATE accounts SET email='$email', admin=$admin, phone='$phone' WHERE email='$email_orig'";
 	//echo $sql;  
 	$conn->query($sql);
 	  header('Location: accounts.php');
