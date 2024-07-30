@@ -24,7 +24,7 @@
     $week = 7*24*60*60;
     $firstdate = date("m/d",time()-2*$week);
     $seconddate = date("m/d",time());
-    $sql = "SELECT Hours.Date, Hours.Hours, Hours.Vacation, accounts.name FROM Hours INNER JOIN accounts ON Hours.EmpID=accounts.id WHERE Date>=' $firstdate' AND Date<=' $seconddate' ORDER BY Date, EmpID";
+    $sql = "SELECT Hours.Date, Hours.Hours, Hours.Vacation, accounts.name FROM Hours INNER JOIN accounts ON Hours.EmpID=accounts.id WHERE Date>=' $firstdate' AND Date<=' $seconddate' ORDER BY EmpID, Date";
     echo $sql;
     $result = $conn->query($sql);
     $myfile = fopen("result.csv", "w");
