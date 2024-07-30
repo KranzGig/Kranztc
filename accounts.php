@@ -98,7 +98,7 @@
   <div class="line">
   </div>
   <div class="button1">
-  <button onclick="removeHidden()">
+  <button class="square" onclick="removeHidden()">
     +
   </button>
   Add Profile
