@@ -41,7 +41,7 @@
    
    
    
-   /*require 'vendor/autoload.php';
+   require 'vendor/autoload.php';
    use PHPMailer\PHPMailer\PHPMailer;
    $mail = new PHPMailer;
    $mail->isSMTP();
@@ -61,7 +61,7 @@
        echo 'Mailer Error: ' . $mail->ErrorInfo;
    } else {
        echo 'The email message was sent.';
-   }*/
+   }
 ?>
 </body>
 </html>
