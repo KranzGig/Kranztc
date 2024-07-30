@@ -31,15 +31,6 @@
 		$password = "Dradbgon12";
 		$dbname = "u751975974_TestDB";
 
-			$defname = '';
-			$url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-			$url_components = parse_url($url);
-			parse_str($url_components['query'], $params);
-		    if (isset($params['name']))
-		{
-			$defname = $params['name'];
-		}
-		
 		
 		// Create connection
 		$conn = new mysqli($servername, $username, $password, $dbname);
@@ -49,11 +40,7 @@
     			while($row = $result->fetch_assoc()) {
 				$name = $row['name'];
 				if (!$row['admin']) {
-					if ($name == $defname) {
-						echo "<option value ='".$name."' selected>".$name."</option>";
-					} else {
-						echo "<option value ='".$name."'>".$name."</option>";
-					}
+					echo "<option value ='".$name."'>".$name."</option>";
 				}
 			}
 		 }
@@ -63,26 +50,7 @@
       <tr>
         <th>Pick Date:</th>
        <td>
-          <?php
-			$url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-			$url_components = parse_url($url);
-			parse_str($url_components['query'], $params);
-		    if (isset($params['date']))
-		{
-			$date = $params['date'];
-			echo "<input type='date' name='date' id='date' value=$date>"; ?>
-			
-
-			<script type="text/javascript">
-			    document.getElementById('info').submit(); // SUBMIT FORM
-			</script>
-		<?php
-
-		} else {
-			echo "<input type='date' name='date' id='date'>";
-		}
-	  ?>
-	  <!--<input type="date" name="date" id="date">-->
+	  <input type="date" name="date" id="date">
       </td>
       </tr>
       <tr><td>
@@ -101,7 +69,17 @@
     </tr>
     <?php
 	session_start();
-	$name = $_POST['caretakers'];
+	$url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+			$url_components = parse_url($url);
+			parse_str($url_components['query'], $params);
+	if (isset($params['date']) && isset($params['name'])) {
+		$name = $params['name'];
+		$curdate = strtotime($params['date']);
+	} else {
+		$name = $_POST['caretakers'];
+		$curdate = strtotime($_POST['date']);
+	}
+	
 	$sql = "SELECT id FROM accounts WHERE name='$name'";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
@@ -113,7 +91,7 @@
 		echo "<form action='history_submit.php' method='post'>";
 		echo "<input type='hidden' name='id' value=$id>";
 		for ($x = date("w"); $x >= 0; $x--) {
-			$time = strtotime($_POST['date']) - $x * $mins;
+			$time = $curdate - $x * $mins;
 			$day = $name[date("w",$time)];
 			$timestamp = date("m/d",$time);
 			$date = $day." ".date("m/d",$time);
@@ -136,7 +114,7 @@
 			
 		}
 		for ($x = 1; $x < 7-date("w"); $x++) {
-			$time = strtotime($_POST['date']) + $x * $mins;
+			$time = $curdate + $x * $mins;
 			$day = $name[date("w",$time)];
 			$timestamp = date("m/d",$time);
 			$date = $day." ".date("m/d",$time);
