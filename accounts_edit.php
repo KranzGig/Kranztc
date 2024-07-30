@@ -46,6 +46,10 @@
 			//echo $row['email'];
 			echo "</td></tr>";
 			echo "<tr>";
+			echo "<th>Phone Number:</th>";
+			echo "<td><input type='text' name='phone-".$row['email']." 'value='".$row['phone']."'></td>";
+			echo "</td></tr>";
+			echo "<tr>";
 			echo "<th>Caretaker:</th>";
 			echo "<td>";
 			if ($row['admin'] == 0) {
