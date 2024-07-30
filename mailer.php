@@ -25,6 +25,7 @@
     $firstdate = date("m/d",time()-2*$week);
     $seconddate = date("m/d",time());
     $sql = "SELECT * FROM Hours ORDER BY Date, EmpID WHERE Date>=$firsttdate AND Date<=$seconddate";
+    echo $sql;
     $result = $conn->query($sql);
     $myfile = fopen("result.csv", "w");
     fwrite($myfile, "Date, Hours, Vacation, Name\n");
