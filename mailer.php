@@ -38,8 +38,8 @@
     }
     
     fclose($myfile);*/
-   
-    echo date("m/d",time());
+    $week = 7*24*60*60;
+    echo date("m/d",time()-2*$week);
    
    
    
