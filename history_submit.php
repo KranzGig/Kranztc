@@ -33,7 +33,11 @@
 			$conn->query($sql);
 		}
 	}
+	$sql = "SELECT name FROM accounts WHERE id=$id";
+	$result = $conn->query($sql);
+	$row = $result->fetch_assoc();
+	$name = $row['name'];
 	//echo "done";
-	header('Location: history.php');
+	header("Location: history.php?name=$name&date=$date");
 		exit;
 ?>
