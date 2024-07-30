@@ -31,7 +31,7 @@
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
-	$sql = 'SELECT email, admin, name FROM accounts';
+	$sql = 'SELECT email, admin, name, phone FROM accounts';
 	$result = $conn->query($sql);
 	 if ($result->num_rows > 0) {
     		while($row = $result->fetch_assoc()) {
