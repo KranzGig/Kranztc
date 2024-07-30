@@ -30,7 +30,7 @@
     $myfile = fopen("result.csv", "w");
     fwrite($myfile, "Date, Hours, Vacation, Name\n");
     while($row = $result->fetch_assoc()) {
-        echo $row['Date'];
+        //echo $row['Date'];
         fwrite($myfile, $row["Date"] . ", ");
         fwrite($myfile, $row["Hours"] . ", ");
         fwrite($myfile, $row["Vacation"] . ", ");
@@ -45,7 +45,7 @@
    use PHPMailer\PHPMailer\PHPMailer;
    $mail = new PHPMailer;
    $mail->isSMTP();
-   $mail->SMTPDebug = 2;
+   //$mail->SMTPDebug = 2;
    $mail->Host = 'smtp.hostinger.com';
    $mail->Port = 587;
    $mail->SMTPAuth = true;
