@@ -21,7 +21,10 @@
         die("Connection failed: " . $conn->connect_error);
     }
     //$sql = "SELECT * FROM Hours INTO OUTFILE '/usr/bin/php /home/u751975974/public_html/result.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'";
-    /*$sql = "SELECT * FROM Hours ORDER BY Date, EmpID";
+    $week = 7*24*60*60;
+    $firstdate = date("m/d",time()-2*$week);
+    $seconddate = date("m/d",time());
+    $sql = "SELECT * FROM Hours ORDER BY Date, EmpID WHERE Date>=$firsttdate && Date<=$seconddate";
     $result = $conn->query($sql);
     $myfile = fopen("result.csv", "w");
     fwrite($myfile, "Date, Hours, Vacation, Name\n");
@@ -37,13 +40,11 @@
         fwrite($myfile, $name . ", \n");
     }
     
-    fclose($myfile);*/
-    $week = 7*24*60*60;
-    echo date("m/d",time()-2*$week);
+    fclose($myfile);
    
    
    
-   /*require 'vendor/autoload.php';
+   require 'vendor/autoload.php';
    use PHPMailer\PHPMailer\PHPMailer;
    $mail = new PHPMailer;
    $mail->isSMTP();
@@ -63,7 +64,7 @@
        echo 'Mailer Error: ' . $mail->ErrorInfo;
    } else {
        echo 'The email message was sent.';
-   }*/
+   }
 ?>
 </body>
 </html>
