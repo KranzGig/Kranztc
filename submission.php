@@ -27,6 +27,9 @@
 		$sql = "SELECT * FROM Hours WHERE Date=$date AND EmpID=$id;";
 		//echo $sql;
 		$result = $conn->query($sql);
+		if ($hours == '') {
+			$hours = 0;
+		}
 		if ($result->num_rows > 0) {
 			$sql = "UPDATE Hours SET Hours=$hours, Vacation=$vacation WHERE Date=$date AND EmpID=$id";
 			echo $sql;
