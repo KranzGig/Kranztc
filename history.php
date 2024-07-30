@@ -53,7 +53,8 @@
 	  <input type="date" name="date" id="date">
       </td>
       </tr>
-      <tr><td>
+      <tr><th> </th>
+      <td>
 	      <input type="submit" value="Go">
       </td></tr>
 	  </form>
@@ -145,7 +146,7 @@
   <button class="square" id="history_edit" class="unhidden" onclick=removeHidden()>
     /
   </button>
-  Edit
+  Edit<br />
   </div>
 
 <script>
