@@ -170,3 +170,6 @@ h1 {
 .long #date, #caretakers {
   width: 350px;
 }
+.long {
+  text-align: center;
+}
