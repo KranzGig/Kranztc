@@ -146,8 +146,9 @@
   <button class="square" id="history_edit" class="unhidden" onclick=removeHidden()>
     /
   </button>
-  Edit<br />
+  Edit
   </div>
+  <p></p>
 
 <script>
 	function removeHidden() {
