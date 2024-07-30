@@ -29,11 +29,11 @@
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			$sql = "UPDATE Hours SET Hours=$hours, Vacation=$vacation WHERE Date=$date AND EmpID=$id";
-			//echo $sql;
+			echo $sql;
 			$conn->query($sql);
 		} else {
 			$sql = "INSERT INTO Hours VALUES ($date, $hours, $vacation, $id)";
-			//echo $sql;
+			echo $sql;
 			$conn->query($sql);
 		}
 	}
