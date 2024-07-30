@@ -91,7 +91,7 @@
 		//echo $new_date;
 		echo "<form action='history_submit.php' method='post'>";
 		echo "<input type='hidden' name='id' value=$id>";
-		for ($x = date("w"); $x >= 0; $x--) {
+		for ($x = date("w", $curdate); $x >= 0; $x--) {
 			$time = $curdate - $x * $mins;
 			$day = $name[date("w",$time)];
 			$timestamp = date("m/d",$time);
@@ -114,7 +114,7 @@
 			}
 			
 		}
-		for ($x = 1; $x < 7-date("w"); $x++) {
+		for ($x = 1; $x < 7-date("w",$curdate); $x++) {
 			$time = $curdate + $x * $mins;
 			$day = $name[date("w",$time)];
 			$timestamp = date("m/d",$time);
