@@ -22,7 +22,7 @@
   </ul>
   <h1>Account Management</h1>
 <div class="line">
-</div>
+</div><br />
 <div class="long">
 <table class="table table-borderless table-responsive">
 <?php
@@ -94,7 +94,7 @@
     /
   </button>
   Edit Profile<br>
-  
+  </div>
   <div class="line">
   </div>
   <div class="button1">
