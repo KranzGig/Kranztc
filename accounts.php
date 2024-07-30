@@ -49,7 +49,7 @@
 			echo "<input type='hidden' name='email' value='".$row['email']."'/>";
 			echo $row['email'];
 			echo "</td></tr>";
-			echo "<tr><th>Phone Number:</th>";
+			echo "<tr><th>Phone:</th>";
 			echo "<td>";
 			echo "<input type='hidden' name='phone' value='".$row['phone']."'/>";
 			echo $row['phone'];
