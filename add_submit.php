@@ -12,7 +12,7 @@
     die("Connection failed: " . $conn->connect_error);
   }
   if ($_POST['name'] == '' || $_POST['phone'] == '' || $_POST['email'] == '') {
-    header('Location: empty.html');
+    header('Location: empty_add.html');
     exit;
   }
   $admin = 1;
