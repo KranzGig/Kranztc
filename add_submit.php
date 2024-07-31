@@ -20,8 +20,11 @@
     $admin = 0;
   }
   //echo "Admin: ". $admin;
-  $sql = "INSERT INTO accounts (email, admin)
-  VALUES ('". $_POST['email'] . "'," . $admin . ")";
+  $email = $_POST['email'];
+  $name = $_POST['name'];
+  $phone = $_POST['phone'];
+  $sql = "INSERT INTO accounts (email, name, admin, phone)
+  VALUES ('$email','$name',$admin,'$phone')";
   //echo $sql;
   $conn->query($sql);
   header('Location: accounts.php');
