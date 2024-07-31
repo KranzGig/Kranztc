@@ -12,7 +12,7 @@
     die("Connection failed: " . $conn->connect_error);
   }
   if ($_POST['name'] == "''" || $_POST['phone'] == "''" || $_POST['email'] == "''") {
-    echo "Do not leave any fields blank";
+    header('Location: empty.html');
   }
   $admin = 1;
   if (isset($_POST['caretaker'])) {
