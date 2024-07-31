@@ -13,6 +13,7 @@
   }
   if ($_POST['name'] == "''" || $_POST['phone'] == "''" || $_POST['email'] == "''") {
     header('Location: empty.html');
+    exit;
   }
   $admin = 1;
   if (isset($_POST['caretaker'])) {
