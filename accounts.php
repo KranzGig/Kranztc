@@ -73,8 +73,16 @@
 	<tr id="add">
 		<form action="add_submit.php" method="post">
 			<tr>
+				<th class="hidden" hidden>Name:</th>
+				<td><input type="text" id="name" name="name" class="hidden" hidden> </td>
+			</tr>
+			<tr>
 				<th class="hidden" hidden>Email:</th>
 				<td><input type="text" id="email" name="email" class="hidden" hidden> </td>
+			</tr>
+			<tr>
+				<th class="hidden" hidden>Phone Number:</th>
+				<td><input type="text" id="phone" name="phone" class="hidden" hidden> </td>
 			</tr>
 			<tr>
 				<th class="hidden" hidden>Caretaker:</th>
