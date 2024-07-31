@@ -13,7 +13,7 @@
   <ul>
     <li id="current_tab"><a href="accounts.php">Accounts</a></li>
     <li><a href="history.php">History</a></li>
-    <li id="right"><a href="login.html">Log Out</a></li>
+    <li id="right"><a href="logout.php">Log Out</a></li>
   </ul>
   <h1>Account Management</h1>
 <div class="line">
