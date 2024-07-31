@@ -11,6 +11,9 @@
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
+  if ($_POST['name'] == '' || $_POST['phone'] == '' || $_POST['email'] == '') {
+    echo "Do not leave any fields blank";
+  }
   $admin = 1;
   if (isset($_POST['caretaker'])) {
     $admin = 0;
