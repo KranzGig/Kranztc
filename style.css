@@ -177,7 +177,7 @@ input[type=text], select, #uname, #pword, #email {
   box-sizing: border-box;
 }
 #numhours {
-  width: 350px;
+  width: 100px;
   padding: 12px 20px;
   margin: 8px 0;
   border-radius: 4px;
