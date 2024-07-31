@@ -34,7 +34,7 @@
 		  header('Location:empty.html');
 		  exit();
 	  }
-          $sql = "UPDATE accounts SET email='$email', admin=$admin, phone='$phone' WHERE email='$email_orig'";
+          $sql = "UPDATE accounts SET email='$email', admin=$admin, name=$name, phone='$phone' WHERE email='$email_orig'";
 	//echo $sql;  
 	$conn->query($sql);
 	  header('Location: accounts.php');
