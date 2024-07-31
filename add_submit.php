@@ -11,7 +11,7 @@
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
-  if ($_POST['name'] == "''" || $_POST['phone'] == "''" || $_POST['email'] == "''") {
+  if ($_POST['name'] == '' || $_POST['phone'] == '' || $_POST['email'] == '') {
     header('Location: empty.html');
     exit;
   }
