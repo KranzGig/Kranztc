@@ -11,8 +11,8 @@
 </head>
 <body>
   <ul>
-    <li id="current_tab"><a href="accounts.html">Accounts</a></li>
-    <li><a href="history.html">History</a></li>
+    <li id="current_tab"><a href="accounts.php">Accounts</a></li>
+    <li><a href="history.php">History</a></li>
     <li id="right"><a href="login.html">Log Out</a></li>
   </ul>
   <h1>Account Management</h1>
