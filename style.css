@@ -237,8 +237,8 @@ input[type=checkbox] {
   width: 20px;
   height: 20px;
 }
-input[type=text], select, #uname, #pword, #email {
-  width: 350px;
+input[type=text], select, #uname, #pword, #email, #name, #phone {
+  width: 250px;
   padding: 12px 20px;
   margin: 8px 0;
   border-radius: 4px;
