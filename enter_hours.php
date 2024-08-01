@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="style.css?v=1.9">
+  <link rel="stylesheet" type="text/css" href="style.css?v=2.0">
 </head>
 <body>
  <?php
@@ -126,7 +126,7 @@
 </div>
 
 	
-<div class="button1">
+<div class="button2">
     <input type="submit" value="Save" id='save'>
     <a href="logout.php"><button id='enter'>Logout</button></a>
 	</div>
