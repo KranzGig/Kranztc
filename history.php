@@ -13,6 +13,11 @@
   <ul>
     <li><a href="accounts.php">Accounts</a></li>
     <li id="current_tab"><a href="history.php">History</a></li>
+	  <?php
+	session_start();
+	$name = $_SESSION['name'];
+	echo "<li>".$name."</li>";
+    ?>
     <li id="right"><a href="logout.php">Log Out</a></li>
   </ul>
   <h1>Weekly Caretaker History</h1>
