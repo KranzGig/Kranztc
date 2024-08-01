@@ -106,6 +106,10 @@ li a:hover {
   font-family: "Josefin Sans", Tacoma;
 }
 
+.square_current:hover {
+  background-color: #5592cc;
+}
+
 .button1 {
   text-align: center;
   font-family: "Josefin Sans", Tacoma;
