@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body onload="checkIncorrect()">
   <ul>
     <li id="current_tab"><a href="accounts.php">Accounts</a></li>
     <li><a href="history.php">History</a></li>
