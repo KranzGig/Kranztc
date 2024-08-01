@@ -103,8 +103,6 @@
   </button>
   Edit Profile<br>
   </div>
-  <div class="line">
-  </div>
   <div class="button1">
   <button class="square" onclick="removeHidden()">
     +
