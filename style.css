@@ -254,7 +254,7 @@ input[type=text], select, #uname, #pword, #repword, #email, #name, #phone {
 }
 #joe {
   float: right;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 #incorrect {
   text-align:center;
