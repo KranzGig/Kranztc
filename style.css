@@ -2,6 +2,14 @@
   background-color: #437eb5;
 }
 
+#go {
+  margin-top: 20px;
+}
+
+#go:hover {
+  background-color: #437eb5;
+}
+
 #acc_mng tr {
   height: 25px;
 }
