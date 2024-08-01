@@ -1,3 +1,7 @@
+button {
+  text-align: center;
+}
+
 #history_table tr{
   height: 35px;
 }
