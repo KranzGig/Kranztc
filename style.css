@@ -2,8 +2,6 @@
   background-color: #437eb5;
 }
 
-
-
 #acc_mng tr {
   height: 25px;
 }
@@ -204,5 +202,5 @@ input[type=text], select, #uname, #pword, #email {
 }
 
 #delete {
-  margin-top: 25px;
+  margin-top: 15px;
 }
