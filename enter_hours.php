@@ -54,7 +54,7 @@
 		//echo date('Y-m-d H:i:s',time()-(4*60*60));
 		echo time()-(4*60*60);
 		echo date("w");
-		if (date("w") == '5') {
+		if (date("w") == '4') {
 			echo "True";
 		}
 		for ($x = date("w"); $x >= 0; $x--) {
