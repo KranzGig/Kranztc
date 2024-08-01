@@ -1,9 +1,9 @@
-#delete {
-  margin-top: 15px;
-}
-
 #delete:hover {
   background-color: #437eb5;
+}
+
+#delete {
+  margin-top: 25px;
 }
 
 #acc_mng tr {
