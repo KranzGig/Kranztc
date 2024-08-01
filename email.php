@@ -9,7 +9,7 @@
   $conn = new mysqli($servername, $username, $password, $dbname);
   
   if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE email = ?')) {
-    $stmt->bind_param('s', $_POST['Email']);
+    $stmt->bind_param('s', $_POST['email']);
     $stmt->execute();
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
