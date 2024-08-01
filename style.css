@@ -1,3 +1,11 @@
+#save {
+  margin-right: 25px;
+}
+
+#save:hover {
+  background-color: #437eb5;
+}
+
 #delete:hover {
   background-color: #437eb5;
 }
