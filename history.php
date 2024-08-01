@@ -20,7 +20,7 @@
   </div><br>
   <div class="long">
     <table>
-       <br><tr>
+       <tr>
         <th>Caretaker:</th>
        <td>
 	<form method="post" id="info">
