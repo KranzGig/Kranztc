@@ -52,7 +52,7 @@
        <td>
 	  <input type="date" name="date" id="date">
       </td>
-      </tr></select><br>
+      </tr></select>
       <tr><th> </th>
       <td>
 	      <input type="submit" value="Go">
