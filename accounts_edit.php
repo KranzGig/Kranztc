@@ -67,12 +67,22 @@
   			echo "</div>";
 		}
 		 echo "<tr><td>";
-			echo "<input type=submit value='Save' id='enter'>";
+			echo "<p style='display:none;' id='incorrect'>Incorrect email and/or password</p>";
+		 	echo "<input type=submit value='Save' id='enter'>";
 			echo "</td></tr>";
 	 }
 ?>
 </table></form>
 </div>
-	  
+  <script type="text/javascript">
+	function checkIncorrect() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        if (urlParams.get("error") == "1") {
+            document.getElementById("incorrect").style.removeProperty('display');
+        }
+    }
+    
+</script>
 </body>
 </html>
