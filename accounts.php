@@ -72,23 +72,23 @@
 ?>
 	<tr id="add">
 		<form action="add_submit.php" method="post">
-			<tr>
+			<tr class="hidden" style="display:none;">
 				<th class="hidden" hidden>Name:</th>
 				<td><input type="text" id="name" name="name" class="hidden" style="display:none;"> </td>
 			</tr>
-			<tr>
+			<tr class="hidden" style="display:none;">
 				<th class="hidden" hidden>Email:</th>
 				<td><input type="text" id="email" name="email" class="hidden" style="display:none;"> </td>
 			</tr>
-			<tr>
+			<tr class="hidden" style="display:none;">
 				<th class="hidden" hidden>Phone Number:</th>
 				<td><input type="text" id="phone" name="phone" class="hidden" style="display:none;"> </td>
 			</tr>
-			<tr>
+			<tr class="hidden" style="display:none;">
 				<th class="hidden" hidden>Caretaker:</th>
 				<td><input type="checkbox" id="caretaker" name="caretaker" class="hidden" style="display:none;"> </td>
 			</tr>
-			<tr>
+			<tr class="hidden" style="display:none;">
 				 <td><input type="submit" value="Save" class="hidden" id='enter' style="display:none;"></td>
 				 </form>
 				 <td><button onclick="addHidden()" class="hidden" id='save' style="display:none;">Cancel</button></td>
