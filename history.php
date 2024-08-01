@@ -151,7 +151,7 @@
   <button class="square" id="history_edit" class="unhidden" onclick=removeHidden()>
     /
   </button>
-  Edit
+  <a href="#" onclick=removeHidden()>Edit</a>
   </div>
   <br /><br />
 
