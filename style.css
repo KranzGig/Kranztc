@@ -32,10 +32,6 @@ h2 {
   background-color: #437eb5;
 }
 
-.delete:hover {
-  background-color: #437eb5;
-}
-
 #go {
   margin-top: 20px;
 }
@@ -131,12 +127,6 @@ li a:hover {
 
 .square:hover {
   background-color: #437eb5;
-}
-
-.delete {
-  margin-top: -5px;
-  margin-bottom: 25px;
-  margin-left: 16px;
 }
 
 .square_current {
@@ -254,8 +244,15 @@ input[type=text], select, #uname, #pword, #repword, #email, #name, #phone {
 
 .delete {
   margin-top: 15px;
+  margin-bottom: 25px;
+  margin-left: 16px;
   font-family: "Josefin Sans", Tacoma;
 }
+
+.delete:hover {
+  background-color: #437eb5;
+}
+
 .popup {
   position: fixed;
   z-index: 1;
