@@ -62,7 +62,7 @@
   			echo "</div>";
 		}
 		 echo "<tr><td>";
-			echo "<input type=submit value='Save' id="edit">";
+			echo "<input type=submit value='Save' id="enter">";
 			echo "</td></tr>";
 	 }
 ?>
