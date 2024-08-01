@@ -19,7 +19,7 @@
   <div class="line">
   </div><br>
   <div class="long">
-    <table>
+    <table id='acc_mng'>
        <tr>
         <th>Caretaker:</th>
        <td>
