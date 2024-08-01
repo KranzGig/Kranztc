@@ -24,7 +24,7 @@
 <div class="line">
 </div><br /><br>
 <div class="long">
-<table class="table table-borderless table-responsive">
+<table>
 <?php
 	session_start();
 	
