@@ -203,4 +203,5 @@ input[type=text], select, #uname, #pword, #email {
 
 #delete {
   margin-top: 15px;
+  font-family: "Josefin Sans", Tacoma;
 }
