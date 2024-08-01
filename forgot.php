@@ -9,11 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <p>
+  <div class='button2'>
       <form action="email.php" method="post">
           <input type="text" id="email" name="email" placeholder="email" id='email'>
           <input type="submit" value="Enter" id='enter'>
       </form>
-  </p>
+  </div>
 </body>
 </html>
