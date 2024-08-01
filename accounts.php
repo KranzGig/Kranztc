@@ -24,7 +24,7 @@
 <div class="line">
 </div><br /><br>
 <div class="long">
-<table>
+<table id="acc_mng">
 <?php
 	session_start();
 	
