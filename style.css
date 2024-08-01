@@ -253,7 +253,7 @@ input[type=text], select, #uname, #pword, #repword, #email, #name, #phone {
   background-color: #437eb5;
 }
 #joe {
-  float: right;
+  float: left;
   top: -25px;
 }
 #incorrect {
