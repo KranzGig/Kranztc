@@ -65,7 +65,7 @@ if ($stmt = $conn->prepare('SELECT id, password, admin, name FROM accounts WHERE
     	}
     } else {
 	// Incorrect username
-	echo 'Incorrect email and/or password!';
+	echo '<h2>Incorrect email and/or password!<h2>';
     }
 }
 ?>
