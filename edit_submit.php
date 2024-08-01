@@ -27,11 +27,11 @@
 		      }
 	//echo "$email</br>";  
 	if ($name == '') {
-		  header('Location:empty.html');
+		  header('Location:accounts.php?error=1');
 		  exit();
 	  }
 	if ($phone == '') {
-		  header('Location:empty.html');
+		  header('Location:accounts.php?error=1');
 		  exit();
 	  }
           $sql = "UPDATE accounts SET email='$email', admin=$admin, name='$name', phone='$phone' WHERE email='$email_orig'";
