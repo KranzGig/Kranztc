@@ -32,7 +32,7 @@ h2 {
   background-color: #437eb5;
 }
 
-#delete:hover {
+.delete:hover {
   background-color: #437eb5;
 }
 
@@ -133,7 +133,7 @@ li a:hover {
   background-color: #437eb5;
 }
 
-#delete {
+.delete {
   margin-top: -5px;
   margin-bottom: 25px;
   margin-left: 16px;
@@ -252,7 +252,7 @@ input[type=text], select, #uname, #pword, #repword, #email, #name, #phone {
   box-sizing: border-box;
 }
 
-#delete {
+.delete {
   margin-top: 15px;
   font-family: "Josefin Sans", Tacoma;
 }
