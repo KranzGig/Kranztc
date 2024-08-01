@@ -75,7 +75,8 @@
 			}
 			echo "</td></tr>";
 			echo "<tr><td>";
-			echo "<input type='submit' value='Delete' class='delete' onclick=\"return confirm('Are you sure you want to delete this user?');\"><br/>";
+			$name = $row['name'];
+			echo "<input type='submit' value='Delete' class='delete' onclick=\"return confirm('Are you sure you want to delete $name?');\"><br/>";
   			echo "</div>";
 			echo "</tr></form></td>";
 		}
