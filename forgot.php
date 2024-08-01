@@ -13,7 +13,7 @@
     <h2>Enter Email:</h2>
       <form action="email.php" method="post">
           <input type="text" id="email" name="email" placeholder="Email" id='email'><br><br>
-          <p style="display:none;" id="incorrect">Incorrect email and/or password</p>
+          <p style="display:none;" id="incorrect">Incorrect email</p>
           <input type="submit" value="Enter" id='enter'>
       </form>
   </div>
