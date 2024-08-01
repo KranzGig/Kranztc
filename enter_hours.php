@@ -50,7 +50,7 @@
 
 		$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 		$mins = 24 * 60 * 60;
-		echo date('Y-m-d H:i:s',time() - (4*24*60));
+		echo date('Y-m-d H:i:s',time());
 		for ($x = date("w"); $x >= 0; $x--) {
 			$time = time() - $x * $mins;
 			$day = $name[date("w",$time)];
