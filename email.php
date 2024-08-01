@@ -38,7 +38,7 @@
 	   }
 	    echo "Check your email for a link to reset your password";
     } else {
-	echo "Enter a valid email";
+	header('Location:forgot.php?error=1');
     }
   }
 ?>
