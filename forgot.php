@@ -12,7 +12,7 @@
   <div class='button2'>
     <h2>Enter Email:</h2>
       <form action="email.php" method="post">
-          <input type="text" id="email" name="email" placeholder="email" id='email'><br><br>
+          <input type="text" id="email" name="email" placeholder="Email" id='email'><br><br>
           <input type="submit" value="Enter" id='enter'>
       </form>
   </div>
