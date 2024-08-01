@@ -50,7 +50,7 @@
 	$result = $conn->query($sql);
 	 if ($result->num_rows > 0) {
     		while($row = $result->fetch_assoc()) {
-			echo "<form action='delete_submit.php' method='post' onsubmit='return confirm('Do you really want to submit the form?');'><tr>";
+			echo "<form action='delete_submit.php' method='post' id='deleteform'><tr>";
 			echo "<th>Name:</th>";
 			echo "<td>";
 			echo $row['name'];
@@ -122,6 +122,12 @@
   </div><br /><br />
 
 <script>
+	var el = document.getElementById('deleteform');
+	
+	el.addEventListener('submit', function(){
+	return confirm('Are you sure you want to delete this user?');
+	}, false);
+
 	function removeHidden() {
 		const hidden = document.getElementsByClassName("hidden");
 		for (let j = 0; j < hidden.length; j++) {
