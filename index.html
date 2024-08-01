@@ -24,7 +24,7 @@
       <input type="password" id="pword" name="pword" placeholder="Password"><br /><br />
         </div>
   </div>
-      <p style="display:none;">Incorrect email and/or password</p>
+      <p style="display:none;" id="incorrect">Incorrect email and/or password</p>
   <p id="small"><a href="forgot.php">Forgot Password?</a></p>
   <div class="button2">
   <button id='enter'>
@@ -32,5 +32,16 @@
   </button>
   </div>
     </form>
+
+<script type="text/javascript">
+	function checkIncorrect() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        if (urlParams.get("error") == "1") {
+            document.getElementById("incorrect").style.removeProperty('display');
+        }
+    }
+    
+</script>
 </body>
 </html>
