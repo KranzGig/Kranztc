@@ -26,11 +26,13 @@ echo "<input type='hidden' name='URLid' value='".$params['id']."'/>";
 //echo $params['id'];
  
 ?> 
+    <div class='reset'>
     New Password:<br />
       <input type="password" id="pword" name="pword" placeholder="Password"><br /><br />
       Re Enter Password:<br />
       <input type="password" id="repword" name="repword" placeholder="Password"><br /><br />
       <input type="submit" value="Enter">
+    </div>
 </form>
 
 </body>
