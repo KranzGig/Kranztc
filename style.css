@@ -258,8 +258,8 @@ input[type=text], select, #uname, #pword, #repword, #email, #name, #phone {
 }
 #incorrect {
   text-align:center;
-  color: #3f6c96;
-  padding: 14px 25px;
+  color: #ab2836;
+  margin-botton: 10px;
 }
 
 
