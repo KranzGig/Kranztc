@@ -2,9 +2,7 @@
   background-color: #437eb5;
 }
 
-#delete {
-  margin-top: 25px;
-}
+
 
 #acc_mng tr {
   height: 25px;
@@ -203,4 +201,8 @@ input[type=text], select, #uname, #pword, #email {
   margin: 8px 0;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+#delete {
+  margin-top: 25px;
 }
