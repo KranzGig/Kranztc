@@ -48,10 +48,6 @@ h2 {
   height: 25px;
 }
 
-#enter:hover {
-  background-color: #437eb5;
-}
-
 .button_center {
   text-align: center;
   font-family: "Josefin Sans", Tacoma;
@@ -256,3 +252,6 @@ input[type=text], select, #uname, #pword, #email {
   font-family: "Josefin Sans", Tacoma;
 }
 
+#enter:hover {
+  background-color: #437eb5;
+}
