@@ -66,7 +66,7 @@
 			echo "</td></tr>";
   			echo "</div>";
 		}
-		 echo "<tr><p style='display:none;' id='incorrect'>Incorrect email and/or password</p><tr>";
+		 echo "<tr><p style='display:none;' id='incorrect'>Incorrect email and/or password</p></tr>";
 		 echo "<tr><td>";
 			
 		 	echo "<input type=submit value='Save' id='enter'>";
