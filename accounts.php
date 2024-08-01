@@ -114,7 +114,7 @@
 	function removeHidden() {
 		const hidden = document.getElementsByClassName("hidden");
 		for (let j = 0; j < hidden.length; j++) {
-	  		hidden[j].style.display = 'block';
+	  		hidden[j].style.removeProperty('display');
 		}
 	}
 	function addHidden() {
