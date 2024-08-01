@@ -11,7 +11,7 @@
 <body>
   <p>
       <form action="email.php" method="post">
-          <input type="text" id="email" name="email" placeholder="email">
+          <input type="text" id="email" name="email" placeholder="email" id='email'>
           <input type="submit" value="Enter" id='enter'>
       </form>
   </p>
