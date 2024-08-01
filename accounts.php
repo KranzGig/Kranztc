@@ -121,7 +121,7 @@
   Add Profile
   </div><br /><br />
 
-<script>
+<script type="text/javascript">
 	const el = document.getElementById("deleteform");
 	
 	el.addEventListener('submit', function(){
