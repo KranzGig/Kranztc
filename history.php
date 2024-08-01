@@ -16,7 +16,7 @@
 	  <?php
 	session_start();
 	$name = $_SESSION['name'];
-	echo "<li>".$name."</li>";
+	echo "<li id='right'>".$name."</li>";
     ?>
     <li id="right"><a href="logout.php">Log Out</a></li>
   </ul>
