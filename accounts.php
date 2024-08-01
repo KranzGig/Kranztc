@@ -118,7 +118,7 @@
   <button class="square" onclick="removeHidden()">
     +
   </button>
-  <a href="#" onclick=removeHidden()>Add Profile</a>
+  <a href="#" onclick="removeHidden()">Add Profile</a>
   </div><br /><br />
 
 <script>
