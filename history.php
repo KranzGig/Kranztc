@@ -47,12 +47,12 @@
 	    ?>
       </td>
       </tr>
-      <tr>
+      <br><tr>
         <th>Pick Date:</th>
        <td>
 	  <input type="date" name="date" id="date">
       </td>
-      </tr>
+      </tr></select><br>
       <tr><th> </th>
       <td>
 	      <input type="submit" value="Go">
