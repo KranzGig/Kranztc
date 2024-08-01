@@ -46,7 +46,9 @@ li a:hover {
 #right {
   float: right;
 }
-
+button { 
+  cursor : pointer;
+}
 .button {
   display: block;
   text-align: center;
