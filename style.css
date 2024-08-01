@@ -44,6 +44,10 @@ h2 {
   background-color: #437eb5;
 }
 
+#enter:hover {
+  background-color: #437eb5;
+}
+
 #acc_mng tr {
   height: 25px;
 }
@@ -252,6 +256,4 @@ input[type=text], select, #uname, #pword, #email {
   font-family: "Josefin Sans", Tacoma;
 }
 
-#enter:hover {
-  background-color: #437eb5;
-}
+
