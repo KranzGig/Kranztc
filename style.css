@@ -35,6 +35,7 @@ li a {
 
 li a:hover {
   background-color: #c1d4df;
+  cursor: pointer;
 }
 
 #current_tab a{
