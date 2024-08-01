@@ -256,6 +256,8 @@ input[type=text], select, #uname, #pword, #repword, #email, #name, #phone {
   float: right;
   top: -25px;
 }
-
+#incorrect {
+  text-align:center;
+}
 
 
