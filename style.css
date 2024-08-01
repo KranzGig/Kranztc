@@ -35,7 +35,6 @@ li a {
 
 li a:hover {
   background-color: #c1d4df;
-  cursor: pointer;
 }
 
 #current_tab a{
@@ -46,14 +45,10 @@ li a:hover {
 #right {
   float: right;
 }
-button { 
-  cursor : pointer;
-}
 .button {
   display: block;
   text-align: center;
   font-family: "Josefin Sans", Tacoma;
-  cursor: pointer;
 }
 .line {
   width: 100%;
