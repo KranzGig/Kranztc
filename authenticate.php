@@ -61,12 +61,12 @@ if ($stmt = $conn->prepare('SELECT id, password, admin, name FROM accounts WHERE
 		    }
     	} else {
     		// Incorrect password
-    		header('Location: index.php?error=1');
+    		header('Location: index.html?error=1');
 		exit;
     	}
     } else {
 	// Incorrect username
-	header('Location: index.php?error=1');
+	header('Location: index.html?error=1');
         exit;
     }
 }
