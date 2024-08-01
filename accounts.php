@@ -75,7 +75,7 @@
 			}
 			echo "</td></tr>";
 			echo "<tr><td>";
-			echo "<input type='submit' value='Delete' class='delete'><br/>";
+			echo "<input type='submit' value='Delete' class='delete' onclick='return confirm('Are you sure you want to submit this form?');'><br/>";
   			echo "</div>";
 			echo "</tr></form></td>";
 		}
