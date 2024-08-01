@@ -87,6 +87,10 @@ li a:hover {
   border-radius: 10px;
 }
 
+.square:hover {
+  background-color: #437eb5;
+}
+
 #delete {
   margin-top: -5px;
   margin-bottom: 25px;
