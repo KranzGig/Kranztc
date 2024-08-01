@@ -50,7 +50,7 @@
 	$result = $conn->query($sql);
 	 if ($result->num_rows > 0) {
     		while($row = $result->fetch_assoc()) {
-			echo "<form action='delete_submit.php' method='post' id='deleteform'><tr>";
+			echo "<form action='delete_submit.php' method='post' id='deleteform' onclick='return confirm('Are you sure you want to submit this form?');'><tr>";
 			echo "<th>Name:</th>";
 			echo "<td>";
 			echo $row['name'];
@@ -75,7 +75,7 @@
 			}
 			echo "</td></tr>";
 			echo "<tr><td>";
-			echo "<input type='submit' value='Delete' class='delete' onclick='return confirm('Are you sure you want to submit this form?');'><br/>";
+			echo "<input type='submit' value='Delete' class='delete'><br/>";
   			echo "</div>";
 			echo "</tr></form></td>";
 		}
