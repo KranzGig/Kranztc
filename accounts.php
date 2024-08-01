@@ -122,12 +122,6 @@
   </div><br /><br />
 
 <script type="text/javascript">
-	const el = document.getElementById("deleteform");
-	
-	el.addEventListener('submit', function(){
-	return confirm('Are you sure you want to delete this user?');
-	}, false);
-
 	function removeHidden() {
 		const hidden = document.getElementsByClassName("hidden");
 		for (let j = 0; j < hidden.length; j++) {
