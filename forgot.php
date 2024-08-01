@@ -8,13 +8,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="checkIncorrect()">
   <div class='button2'>
     <h2>Enter Email:</h2>
       <form action="email.php" method="post">
           <input type="text" id="email" name="email" placeholder="Email" id='email'><br><br>
+          <p style="display:none;" id="incorrect">Incorrect email and/or password</p>
           <input type="submit" value="Enter" id='enter'>
       </form>
   </div>
+<script type="text/javascript">
+	function checkIncorrect() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        if (urlParams.get("error") == "1") {
+            document.getElementById("incorrect").style.removeProperty('display');
+        }
+    }
+    
+</script>
 </body>
 </html>
