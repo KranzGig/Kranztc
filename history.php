@@ -55,7 +55,7 @@
       </tr></select>
       <tr><th> </th>
       <td>
-	      <input type="submit" value="Go">
+	      <input type="submit" value="Go" id='enter'>
       </td></tr>
 	  </form>
     </table>
