@@ -51,7 +51,7 @@
 		$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 		$mins = 24 * 60 * 60;
 		date_default_timezone_set("MST");
-		echo date('Y-m-d H:i:s',time()-(4*24*60));
+		echo date('Y-m-d H:i:s',time()-(4*60*60));
 		for ($x = date("w"); $x >= 0; $x--) {
 			$time = time() - $x * $mins;
 			$day = $name[date("w",$time)];
