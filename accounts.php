@@ -114,7 +114,7 @@
     /
   </button>
   <a href="#" onclick="window.location.href='accounts_edit.php'">Edit Profile</a>
-  Edit Profile<br>
+  <br>
   </div>
   <div class="button1">
   <button class="square" onclick="removeHidden()">
