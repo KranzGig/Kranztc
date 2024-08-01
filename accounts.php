@@ -122,7 +122,7 @@
   </div><br /><br />
 
 <script>
-	var el = document.getElementById('deleteform');
+	const el = document.getElementById("deleteform");
 	
 	el.addEventListener('submit', function(){
 	return confirm('Are you sure you want to delete this user?');
