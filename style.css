@@ -254,7 +254,7 @@ input[type=text], select, #uname, #pword, #repword, #email, #name, #phone {
 }
 #joe {
   float: right;
-  top: 250px;
+  top: -25px;
 }
 .popup {
   position: fixed;
