@@ -61,7 +61,7 @@
     </table>
   </div>
   <div class="line">
-  </div>
+  </div><br>
   <table id="history_table">
 	  <tr>
       <th>Date:</th>
