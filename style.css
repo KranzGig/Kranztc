@@ -235,6 +235,7 @@ input[type=submit], button {
   color: #fff;
   background-color: #3f6c96;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 input[type=checkbox] {
   width: 20px;
