@@ -17,10 +17,10 @@
   </ul>
   <h1>Weekly Caretaker History</h1>
   <div class="line">
-  </div>
+  </div><br>
   <div class="long">
     <table>
-       <tr>
+       <br><tr>
         <th>Caretaker:</th>
        <td>
 	<form method="post" id="info">
