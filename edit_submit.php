@@ -36,8 +36,8 @@
 	  }
           $sql = "UPDATE accounts SET email='$email', admin=$admin, name=$name, phone='$phone' WHERE email='$email_orig'";
 	echo $sql;  
-	//$conn->query($sql);
-	  //header('Location: accounts.php');
+	$conn->query($sql);
+	  header('Location: accounts.php');
 	
           
         }
