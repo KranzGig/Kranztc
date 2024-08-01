@@ -25,12 +25,14 @@ parse_str($url_components['query'], $params);
 echo "<input type='hidden' name='URLid' value='".$params['id']."'/>";
 //echo $params['id'];
  
-?>  
+?> 
+    <p>
     New Password:<br />
       <input type="password" id="pword" name="pword" placeholder="Password"><br /><br />
       Re Enter Password:<br />
       <input type="password" id="repword" name="repword" placeholder="Password"><br /><br />
       <input type="submit" value="Enter">
+    </p>
 </form>
 
 </body>
