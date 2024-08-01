@@ -47,7 +47,7 @@
 	    ?>
       </td>
       </tr>
-      <br><tr>
+      <tr>
         <th>Pick Date:</th>
        <td>
 	  <input type="date" name="date" id="date">
