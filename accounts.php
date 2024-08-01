@@ -64,7 +64,7 @@
 			}
 			echo "</td></tr>";
 			echo "<tr><td>";
-			echo "<input type='submit' value='Delete' id="delete"><br/>";
+			echo "<input type='submit' value='Delete'><br/>";
   			echo "</div>";
 			echo "</tr></form></td>";
 		}
