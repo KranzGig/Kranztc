@@ -18,7 +18,7 @@
     <?php
 	session_start();
 	$name = $_SESSION['name'];
-	echo "<li id='right'>".$name."</li>";
+	echo "<li id='joe'>".$name."</li>";
     ?>
   </ul>
   <h1>Weekly Caretaker History</h1>
