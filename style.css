@@ -1,3 +1,7 @@
+#acc_mng tr {
+  height: 15px;
+}
+
 #enter:hover {
   background-color: #437eb5;
 }
