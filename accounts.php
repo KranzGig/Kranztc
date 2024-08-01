@@ -74,24 +74,24 @@
 		<form action="add_submit.php" method="post">
 			<tr>
 				<th class="hidden" hidden>Name:</th>
-				<td><input type="text" id="name" name="name" class="hidden" hidden> </td>
+				<td><input type="text" id="name" name="name" class="hidden" style="display:none;"> </td>
 			</tr>
 			<tr>
 				<th class="hidden" hidden>Email:</th>
-				<td><input type="text" id="email" name="email" class="hidden" hidden> </td>
+				<td><input type="text" id="email" name="email" class="hidden" style="display:none;"> </td>
 			</tr>
 			<tr>
 				<th class="hidden" hidden>Phone Number:</th>
-				<td><input type="text" id="phone" name="phone" class="hidden" hidden> </td>
+				<td><input type="text" id="phone" name="phone" class="hidden" style="display:none;"> </td>
 			</tr>
 			<tr>
 				<th class="hidden" hidden>Caretaker:</th>
-				<td><input type="checkbox" id="caretaker" name="caretaker" class="hidden" hidden> </td>
+				<td><input type="checkbox" id="caretaker" name="caretaker" class="hidden" style="display:none;"> </td>
 			</tr>
 			<tr>
-				 <td><input type="submit" value="Save" class="hidden" hidden id='enter'></td>
+				 <td><input type="submit" value="Save" class="hidden" id='enter' style="display:none;"></td>
 				 </form>
-				 <td><button onclick="addHidden()" class="hidden" hidden id='save'>Cancel</button></td>
+				 <td><button onclick="addHidden()" class="hidden" id='save' style="display:none;">Cancel</button></td>
 			</tr>
 		
 	</tr>
@@ -114,13 +114,14 @@
 	function removeHidden() {
 		const hidden = document.getElementsByClassName("hidden");
 		for (let j = 0; j < hidden.length; j++) {
-	  		hidden[j].removeAttribute("hidden");
+	  		hidden[j].style.display = 'block';
 		}
 	}
 	function addHidden() {
 		const hidden = document.getElementsByClassName("hidden");
 		for (let j = 0; j < hidden.length; j++) {
-	  		hidden[j].setAttribute("hidden","true");
+	  		//hidden[j].setAttribute("display","none");
+			hidden[j].style.display = 'none';
 			
 		}
 	}
