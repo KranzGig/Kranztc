@@ -1,5 +1,8 @@
+#delete {
+  margin-top: 15px;
+}
+
 #delete:hover {
-  margin-top: 25px;
   background-color: #437eb5;
 }
 
