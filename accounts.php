@@ -112,13 +112,13 @@
   <button class="square_current" onclick="window.location.href='accounts_edit.php'">
     /
   </button>
-  <a href="#" onclick="window.location.href='accounts_edit.php'">Edit Profile</a><br>
+  Edit Profile<br>
   </div>
   <div class="button1">
   <button class="square" onclick="removeHidden()">
     +
   </button>
-  <a href="#" onclick="removeHidden()">Add Profile</a>
+  Add Profile
   </div><br /><br />
 
 <script>
