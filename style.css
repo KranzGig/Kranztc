@@ -51,6 +51,7 @@ li a:hover {
   display: block;
   text-align: center;
   font-family: "Josefin Sans", Tacoma;
+  cursor: pointer;
 }
 .line {
   width: 100%;
