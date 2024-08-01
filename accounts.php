@@ -115,12 +115,15 @@
 		const hidden = document.getElementsByClassName("hidden");
 		for (let j = 0; j < hidden.length; j++) {
 	  		hidden[j].removeAttribute("hidden");
+			hidden[j].setAttribute("height",30);
 		}
 	}
 	function addHidden() {
 		const hidden = document.getElementsByClassName("hidden");
 		for (let j = 0; j < hidden.length; j++) {
 	  		hidden[j].setAttribute("hidden","true");
+			hidden[j].setAttribute("height",0);
+			
 		}
 	}
 </script>
