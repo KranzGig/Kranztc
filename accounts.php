@@ -73,19 +73,19 @@
 	<tr id="add">
 		<form action="add_submit.php" method="post">
 			<tr class="hidden" style="display:none;">
-				<th class="hidden" hidden>Name:</th>
+				<th class="hidden" style="display:none;">Name:</th>
 				<td><input type="text" id="name" name="name" class="hidden" style="display:none;"> </td>
 			</tr>
 			<tr class="hidden" style="display:none;">
-				<th class="hidden" hidden>Email:</th>
+				<th class="hidden" style="display:none;">Email:</th>
 				<td><input type="text" id="email" name="email" class="hidden" style="display:none;"> </td>
 			</tr>
 			<tr class="hidden" style="display:none;">
-				<th class="hidden" hidden>Phone Number:</th>
+				<th class="hidden" style="display:none;">Phone Number:</th>
 				<td><input type="text" id="phone" name="phone" class="hidden" style="display:none;"> </td>
 			</tr>
 			<tr class="hidden" style="display:none;">
-				<th class="hidden" hidden>Caretaker:</th>
+				<th class="hidden" style="display:none;">Caretaker:</th>
 				<td><input type="checkbox" id="caretaker" name="caretaker" class="hidden" style="display:none;"> </td>
 			</tr>
 			<tr class="hidden" style="display:none;">
