@@ -121,7 +121,7 @@
 						echo "<option value='$i'>$i</option>";
 					}
 				}
-				echo "<p class='unhidden'>$num</p>";
+				echo "</select><p class='unhidden'>$num</p>";
 				echo "</td>";
 				//echo "<td><input type='text' name=$day-hours value=$num class='hidden' hidden><p class='unhidden'>$num</p></td>";
 				if ($vacation) {
