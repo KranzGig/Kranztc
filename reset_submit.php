@@ -7,7 +7,7 @@ $dbname = "u751975974_TestDB";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-echo $_POST['pword'];
+echo $_POST['repword'];
 /*if ($_POST['pword'] == '' || ($_POST['repword'] == '' ) {
 	// Could not get the data that should have been sent.
 	echo "hi1";
