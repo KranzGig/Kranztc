@@ -23,17 +23,6 @@
   <h1>Account Management</h1>
 <div class="line">
 </div><br /><br>
-<div id="myPopup" class="popup">
-            <div class="popup-content">
-                <h1 style="color: green">
-                    GeekforGeeks !
-                </h1>
-                <p>This is a popup box!</p>
-                <button id="closePopup">
-                    Close
-                </button>
-            </div>
-        </div>
 <div class="long">
 <table id="acc_mng">
 <?php
