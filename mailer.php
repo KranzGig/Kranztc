@@ -54,8 +54,8 @@
    $mail->setFrom('automail@kranztc.com', 'Kranz Tech Consulting');
    $mail->addReplyTo('automail@kranztc.com', 'Kranz Tech Consulting');
    $mail->addAddress('kranz.amber1@gmail.com', 'Amber Kranz');
-   $mail->Subject = 'Checking if PHPMailer works';
-   $mail->Body = 'This is just a plain text message body';
+   $mail->Subject = 'Caretaker hours';
+   $mail->Body = 'Caretaker hours';
    $mail->addAttachment('result.csv');
    if (!$mail->send()) {
        echo 'Mailer Error: ' . $mail->ErrorInfo;
