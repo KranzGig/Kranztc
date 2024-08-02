@@ -32,7 +32,7 @@
 	   $mail->addReplyTo('automail@kranztc.com', 'Kranz Tech Consulting');
 	   $mail->addAddress('kranz.amber1@gmail.com', 'Amber Kranz');
 	   $mail->Subject = 'Reset Time Tracking Password';
-	   $mail->Body = "Use the following link to reset your password: kranztc.com/reset.php?id=".$code;
+	   $mail->Body = "Use the following link to reset your password: documenthours.com/reset.php?id=".$code;
 	   if (!$mail->send()) {
 	       echo 'Mailer Error: ' . $mail->ErrorInfo;
 	   }
