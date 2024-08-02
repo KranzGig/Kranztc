@@ -113,6 +113,7 @@
 				$vacation = $row["Vacation"];
 				echo "<tr><td><input type='hidden' name=$day-date value='$date'>$date</td>";
 				echo "<td><select name=$day-hours class='hidden' hidden>";
+				echo "<p class='unhidden'>$num</p>";
 				echo "<option value='0'></option>";
 				for ($i=1;$i<=24;$i++) {
 					if ($i == $num) {
