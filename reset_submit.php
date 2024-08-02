@@ -17,7 +17,9 @@ if ($_POST['pword'] == '' || $_POST['repword'] == '' ) {
 	exit;
 } 
 if ($_POST['pword'] != $_POST['repword']) {
-	exit('Passwords do not match');
+	$urlid = $_POST['URLid'];
+        header('Location: reset.php?$urlid&error=1');
+	exit;
 } 
 if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')){
 	//echo "hi";
