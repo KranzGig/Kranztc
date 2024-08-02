@@ -8,10 +8,11 @@ $dbname = "u751975974_TestDB";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ( !isset($_POST['pword'], $_POST['repword']) ) {
 	// Could not get the data that should have been sent.
-	exit('Please fill both fields!');
+	header('Location:reset.php?error=1');
+	
 }
 if ($_POST['pword'] != $_POST['repword']) {
-	exit('Passwords do not match');
+	header('Location:reset.php?error=1');
 }
 echo "one";
 if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
