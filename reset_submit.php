@@ -1,5 +1,6 @@
 <?php
-$servername = "127.0.0.1:3306";
+echo "hi";
+/*$servername = "127.0.0.1:3306";
 $username = "u751975974_kranz";
 $password = "Dradbgon12";
 $dbname = "u751975974_TestDB";
@@ -14,7 +15,7 @@ if ($_POST['pword'] == '' || ($_POST['repword'] == '' ) {
 if ($_POST['pword'] != $_POST['repword']) {
 	exit('Passwords do not match');
 } 
-/*if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')){
+if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')){
 	echo "hi";
         echo md5($_POST['URLid']);
 	$stmt->bind_param('s', md5($_POST['URLid']));
