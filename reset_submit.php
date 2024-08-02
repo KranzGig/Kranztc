@@ -16,7 +16,7 @@ if ($_POST['pword'] != $_POST['repword']) {
 echo "one";
 if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
 	echo md5($_POST['URLid']);
-	$stmt->bind_param('s', md5($_POST['URLid']));
+	/*$stmt->bind_param('s', md5($_POST['URLid']));
 	$stmt->execute();
 	$stmt->store_result();
 	echo "three";
@@ -34,7 +34,7 @@ if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
 			echo "five";
     		    header('Location: enter_hours.php');
     	    }
-	}
+	}*/
 }
 //echo $_POST['URLid'];
 ?>
