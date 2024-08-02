@@ -90,7 +90,8 @@
 				<td><input type="checkbox" id="caretaker" name="caretaker" class="hidden" style="display:none;"> </td>
 			</tr>
 			<tr class="hidden" style="display:none;">
-				 <td><input type="submit" value="Save" class="hidden" id='enter' style="display:none;"></td>
+				<p style='display:none;' id='incorrect'>Fill out all fields</p> 
+				<td><input type="submit" value="Save" class="hidden" id='enter' style="display:none;"></td>
 				 </form>
 				 <td><button onclick="addHidden()" class="hidden" id='save' style="display:none;">Cancel</button></td>
 			</tr>
@@ -113,6 +114,13 @@
   </div><br /><br />
 
 <script type="text/javascript">
+	function checkIncorrect() {
+	        const queryString = window.location.search;
+	        const urlParams = new URLSearchParams(queryString);
+	        if (urlParams.get("error") == "1") {
+	            document.getElementById("incorrect").style.removeProperty('display');
+	        }
+       }
 	function removeHidden() {
 		const hidden = document.getElementsByClassName("hidden");
 		for (let j = 0; j < hidden.length; j++) {
