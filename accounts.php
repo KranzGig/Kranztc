@@ -89,9 +89,9 @@
 				<th class="hidden" style="display:none;">Caretaker:</th>
 				<td><input type="checkbox" id="caretaker" name="caretaker" class="hidden" style="display:none;"> </td>
 			</tr>
-			<p id='incorrect'>Fill out all fields</p> 
+			
 			<tr class="hidden" style="display:none;">
-				
+				<td><p id='incorrect'>Fill out all fields</p> </td>
 				<td><input type="submit" value="Save" class="hidden" id='enter' style="display:none;"></td>
 				 </form>
 				 <td><button onclick="addHidden()" class="hidden" id='save' style="display:none;">Cancel</button></td>
