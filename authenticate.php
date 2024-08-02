@@ -14,7 +14,8 @@ if ($conn->connect_error) {
 }
 if ( !isset($_POST['uname'], $_POST['pword']) ) {
 	// Could not get the data that should have been sent.
-	exit('Please fill both the username and password fields!');
+	header('Location: index.html?error=1');
+        exit;
 }
 if ($stmt = $conn->prepare('SELECT id, password, admin, name FROM accounts WHERE email = ?')) {
 	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
