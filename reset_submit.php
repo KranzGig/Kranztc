@@ -36,5 +36,5 @@ if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
     	    }
 	}
 }
-//echo $_POST['URLid'];
+echo $_POST['URLid'];
 ?>
