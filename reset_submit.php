@@ -30,13 +30,18 @@ if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')){
 		if ($stmt = $conn->prepare("UPDATE accounts SET password=? WHERE id=$id")) {
     	            $stmt->bind_param('s', password_hash($_POST['pword'],PASSWORD_DEFAULT));
 	            $stmt->execute();
+		     $stmt->execute();
 	            session_regenerate_id();
     		    $_SESSION['loggedin'] = TRUE;
     		    $_SESSION['uname'] = $_POST['uname'];
     		    $_SESSION['id'] = $id;
-		    session_start();
-			//echo "five";
-    		    header('Location: enter_hours.php');
+		    //$_SESSION['name'] = $name;
+		    if ($admin == 0) {
+    		    	header('Location: enter_hours.php');
+		    } else {
+			header('Location: accounts.php');
+		    }
+	            
     	    }
 	}
 }
