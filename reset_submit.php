@@ -8,7 +8,8 @@ $dbname = "u751975974_TestDB";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($_POST['pword'] == '' || ($_POST['repword'] == '' ) {
 	// Could not get the data that should have been sent.
-	exit('Please fill both fields!');
+	echo "hi1";
+        exit('Please fill both fields!');
 } 
 if ($_POST['pword'] != $_POST['repword']) {
 	exit('Passwords do not match');
