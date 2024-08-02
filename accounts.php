@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css?v2.9">
 </head>
-<body>
+<body onload="checkIncorrect()">
   <ul>
     <li id="current_tab"><a href="accounts.php">Accounts</a></li>
     <li><a href="history.php">History</a></li>
@@ -119,6 +119,7 @@
 	        const urlParams = new URLSearchParams(queryString);
 	        if (urlParams.get("error") == "1") {
 	            document.getElementById("incorrect").style.removeProperty('display');
+		    removeHidden();
 	        }
        }
 	function removeHidden() {
