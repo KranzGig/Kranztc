@@ -112,7 +112,17 @@
 				$num = $row["Hours"];
 				$vacation = $row["Vacation"];
 				echo "<tr><td><input type='hidden' name=$day-date value='$date'>$date</td>";
-				echo "<td><input type='text' name=$day-hours value=$num class='hidden' hidden><p class='unhidden'>$num</p></td>";
+				echo "<td><select name=$day-hours class='hidden'>";
+				echo "<option value='0'></option>";
+				for ($i=1;$i<=24;$i++) {
+					if ($i == $num) {
+						echo "<option value='$i' selected>$i</option>";
+					} else {
+						echo "<option value='$i'>$i</option>";
+					}
+				}
+				echo "</td>";
+				//echo "<td><input type='text' name=$day-hours value=$num class='hidden' hidden><p class='unhidden'>$num</p></td>";
 				if ($vacation) {
 					echo "<td><input type='checkbox' class='hidden' name=$day-vacation checked hidden><p class='unhidden'>Yes</p></td></tr>";
 				} else {
