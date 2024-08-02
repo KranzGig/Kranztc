@@ -6,7 +6,7 @@ $dbname = "u751975974_TestDB";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-if ($_POST['pword'] == '' ) {
+if ($_POST['pword'] == '' || ($_POST['repword'] == '' ) {
 	// Could not get the data that should have been sent.
 	exit('Please fill both fields!');
 }
@@ -14,7 +14,7 @@ if ($_POST['pword'] != $_POST['repword']) {
 	exit('Passwords do not match');
 }
 echo "one";
-/*if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
+if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
 	echo md5($_POST['URLid']);
 	$stmt->bind_param('s', md5($_POST['URLid']));
 	$stmt->execute();
@@ -35,6 +35,6 @@ echo "one";
     		    header('Location: enter_hours.php');
     	    }
 	}
-}*/
+}
 echo $_POST['URLid'];
 ?>
