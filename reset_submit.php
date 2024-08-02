@@ -1,13 +1,13 @@
 <?php
 echo "hi";
-/*$servername = "127.0.0.1:3306";
+$servername = "127.0.0.1:3306";
 $username = "u751975974_kranz";
 $password = "Dradbgon12";
 $dbname = "u751975974_TestDB";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-if ($_POST['pword'] == '' || ($_POST['repword'] == '' ) {
+/*if ($_POST['pword'] == '' || ($_POST['repword'] == '' ) {
 	// Could not get the data that should have been sent.
 	echo "hi1";
         exit('Please fill both fields!');
