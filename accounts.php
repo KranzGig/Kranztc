@@ -89,7 +89,7 @@
 				<th class="hidden" style="display:none;">Caretaker:</th>
 				<td><input type="checkbox" id="caretaker" name="caretaker" class="hidden" style="display:none;"> </td>
 			</tr>
-			<tr><td><p id='incorrect'>Fill out all fields</p></td></tr>
+			<tr><td><p id='incorrect' style="display:none;">Fill out all fields</p></td></tr>
 			<tr class="hidden" style="display:none;">
 				<td><input type="submit" value="Save" class="hidden" id='enter' style="display:none;"></td>
 				 </form>
