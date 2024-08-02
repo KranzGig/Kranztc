@@ -20,6 +20,7 @@
 		$stmt->bind_param('s', md5($code));
 		$stmt->execute();
 	}
+        $email = $_POST['email'];
 	$mail = new PHPMailer;
 	   $mail->isSMTP();
 	   //$mail->SMTPDebug = 2;
@@ -30,7 +31,7 @@
 	   $mail->Password = 'DragonSandd0gs-';
 	   $mail->setFrom('automail@kranztc.com', 'Kranz Tech Consulting');
 	   $mail->addReplyTo('automail@kranztc.com', 'Kranz Tech Consulting');
-	   $mail->addAddress('kranz.amber1@gmail.com', 'Amber Kranz');
+	   $mail->addAddress($email);
 	   $mail->Subject = 'Reset Time Tracking Password';
 	   $mail->Body = "Use the following link to reset your password: documenthours.com/reset.php?id=".$code;
 	   if (!$mail->send()) {
