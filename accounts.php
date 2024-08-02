@@ -13,12 +13,12 @@
   <ul>
     <li id="current_tab"><a href="accounts.php">Accounts</a></li>
     <li><a href="history.php">History</a></li>
+    <li id="right"><a href="logout.php">Log Out</a></li>
     <?php
 	session_start();
 	$name = $_SESSION['name'];
-	echo "<li>".$name."</li>";
+	echo "<li id='joe'>".$name."</li>";
     ?>
-    <li id="right"><a href="logout.php">Log Out</a></li>
   </ul>
   <h1>Account Management</h1>
 <div class="line">
