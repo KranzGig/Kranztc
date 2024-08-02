@@ -34,6 +34,7 @@ if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')){
     		    $_SESSION['loggedin'] = TRUE;
     		    $_SESSION['uname'] = $_POST['uname'];
     		    $_SESSION['id'] = $id;
+		    session_start();
 			//echo "five";
     		    header('Location: enter_hours.php');
     	    }
