@@ -9,12 +9,12 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($_POST['pword'] == '' || ($_POST['repword'] == '' ) {
 	// Could not get the data that should have been sent.
 	exit('Please fill both fields!');
-}
-    elseif ($_POST['pword'] != $_POST['repword']) {
+} elseif ($_POST['pword'] != $_POST['repword']) {
 	exit('Passwords do not match');
-}
-elseif ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
-	echo md5($_POST['URLid']);
+} else {
+	echo "hi";
+        /*$stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?');
+        echo md5($_POST['URLid']);
 	$stmt->bind_param('s', md5($_POST['URLid']));
 	$stmt->execute();
 	$stmt->store_result();
@@ -33,7 +33,7 @@ elseif ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
 			echo "five";
     		    header('Location: enter_hours.php');
     	    }
-	}
+	}*/
 }
 echo $_POST['URLid'];
 ?>
