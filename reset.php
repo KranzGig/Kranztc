@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css?v=2.3">
 </head>
-<body onload="checkIncorrect()">
+<body>
 <form action="reset_submit.php" method="post">
     <?php
 // Initialize URL to the variable
@@ -31,21 +31,9 @@ echo "<input type='hidden' name='URLid' value='".$params['id']."'/>";
       <input type="password" id="pword" name="pword" placeholder="Password"><br /><br />
       Reenter Password:<br />
       <input type="password" id="repword" name="repword" placeholder="Password"><br /><br />
-      <p id='incorrect' style="display:none;">Please input matching passwords</p>
       <input type="submit" value="Enter">
 </div>
 </form>
 
-<script type="text/javascript">
-	function checkIncorrect() {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        if (urlParams.get("error") == "1") {
-            document.getElementById("incorrect").style.removeProperty('display');
-        }
-    }
-    
-</script>
-    
 </body>
 </html>
