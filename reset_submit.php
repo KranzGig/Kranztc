@@ -10,10 +10,10 @@ if ($_POST['pword'] == '' || ($_POST['repword'] == '' ) {
 	// Could not get the data that should have been sent.
 	exit('Please fill both fields!');
 }
-    else if ($_POST['pword'] != $_POST['repword']) {
+    elseif ($_POST['pword'] != $_POST['repword']) {
 	exit('Passwords do not match');
 }
-else if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
+elseif ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')) {
 	echo md5($_POST['URLid']);
 	$stmt->bind_param('s', md5($_POST['URLid']));
 	$stmt->execute();
