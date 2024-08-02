@@ -133,6 +133,7 @@
 		for (let j = 0; j < hidden.length; j++) {
 	  		//hidden[j].setAttribute("display","none");
 			hidden[j].style.display = 'none';
+			document.getElementById("incorrect").style.display = 'none';
 			
 		}
 	}
