@@ -6,7 +6,7 @@ $dbname = "u751975974_TestDB";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-if ( !isset($_POST['pword']) ) {
+if ($_POST['pword'] == '' ) {
 	// Could not get the data that should have been sent.
 	exit('Please fill both fields!');
 }
