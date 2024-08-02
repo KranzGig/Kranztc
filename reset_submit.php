@@ -14,7 +14,7 @@ if ($_POST['pword'] == '' || ($_POST['repword'] == '' ) {
 if ($_POST['pword'] != $_POST['repword']) {
 	exit('Passwords do not match');
 } 
-if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')){
+/*if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')){
 	echo "hi";
         echo md5($_POST['URLid']);
 	$stmt->bind_param('s', md5($_POST['URLid']));
@@ -36,5 +36,5 @@ if ($stmt = $conn->prepare('SELECT id FROM accounts WHERE code = ?')){
     		    header('Location: enter_hours.php');
     	    }
 	}
-}
+}*/
 ?>
