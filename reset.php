@@ -31,7 +31,7 @@ echo "<input type='hidden' name='URLid' value='".$params['id']."'/>";
       <input type="password" id="pword" name="pword" placeholder="Password"><br /><br />
       Reenter Password:<br />
       <input type="password" id="repword" name="repword" placeholder="Password"><br /><br />
-      <p id='incorrect' style="display:none;">Please input matching passwords</p>
+      <p id='incorrect' style="display:none;">Please enter a matching password in both fields</p>
       <input type="submit" value="Enter">
 </div>
 </form>
