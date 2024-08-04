@@ -83,7 +83,7 @@
 			</tr>
 			<tr class="hidden" style="display:none;">
 				<th class="hidden" style="display:none;">Phone Number:</th>
-				<td><input type="text" id="phone" name="phone" class="hidden" style="display:none;"> </td>
+				<td><input type="teL" id="phone" name="phone" pattern='[0-9]{3}-[0-9]{2}-[0-9]{3}' class="hidden" style="display:none;"> </td>
 			</tr>
 			<tr class="hidden" style="display:none;">
 				<th class="hidden" style="display:none;">Caretaker:</th>
