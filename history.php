@@ -10,6 +10,36 @@
   <link rel="stylesheet" type="text/css" href="style.css?v2.2">
 </head>
 <body>
+
+<script>
+	function removeHidden() {
+		const hidden = document.getElementsByClassName("hidden");
+		for (let j = 0; j < hidden.length; j++) {
+	  		hidden[j].removeAttribute("hidden");
+		}
+		const unhidden = document.getElementsByClassName("unhidden");
+		for (let j = 0; j < unhidden.length; j++) {
+	  		unhidden[j].setAttribute("hidden","true");
+		}
+	}
+	function addHidden() {
+		const hidden = document.getElementsByClassName("hidden");
+		for (let j = 0; j < hidden.length; j++) {
+	  		hidden[j].setAttribute("hidden","true");
+		}
+		const unhidden = document.getElementsByClassName("unhidden");
+		for (let j = 0; j < unhidden.length; j++) {
+	  		unhidden[j].removeAttribute("hidden");
+		}
+	}
+	function checkIncorrect() {
+            document.getElementById("incorrect").style.removeProperty('display');
+    }
+    
+</script>
+
+
+	
   <ul>
     <li><a href="accounts.php">Accounts</a></li>
     <li id="current_tab"><a href="history.php">History</a></li>
@@ -59,7 +89,9 @@
 	  <input type="date" name="date" id="date">
       </td>
       </tr></select>
+		<tr><td><p style="display:none;" id="incorrect">Please enter a date</p></td></tr>
       <tr><th> </th>
+
       <td>
 	      <input type="submit" value="Go" id='go'>
       </td></tr>
@@ -80,17 +112,15 @@
 			$url_components = parse_url($url);
 			parse_str($url_components['query'], $params);
 	if ($_POST['date'] == '') {
-		echo "YYYYYYYYYYYYYY";
+		echo "<script> checkIncorrect(); </script>";
 	}
-	/*if (isset($_POST['caretakers']) && isset($_POST['date'])) {
+	if (isset($_POST['caretakers']) && isset($_POST['date'])) {
 		$name = $_POST['caretakers'];
 		$curdate = strtotime($_POST['date']);
 	} else if (isset($params['name']) && isset($params['date'])){
 		$name = $params['name'];
 		$curdate = strtotime($params['date']);
-	} else {
-		echo "OKOKOKOKOK";
-	}*/
+	} 
 	
 	/*$sql = "SELECT id FROM accounts WHERE name='$name'";
 	$result = $conn->query($sql);
@@ -180,28 +210,7 @@
   </div>
   <br /><br />
 
-<script>
-	function removeHidden() {
-		const hidden = document.getElementsByClassName("hidden");
-		for (let j = 0; j < hidden.length; j++) {
-	  		hidden[j].removeAttribute("hidden");
-		}
-		const unhidden = document.getElementsByClassName("unhidden");
-		for (let j = 0; j < unhidden.length; j++) {
-	  		unhidden[j].setAttribute("hidden","true");
-		}
-	}
-	function addHidden() {
-		const hidden = document.getElementsByClassName("hidden");
-		for (let j = 0; j < hidden.length; j++) {
-	  		hidden[j].setAttribute("hidden","true");
-		}
-		const unhidden = document.getElementsByClassName("unhidden");
-		for (let j = 0; j < unhidden.length; j++) {
-	  		unhidden[j].removeAttribute("hidden");
-		}
-	}
-</script>
+
 		  
 </body>
 </html>
