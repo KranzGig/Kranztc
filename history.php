@@ -86,6 +86,8 @@
 	} else if (isset($params['name']) && isset($params['date'])){
 		$name = $params['name'];
 		$curdate = strtotime($params['date']);
+	} else {
+		echo "OKOKOKOKOK";
 	}
 	
 	$sql = "SELECT id FROM accounts WHERE name='$name'";
