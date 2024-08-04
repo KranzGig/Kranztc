@@ -18,7 +18,7 @@
 	 if ($result->num_rows > 0) {
     		while($row = $result->fetch_assoc()) {
           $email_orig = $row['email'];
-	  $email = $_POST['email-'.str_replace(".","_",$email_orig).'_'];
+	  $email = strtolower($_POST['email-'.str_replace(".","_",$email_orig).'_']);
 	  $name = $_POST['name-'.str_replace(".","_",$email_orig).'_'];
 	  $phone = $_POST['phone-'.str_replace(".","_",$email_orig).'_'];
           $admin = 1;
