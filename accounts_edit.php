@@ -52,7 +52,7 @@
 			echo "</td></tr>";
 			echo "<tr>";
 			echo "<th>Phone Number:</th>";
-			echo "<td><input type='text' name='phone-".$row['email']." 'value='".$row['phone']."'></td>";
+			echo "<td><input type='tel' name='phone-".$row['email']." 'value='".$row['phone']."'></td>";
 			echo "</td></tr>";
 			echo "<tr>";
 			echo "<th>Caretaker:</th>";
