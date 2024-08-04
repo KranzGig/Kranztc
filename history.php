@@ -88,7 +88,7 @@
        <td>
 	  <input type="date" name="date" id="date">
       </td>
-      </tr></select>
+      </tr></select><th></th>
 		<tr><td><p style="display:none;" id="incorrect">Please enter a date</p></td></tr>
       <tr><th> </th>
 
