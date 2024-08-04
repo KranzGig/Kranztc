@@ -20,7 +20,7 @@
     $admin = 0;
   }
   //echo "Admin: ". $admin;
-  $email = $_POST['email'];
+  $email = strtolower($_POST['email']);
   $name = $_POST['name'];
   $phone = $_POST['phone'];
   $sql = "INSERT INTO accounts (email, name, admin, phone)
