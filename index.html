@@ -25,6 +25,7 @@
         </div>
   </div>
       <p style="display:none;" id="incorrect">Incorrect email and/or password</p>
+	  <p style="display:none;" id="empty">Please enter a password</p>
   <p id="small"><a href="forgot.php">Forgot Password?</a></p>
   <div class="button2">
   <button id='enter'>
@@ -39,6 +40,9 @@
         const urlParams = new URLSearchParams(queryString);
         if (urlParams.get("error") == "1") {
             document.getElementById("incorrect").style.removeProperty('display');
+        }
+		if (urlParams.get("error") == "2") {
+            document.getElementById("empty").style.removeProperty('display');
         }
     }
     
