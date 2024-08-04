@@ -52,7 +52,7 @@
 			echo "</td></tr>";
 			echo "<tr>";
 			echo "<th>Phone Number:</th>";
-			echo "<td><input type='tel' name='phone-".$row['email']." 'value='".$row['phone'].' "pattern='[0-9]{3}-[0-9]{2}-[0-9]{3}'></td>";
+			echo "<td><input type='tel' name='phone-".$row['email']." 'value='".$row['phone']."' pattern='[0-9]{3}-[0-9]{2}-[0-9]{3}'></td>";
 			echo "</td></tr>";
 			echo "<tr>";
 			echo "<th>Caretaker:</th>";
