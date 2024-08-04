@@ -79,17 +79,18 @@
 	$url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 			$url_components = parse_url($url);
 			parse_str($url_components['query'], $params);
-	if (isset($_POST['caretakers']) && isset($_POST['date'])) {
-		echo "ONEONEONE";
+	if ($_POST['date'] == '') {
+		echo "YYYYYYYYYYYYYY";
+	}
+	/*if (isset($_POST['caretakers']) && isset($_POST['date'])) {
 		$name = $_POST['caretakers'];
 		$curdate = strtotime($_POST['date']);
 	} else if (isset($params['name']) && isset($params['date'])){
-		echo "TWOTWOTWOTWO";
 		$name = $params['name'];
 		$curdate = strtotime($params['date']);
 	} else {
 		echo "OKOKOKOKOK";
-	}
+	}*/
 	
 	/*$sql = "SELECT id FROM accounts WHERE name='$name'";
 	$result = $conn->query($sql);
