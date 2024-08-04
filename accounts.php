@@ -79,7 +79,7 @@
 			</tr>
 			<tr class="hidden" style="display:none;">
 				<th class="hidden" style="display:none;">Email:</th>
-				<td><input type="text" id="email" name="email" class="hidden" style="display:none;"> </td>
+				<td><input type="email" id="email" name="email" class="hidden" style="display:none;"> </td>
 			</tr>
 			<tr class="hidden" style="display:none;">
 				<th class="hidden" style="display:none;">Phone Number:</th>
