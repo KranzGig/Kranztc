@@ -208,6 +208,9 @@ h1 {
 .long #date, #caretakers {
   width: 350px;
 }
+#acctname {
+  width: 200px;
+}
 .long {
   text-align: center;
 }
