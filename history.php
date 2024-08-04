@@ -90,7 +90,7 @@
 		echo "OKOKOKOKOK";
 	}
 	
-	$sql = "SELECT id FROM accounts WHERE name='$name'";
+	/*$sql = "SELECT id FROM accounts WHERE name='$name'";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 	$id = $row['id'];
@@ -167,7 +167,7 @@
 		}
 		echo "<tr><td><input type='submit' value='Save' id='save' class='hidden' hidden></td>";
 		echo "</form>";
-		echo "<td><button id='save' class='hidden' onclick=addHidden() hidden>Cancel</button></td></tr>";
+		echo "<td><button id='save' class='hidden' onclick=addHidden() hidden>Cancel</button></td></tr>";*/
     ?>
   </table>
   <div class="button1">
