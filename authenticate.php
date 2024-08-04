@@ -24,7 +24,8 @@ if ($_POST['pword'] == '') {
 }
 if ($stmt = $conn->prepare('SELECT id, password, admin, name FROM accounts WHERE email = ?')) {
 	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
-	$stmt->bind_param('s', $_POST['uname']);
+	$uname = strtolower($_POST['uname']);
+	$stmt->bind_param('s', $uname);
 	$stmt->execute();
 	// Store the result so we can check if the account exists in the database.
 	$stmt->store_result();
