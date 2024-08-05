@@ -22,22 +22,32 @@
 	}
         $email = $_POST['email'];
 	$mail = new PHPMailer;
-	   $mail->isSMTP();
-	   //$mail->SMTPDebug = 2;
-	   $mail->Host = 'smtp.hostinger.com';
-	   $mail->Port = 587;
-	   $mail->SMTPAuth = true;
-	   $mail->Username = 'automail@kranztc.com';
-	   $mail->Password = 'DragonSandd0gs-';
-	   $mail->setFrom('automail@kranztc.com', 'Kranz Tech Consulting');
-	   $mail->addReplyTo('automail@kranztc.com', 'Kranz Tech Consulting');
-	   $mail->addAddress($email);
-	   $mail->Subject = 'Reset Time Tracking Password';
-	   $mail->Body = "Use the following link to reset your password: documenthours.com/reset.php?id=".$code;
-	   if (!$mail->send()) {
-	       echo 'Mailer Error: ' . $mail->ErrorInfo;
-	   }
-	    echo "Check your email for a link to reset your password";
+	  $mail->isSMTP();
+	  //$mail->SMTPDebug = 2;
+	  $mail->Host = 'smtp.hostinger.com';
+	  $mail->Port = 587;
+	  $mail->SMTPAuth = true;
+	  $mail->Username = 'automail@kranztc.com';
+	  $mail->Password = 'DragonSandd0gs-';
+	  $mail->setFrom('automail@kranztc.com', 'Kranz Tech Consulting');
+	  $mail->addReplyTo('automail@kranztc.com', 'Kranz Tech Consulting');
+	  $mail->addAddress($email);
+	  $mail->Subject = 'Reset Time Tracking Password';
+	  $mail->Body = "Use the following link to reset your password: documenthours.com/reset.php?id=".$code;
+	  if (!$mail->send()) {
+	      echo 'Mailer Error: ' . $mail->ErrorInfo;
+	  }
+	  echo '<head>'
+  	  echo '<meta charset="utf-8">'
+  	  echo '<title>Time Tracker Email</title>'
+  	  echo '<link rel="preconnect" href="https://fonts.googleapis.com">'
+  	  echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+  	  echo '<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">'
+  	  echo '<meta name="viewport" content="width=device-width, initial-scale=1">'
+ 	  echo '<link rel="stylesheet" type="text/css" href="style.css">'
+  	  echo '<link rel="icon" href="http://documenthours.com/favicon.png">'
+	  echo '</head>'
+	  echo '<p>Check your email for a link to reset your password</p>';
     } else {
 	header('Location:forgot.php?error=1');
     }
