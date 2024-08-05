@@ -60,7 +60,17 @@
    if (!$mail->send()) {
        echo 'Mailer Error: ' . $mail->ErrorInfo;
    } else {
-       echo 'The email message was sent.';
+      echo '<head>';
+  	  echo '<meta charset="utf-8">';
+  	  echo '<title>Time Tracker Mailer</title>';
+  	  echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
+  	  echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
+  	  echo '<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">';
+  	  echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
+ 	  echo '<link rel="stylesheet" type="text/css" href="style.css">';
+  	  echo '<link rel="icon" href="http://documenthours.com/favicon.png">';
+	  echo '</head>';
+	  echo '<p>The email message was sent.</p>';
    }
 ?>
 </body>
