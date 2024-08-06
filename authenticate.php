@@ -12,6 +12,7 @@
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
+  $_SESSION['unameset'] = $_POST['uname'];
   if ( !isset($_POST['uname'], $_POST['pword']) ) {
     //echo "one";
     // Could not get the data that should have been sent.
