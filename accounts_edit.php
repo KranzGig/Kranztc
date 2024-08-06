@@ -25,7 +25,7 @@
   <div class="line">
   </div>
   <div class="long">
-    <form action='edit_submit.php' method='post'>
+    <form method='post'>
     <table class="table table-borderless table-responsive">
     <?php
       session_start();
@@ -87,6 +87,50 @@
       }
     }
   </script>
+<?php
+  session_start();
+  $servername = "127.0.0.1:3306";
+  $username = "u751975974_kranz";
+  $password = "Dradbgon12";
+  $dbname = "u751975974_TestDB";
 
+  // Create connection
+  $conn = new mysqli($servername, $username, $password, $dbname);
+
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+  $sql = 'SELECT email FROM accounts';
+  $result = $conn->query($sql);
+  //print_r($_POST);
+  if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+      $email_orig = $row['email'];
+      $email = strtolower($_POST['email-'.str_replace(".","_",$email_orig).'_']);
+      $name = $_POST['name-'.str_replace(".","_",$email_orig).'_'];
+      $_SESSION['nameset'] = $name;
+      $phone = $_POST['phone-'.str_replace(".","_",$email_orig).'_'];
+      $admin = 1;
+      if (isset($_POST["admin-".str_replace(".","_",$email_orig)])) {
+        $admin = 0;
+      }
+      //echo "$email</br>";  
+      /*if ($name == '') {
+	header('Location:accounts_edit.php?error=1');
+	exit();
+      }
+      if ($phone == '') {
+	header('Location:accounts_edit.php?error=1');
+	exit();
+      }*/
+      $sql = "UPDATE accounts SET email='$email', admin=$admin, name='$name', phone='$phone' WHERE email='$email_orig'";
+      echo $sql;  
+      $conn->query($sql);
+      header('Location: accounts.php');	
+    
+   }
+  }
+?>
 </body>
 </html>
