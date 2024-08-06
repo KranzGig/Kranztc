@@ -88,6 +88,7 @@
     }
   </script>
 <?php
+  echo "JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ";
   if (isset($_POST['submit'])) {
   session_start();
   $servername = "127.0.0.1:3306";
