@@ -11,126 +11,121 @@
   <link rel="icon" href="http://documenthours.com/favicon.png">
 </head>
 <body>
- <?php
-	session_start();
-	// If the user is not logged in redirect to the login page...
-	if (!isset($_SESSION['loggedin'])) {
-		header('Location: index.html');
-		exit;
-	}
-?>
+  <?php
+    session_start();
+    // If the user is not logged in redirect to the login page...
+    if (!isset($_SESSION['loggedin'])) {
+      header('Location: index.html');
+      exit;
+    }
+  ?>
   <img id="clock2" src="clock.png" alt="clock icon"
    srcset="clock.png 2400w"
    sizes="80vw";
   >
-<?php
-	session_start();
-	$name = $_SESSION['name'];
-	echo "<h1>$name Enter Hours</h1>";
-?>
-<div class="container">
-  <table class="table table-borderless table-responsive">
-    <form action="submission.php" method="POST">
-	<thead>
-      <tr>
-        <th>Date:</th>
-        <th>Hours:</th>
-	<th>Paid Vacation:</th>
-      </tr>
+  <?php
+    session_start();
+    $name = $_SESSION['name'];
+    echo "<h1>$name Enter Hours</h1>";
+  ?>
+  <div class="container">
+    <table class="table table-borderless table-responsive">
+      <form action="submission.php" method="POST">
+      <thead>
+        <tr>
+          <th>Date:</th>
+          <th>Hours:</th>
+	  <th>Paid Vacation:</th>
+        </tr>
 	<?php
-		session_start();
-		$servername = "127.0.0.1:3306";
-		$username = "u751975974_kranz";
-		$password = "Dradbgon12";
-		$dbname = "u751975974_TestDB";
+	  session_start();
+	  $servername = "127.0.0.1:3306";
+	  $username = "u751975974_kranz";
+	  $password = "Dradbgon12";
+	  $dbname = "u751975974_TestDB";
 
-		$conn = new mysqli($servername, $username, $password, $dbname);
+	  $conn = new mysqli($servername, $username, $password, $dbname);
 
-		$id = $_SESSION['id'];
+	  $id = $_SESSION['id'];
 		
 
-		$name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-		$mins = 24 * 60 * 60;
-		date_default_timezone_set("MST");
-		//echo date('Y-m-d H:i:s',time()-(4*60*60));
-		$curtime = time();
-		if (date("w") == '0') {
-			$curtime = $curtime - (4*60*60);
-		}
-		for ($x = date("w",$curtime); $x >= 0; $x--) {
-			$time = $curtime - $x * $mins;
-			$day = $name[date("w",$time)];
-			$timestamp = date("m/d",$time);
-			$date = $day." ".date("m/d",$time);
-			$sql = "SELECT Hours,Vacation FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
+	  $name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+	  $mins = 24 * 60 * 60;
+	  date_default_timezone_set("MST");
+	  //echo date('Y-m-d H:i:s',time()-(4*60*60));
+	  $curtime = time();
+	  if (date("w") == '0') {
+	    $curtime = $curtime - (4*60*60);
+	  }
+	  for ($x = date("w",$curtime); $x >= 0; $x--) {
+	    $time = $curtime - $x * $mins;
+	    $day = $name[date("w",$time)];
+	    $timestamp = date("m/d",$time);
+	    $date = $day." ".date("m/d",$time);
+	    $sql = "SELECT Hours,Vacation FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
 			
-			$result = $conn->query($sql);
-			$num = 0;
-			if ($result->num_rows > 0) {
-				$row = $result->fetch_assoc();
-				$num = $row["Hours"];
-				$vacation = $row["Vacation"];
-			}
-			echo "<tr><td class='$day'>$date</td>";
-			echo "<input type='hidden' name='".$day."date' value='".$date."' class='$day'/>";
-			echo "<td><select name='".$day."hours' id='numhours'>";
-			for ($i=0;$i<=24;$i++) {
-				if ($i == $num) {
-					echo "<option value='$i' selected>$i</option>";
-				} else {
-					echo "<option value='$i'>$i</option>";
-				}
-			}
-			if ($vacation) {
-				echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid' checked></td></tr>";
-			} else {
-				echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid'></td></tr>";
-			}
-		}
-		for ($x = 1; $x < 7-date("w",$curtime); $x++) {
-			$time = $curtime + $x * $mins;
-			$day = $name[date("w",$time)];
-			$timestamp = date("m/d",$time);
-			$date = $day." ".date("m/d",$time);
-			$sql = "SELECT Hours FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
+	    $result = $conn->query($sql);
+	    $num = 0;
+	    if ($result->num_rows > 0) {
+	      $row = $result->fetch_assoc();
+	      $num = $row["Hours"];
+	      $vacation = $row["Vacation"];
+	    }
+	    echo "<tr><td class='$day'>$date</td>";
+	    echo "<input type='hidden' name='".$day."date' value='".$date."' class='$day'/>";
+	    echo "<td><select name='".$day."hours' id='numhours'>";
+	    for ($i=0;$i<=24;$i++) {
+	      if ($i == $num) {
+	        echo "<option value='$i' selected>$i</option>";
+	      } else {
+		echo "<option value='$i'>$i</option>";
+	      }
+	    }
+	    if ($vacation) {
+	      echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid' checked></td></tr>";
+	    } else {
+	      echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid'></td></tr>";
+	    }
+	  }
+	  for ($x = 1; $x < 7-date("w",$curtime); $x++) {
+	    $time = $curtime + $x * $mins;
+	    $day = $name[date("w",$time)];
+	    $timestamp = date("m/d",$time);
+	    $date = $day." ".date("m/d",$time);
+	    $sql = "SELECT Hours FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
 			
-			$result = $conn->query($sql);
-			$num = 0;
-			if ($result->num_rows > 0) {
-				$row = $result->fetch_assoc();
-				$num = $row["Hours"];
-			}
-			echo "<tr><td class='$day'>$date</td>";
-			echo "<input type='hidden' name='".$day."date' value='".$date."' class='$day'/>";
-			echo "<td><select name='".$day."hours' id='numhours' disabled>";
-			for ($i=0;$i<=24;$i++) {
-				if ($i == $num) {
-					echo "<option value='$i' selected>$i</option>";
-				} else {
-					echo "<option value='$i'>$i</option>";
-				}
-			}
-			if ($vacation) {
-				echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid' checked disabled></td></tr>";
-			} else {
-				echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid' disabled></td></tr>";
-			}
-		}
-		
-		
+	    $result = $conn->query($sql);
+	    $num = 0;
+	    if ($result->num_rows > 0) {
+	      $row = $result->fetch_assoc();
+	      $num = $row["Hours"];
+	    }
+	    echo "<tr><td class='$day'>$date</td>";
+	    echo "<input type='hidden' name='".$day."date' value='".$date."' class='$day'/>";
+	    echo "<td><select name='".$day."hours' id='numhours' disabled>";
+	    for ($i=0;$i<=24;$i++) {
+	      if ($i == $num) {
+		echo "<option value='$i' selected>$i</option>";
+	      } else {
+		echo "<option value='$i'>$i</option>";
+	      }
+	    }
+	    if ($vacation) {
+	      echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid' checked disabled></td></tr>";
+	    } else {
+	      echo "</td><td><input type='checkbox' id='pvacation' name='".$day."pvacation' value='Paid' disabled></td></tr>";
+	    }
+	  }
+			
 	?>
-      
     </thead>
   </table>
 </div>
 
-	
 <div class="button2">
-    <input type="submit" value="Save" id='save'>
-    
-	
+  <input type="submit" value="Save" id='save'>
   </form>
-	  <a href="logout.php"><button id='enter'>Logout</button></a>
-	</div>
+  <a href="logout.php"><button id='enter'>Logout</button></a>
+</div>
 </body>
 </html>
