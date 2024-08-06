@@ -20,6 +20,7 @@
       $email_orig = $row['email'];
       $email = strtolower($_POST['email-'.str_replace(".","_",$email_orig).'_']);
       $name = $_POST['name-'.str_replace(".","_",$email_orig).'_'];
+      $_SESSION['nameset'] = $name;
       $phone = $_POST['phone-'.str_replace(".","_",$email_orig).'_'];
       $admin = 1;
       if (isset($_POST["admin-".str_replace(".","_",$email_orig)])) {
