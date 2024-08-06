@@ -16,7 +16,10 @@
   <form action="authenticate.php" method="post">
     <div class="form">
       Username:<br />
-      <input type="text" id="uname" name="uname" placeholder="Email"><br /><br>
+      <?php
+        session_start
+      ?>
+      <input type="text" id="uname" name="uname" value="<?php if (isset($_POST['username'])) echo $_POST['username']; ?>" placeholder="Email"><br /><br>
       <div id="pass">
         Password:<br />
         <input type="password" id="pword" name="pword" placeholder="Password"><br /><br />
