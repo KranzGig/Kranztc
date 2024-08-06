@@ -15,11 +15,11 @@
   if ( !isset($_POST['uname'], $_POST['pword']) ) {
     //echo "one";
     // Could not get the data that should have been sent.
-    header('Location: index.html?error=1');
+    header('Location: index.php?error=1');
     exit;
   }
   if ($_POST['pword'] == '') {
-    header('Location: index.html?error=2');
+    header('Location: index.php?error=2');
     exit;
   }
   if ($stmt = $conn->prepare('SELECT id, password, admin, name FROM accounts WHERE email = ?')) {
@@ -75,13 +75,13 @@
       } else {
     	//echo "four";
 	// Incorrect password
-    	header('Location: index.html?error=1');
+    	header('Location: index.php?error=1');
 	exit;
       }
     } else {
       //echo "five";
       // Incorrect username
-      header('Location: index.html?error=1');
+      header('Location: index.php?error=1');
       exit;
     }
   }
