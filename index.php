@@ -17,6 +17,7 @@
     <div class="form">
       Username:<br />
       <?php
+        session_start();
         if (isset($_SESSION['unameset'])) {
           echo "<input type='text' id='uname' name='uname' placeholder='Email'><br /><br>";
         } else {?>
