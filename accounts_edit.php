@@ -50,12 +50,12 @@
 	  echo "</td></tr>";
 	  echo "<tr>";
 	  echo "<th>Email:</th>";
-	  echo "<td><input type='email' name='email-".$row['email']." 'value='".$row['email']."'></td>";
+	  echo "<td><input type='email' name='email-".$row['email']." 'value='".$row['email']."' required></td>";
 	  //echo $row['email'];
 	  echo "</td></tr>";
 	  echo "<tr>";
 	  echo "<th>Phone Number:</th>";
-	  echo "<td><input type='tel' name='phone-".$row['email']." 'value='".$row['phone']."' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'></td>";
+	  echo "<td><input type='tel' name='phone-".$row['email']." 'value='".$row['phone']."' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' required></td>";
 	  echo "</td></tr>";
 	  echo "<tr>";
 	  echo "<th>Caretaker:</th>";
