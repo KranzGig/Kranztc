@@ -26,15 +26,7 @@
       if (isset($_POST["admin-".str_replace(".","_",$email_orig)])) {
         $admin = 0;
       }
-      //echo "$email</br>";  
-      if ($name == '') {
-	header('Location:accounts_edit.php?error=1');
-	exit();
-      }
-      if ($phone == '') {
-	header('Location:accounts_edit.php?error=1');
-	exit();
-      }
+      
       $sql = "UPDATE accounts SET email='$email', admin=$admin, name='$name', phone='$phone' WHERE email='$email_orig'";
       echo $sql;  
       $conn->query($sql);
