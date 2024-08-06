@@ -16,7 +16,12 @@
   <form action="authenticate.php" method="post">
     <div class="form">
       Username:<br />
+      <?php
+        if (isset($_SESSION['unameset'])) {
+          echo "<input type='text' id='uname' name='uname' placeholder='Email'><br /><br>";
+        } else {?>
       <input type="text" id="uname" name="uname" placeholder="Email"><br /><br>
+                <?php } ?>
       <div id="pass">
         Password:<br />
         <input type="password" id="pword" name="pword" placeholder="Password"><br /><br />
@@ -44,5 +49,6 @@
       }
     }  
   </script>
+  
 </body>
 </html>
