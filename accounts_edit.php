@@ -88,6 +88,7 @@
     }
   </script>
 <?php
+  if (isset($_POST['submit'])) {
   session_start();
   $servername = "127.0.0.1:3306";
   $username = "u751975974_kranz";
@@ -130,6 +131,7 @@
       header('Location: accounts.php');	
     
    }
+  }
   }
 ?>
 </body>
