@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css?v=2.3">
+  <link rel="icon" href="http://documenthours.com/favicon.png">
 </head>
 <body onload="checkIncorrect()">
 <form action="reset_submit.php" method="post">
