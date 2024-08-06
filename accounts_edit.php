@@ -25,7 +25,7 @@
   <div class="line">
   </div>
   <div class="long">
-    <form action='' method='post'>
+    <form action='edit_submit.php' method='post'>
     <table class="table table-borderless table-responsive">
     <?php
       session_start();
@@ -43,11 +43,8 @@
     	while($row = $result->fetch_assoc()) {
 	  echo "<tr>";
 	  echo "<th>Name:</th>";
-	  if (isset($_SESSION['nameset'])) {
-	  	echo "<td><input type='text' id='acctname' name='name-".$row['email']." 'value='".$_SESSION['nameset']."'></td>";
-	  } else {
+	  
 	  	echo "<td><input type='text' id='acctname' name='name-".$row['email']." 'value='".$row['name']."'></td>";
-	  }
 	  //echo $row['email'];
 	  echo "</td></tr>";
 	  echo "<tr>";
@@ -90,10 +87,6 @@
       }
     }
   </script>
-<?php
-	if(isset($_POST['name-test2@test2.com'])) {
-		echo "YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY";
-	}
-?>
+
 </body>
 </html>
