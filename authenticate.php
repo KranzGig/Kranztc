@@ -38,7 +38,8 @@
       // Note: remember to use password_hash in your registration file to store the hashed passwords.
       if ($password == '') {
         if ($stmt = $conn->prepare("UPDATE accounts SET password=? WHERE id=$id")) {
-          $stmt->bind_param('s', password_hash($_POST['pword'],PASSWORD_DEFAULT));
+          $_SESSION['unameset'] = '';
+	  $stmt->bind_param('s', password_hash($_POST['pword'],PASSWORD_DEFAULT));
           $stmt->execute();
           session_regenerate_id();
           $_SESSION['loggedin'] = TRUE;
@@ -57,6 +58,7 @@
     	    
       }
       if (password_verify($_POST['pword'], $password)) {
+        $_SESSION['unameset'] = '';
     	//if($_POST['password'] === $password) {
     	// Verification success! User has logged-in!
     	// Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
