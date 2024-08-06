@@ -43,11 +43,9 @@
     	while($row = $result->fetch_assoc()) {
 	  echo "<tr>";
 	  echo "<th>Name:</th>";
-	  if (isset($_POST["name-".$row['email']])) {
-		  echo "<td><input type='text' id='acctname' name='name-".$row['email']." 'value='".$_POST["name-".$row['email']]."'></td>";
-	  } else {
-		echo "<td><input type='text' id='acctname' name='name-".$row['email']." 'value='".$row['name']."'></td>";
-	  }
+	  
+		echo "<td><input type='text' id='acctname' name='name-".$row['email']." 'value='".$row['name']."' required></td>";
+	  
 	  //echo $row['email'];
 	  echo "</td></tr>";
 	  echo "<tr>";
