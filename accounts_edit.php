@@ -43,7 +43,11 @@
     	while($row = $result->fetch_assoc()) {
 	  echo "<tr>";
 	  echo "<th>Name:</th>";
-	  echo "<td><input type='text' id='acctname' name='name-".$row['email']." 'value='".$row['name']."'></td>";
+	  if (isset($_SESSION['nameset'])) {
+	  	echo "<td><input type='text' id='acctname' name='name-".$row['email']." 'value='".$_SESSION['nameset']."'></td>";
+	  } else {
+	  	echo "<td><input type='text' id='acctname' name='name-".$row['email']." 'value='".$row['name']."'></td>";
+	  }
 	  //echo $row['email'];
 	  echo "</td></tr>";
 	  echo "<tr>";
