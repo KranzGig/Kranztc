@@ -88,8 +88,9 @@
     }
   </script>
 <?php
-  echo "JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ";
+  
   if (isset($_POST['submit'])) {
+	  echo "JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ";
   session_start();
   $servername = "127.0.0.1:3306";
   $username = "u751975974_kranz";
