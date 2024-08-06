@@ -76,15 +76,15 @@
     <form action="add_submit.php" method="post">
 	<tr class="hidden" style="display:none;">
 	  <th class="hidden" style="display:none;">Name:</th>
-	  <td><input type="text" id="name" name="name" class="hidden" style="display:none;"> </td>
+	  <td><input type="text" id="name" name="name" class="hidden" style="display:none;" required> </td>
 	</tr>
 	<tr class="hidden" style="display:none;">
 	  <th class="hidden" style="display:none;">Email:</th>
-	  <td><input type="email" id="email" name="email" class="hidden" style="display:none;"> </td>
+	  <td><input type="email" id="email" name="email" class="hidden" style="display:none;" required> </td>
 	</tr>
 	<tr class="hidden" style="display:none;">
 	  <th class="hidden" style="display:none;">Phone Number:</th>
-	  <td><input type="teL" id="phone" name="phone" placeholder='012-345-6789' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' class="hidden" style="display:none;"> </td>
+	  <td><input type="teL" id="phone" name="phone" placeholder='012-345-6789' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' class="hidden" style="display:none;" required> </td>
 	</tr>
 	<tr class="hidden" style="display:none;">
 	  <th class="hidden" style="display:none;">Caretaker:</th>
