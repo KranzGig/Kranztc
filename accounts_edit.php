@@ -91,7 +91,7 @@
   
   if (isset($_POST['submit'])) {
 	  echo "JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ";
-  session_start();
+  /*session_start();
   $servername = "127.0.0.1:3306";
   $username = "u751975974_kranz";
   $password = "Dradbgon12";
@@ -127,13 +127,13 @@
 	header('Location:accounts_edit.php?error=1');
 	exit();
       }*/
-      $sql = "UPDATE accounts SET email='$email', admin=$admin, name='$name', phone='$phone' WHERE email='$email_orig'";
+      /*$sql = "UPDATE accounts SET email='$email', admin=$admin, name='$name', phone='$phone' WHERE email='$email_orig'";
       echo $sql;  
       $conn->query($sql);
       header('Location: accounts.php');	
     
    }
-  }
+  }*/
   }
 ?>
 </body>
