@@ -25,7 +25,7 @@
   <div class="line">
   </div>
   <div class="long">
-    <form action='edit_submit.php' method='post'>
+    <form action='' method='post'>
     <table class="table table-borderless table-responsive">
     <?php
       session_start();
@@ -90,5 +90,10 @@
       }
     }
   </script>
+<?php
+	if(isset($_POST['name-test2@test2.com'])) {
+		echo "YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY";
+	}
+?>
 </body>
 </html>
