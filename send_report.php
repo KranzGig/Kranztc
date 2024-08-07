@@ -7,8 +7,8 @@ $curdate = strtotime($_POST['firstdate']);
 $mins = 24 * 60 * 60;
 $myfile = fopen("result.csv", "w");
 echo "hi";
-/*fwrite($myfile, "Date, Hours, Vacation, EmpID\n");
-for ($x = date("w", $curdate); $x >= 0; $x--) {
+fwrite($myfile, "Date, Hours, Vacation, EmpID\n");
+/*for ($x = date("w", $curdate); $x >= 0; $x--) {
 	$time = $curdate - $x * $mins;
 	$timestamp = date("m/d",$time);
 	$sql = "SELECT Hours.Date, Hours.Hours, Hours.Vacation, accounts.name FROM Hours INNER JOIN accounts ON Hours.EmpID=accounts.id WHERE Date=' $timestamp' ORDER BY EmpID, Date";
