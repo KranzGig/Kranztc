@@ -9,11 +9,11 @@ $myfile = fopen("result.csv", "w");
 echo "hi";
 fwrite($myfile, "Date, Hours, Vacation, EmpID\n");
 for ($x = date("w", $curdate); $x >= 0; $x--) {
-	/*$time = $curdate - $x * $mins;
+	$time = $curdate - $x * $mins;
 	$timestamp = date("m/d",$time);
 	$sql = "SELECT Hours.Date, Hours.Hours, Hours.Vacation, accounts.name FROM Hours INNER JOIN accounts ON Hours.EmpID=accounts.id WHERE Date=' $timestamp' ORDER BY EmpID, Date";
 	echo $sql;
-	$result = $conn->query($sql);
+	/*$result = $conn->query($sql);
 	 while($row = $result->fetch_assoc()) {
       //echo $row['Date'];
       fwrite($myfile, $row["Date"] . ", ");
