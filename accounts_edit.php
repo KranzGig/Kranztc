@@ -14,6 +14,8 @@
   <ul>
     <li id="current_tab"><a href="accounts.php">Accounts</a></li>
     <li><a href="history.php">History</a></li>
+      <li><a href="report.php">Manual Report</a></li>
+
     <li id="right"><a href="logout.php">Log Out</a></li>
     <?php
 	session_start();
