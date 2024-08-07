@@ -87,7 +87,7 @@
       <tr>
         <th>Pick Date:</th>
         <td>
-	  <input type="date" name="date" id="date">
+	  <input type="date" name="date" id="date" required>
         </td>
       </tr></select>
       <tr><th></th><td><p style="display:none;" id="incorrect">Please enter a date</p></td></tr>
@@ -199,6 +199,14 @@
       echo "<tr><td><input type='submit' value='Save' id='save' class='hidden' hidden></td>";
       echo "</form>";
       echo "<td><button id='save' class='hidden' onclick=addHidden() hidden>Cancel</button></td></tr>";
+      $name = $params['name'];
+      $curdate = strtotime($params['date']);
+      $timestamp = date("m/d",$time);
+      echo "<form action='send_report.php' method='post'>";
+      echo "<input type='hidden' name='firstdate' value=$timestamp>";
+      echo "<input type='hidden' name='firstname' value=$name>";
+      echo "<input type='submit' value='Send Report'>";
+      echo "</form>";
     ?>
   </table>
   <div class="button1">
