@@ -17,6 +17,24 @@
     <li id="current_tab"><a href="report.php">Manual Report</a></li>
     <li id="right"><a href="logout.php">Log Out</a></li>
   </ul>
-	  
+  <h1>Manually Send Report</h1>
+  <div class="line">
+  </div><br>
+  <div class="long">
+    <table id='acc_mng'>
+      <tr>
+        <th>Pick Date:</th>
+        <td>
+	  <input type="date" name="date" id="date" required>
+        </td>
+      </tr></select>
+      <tr><th> </th>
+        <td>
+	  <input type="submit" value="Go" id='go'>
+        </td>
+      </tr>
+      </form>
+    </table>
+  </div>
 </body>
 </html>
