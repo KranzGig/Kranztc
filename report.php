@@ -23,7 +23,7 @@
   <div class="long">
     <table id='acc_mng'>
       <tr>
-        <th>Pick Date:</th>
+        <th>Week Of:</th>
         <td>
 	  <input type="date" name="date" id="date" required>
         </td>
