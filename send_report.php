@@ -5,6 +5,7 @@
 $curdate = strtotime($_POST['firstdate']);
 $mins = 24 * 60 * 60;
 $myfile = fopen("result.csv", "w");
+echo "hi";
 fwrite($myfile, "Date, Hours, Vacation, EmpID\n");
 for ($x = date("w", $curdate); $x >= 0; $x--) {
 	$time = $curdate - $x * $mins;
