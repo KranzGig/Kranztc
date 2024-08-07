@@ -30,7 +30,7 @@
       </tr></select>
       <tr><th> </th>
         <td>
-	  <input type="submit" value="Go" id='go'>
+	  <input type="submit" value="Send" id='send'>
         </td>
       </tr>
       </form>
