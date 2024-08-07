@@ -8,7 +8,7 @@ $mins = 24 * 60 * 60;
 $myfile = fopen("result.csv", "w");
 echo "hi";
 fwrite($myfile, "Date, Hours, Vacation, EmpID\n");
-/*for ($x = date("w", $curdate); $x >= 0; $x--) {
+for ($x = date("w", $curdate); $x >= 0; $x--) {
 	$time = $curdate - $x * $mins;
 	$timestamp = date("m/d",$time);
 	$sql = "SELECT Hours.Date, Hours.Hours, Hours.Vacation, accounts.name FROM Hours INNER JOIN accounts ON Hours.EmpID=accounts.id WHERE Date=' $timestamp' ORDER BY EmpID, Date";
@@ -26,7 +26,7 @@ fwrite($myfile, "Date, Hours, Vacation, EmpID\n");
 		 echo "Name: $row['Name'] <br/>";
     }
       }
-      for ($x = 1; $x < 7-date("w",$curdate); $x++) {
+      /*for ($x = 1; $x < 7-date("w",$curdate); $x++) {
 	$time = $curdate + $x * $mins;
 	$timestamp = date("m/d",$time);
 	$sql = "SELECT Hours.Date, Hours.Hours, Hours.Vacation, accounts.name FROM Hours INNER JOIN accounts ON Hours.EmpID=accounts.id WHERE Date=' $timestamp' ORDER BY EmpID, Date";    	
