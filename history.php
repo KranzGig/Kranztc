@@ -44,7 +44,7 @@
   <ul>
     <li><a href="accounts.php">Accounts</a></li>
     <li id="current_tab"><a href="history.php">History</a></li>
-
+    <li><a href="report.php">Manual Report</a></li>
     <li id="right"><a href="logout.php">Log Out</a></li>
     <?php
 	session_start();
