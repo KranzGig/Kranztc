@@ -32,5 +32,7 @@ for ($x = date("w", $curdate); $x >= 0; $x--) {
       fwrite($myfile, $row["name"] . ", \n");
     }
 	}
+
+    fclose($myfile);
       
 ?>
