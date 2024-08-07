@@ -5,7 +5,7 @@
 $curdate = $_POST['firstdate'];
 echo $curdate;
 $mins = 24 * 60 * 60;
-echo $curdate - $mins;
+echo date("w", $curdate);
 for ($x = date("w", $curdate); $x >= 0; $x--) {
 	$time = $curdate - $x * $mins;
 	$timestamp = date("m/d",$time);
