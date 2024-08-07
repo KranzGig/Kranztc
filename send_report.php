@@ -9,7 +9,7 @@ $myfile = fopen("result.csv", "w");
 echo "hi";
 fwrite($myfile, "Date, Hours, Vacation, EmpID\n");
 for ($x = date("w", $curdate); $x >= 0; $x--) {
-	$time = $curdate - $x * $mins;
+	/*$time = $curdate - $x * $mins;
 	$timestamp = date("m/d",$time);
 	$sql = "SELECT Hours.Date, Hours.Hours, Hours.Vacation, accounts.name FROM Hours INNER JOIN accounts ON Hours.EmpID=accounts.id WHERE Date=' $timestamp' ORDER BY EmpID, Date";
 	echo $sql;
@@ -24,7 +24,7 @@ for ($x = date("w", $curdate); $x >= 0; $x--) {
 		 echo "Vacation: $row['Vacation'] <br/>";
       fwrite($myfile, $row["name"] . ", \n");
 		 echo "Name: $row['Name'] <br/>";
-    }
+    }*/
       }
       /*for ($x = 1; $x < 7-date("w",$curdate); $x++) {
 	$time = $curdate + $x * $mins;
