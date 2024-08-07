@@ -14,9 +14,13 @@ for ($x = date("w", $curdate); $x >= 0; $x--) {
 	 while($row = $result->fetch_assoc()) {
       //echo $row['Date'];
       fwrite($myfile, $row["Date"] . ", ");
+		 echo "Date: $row['Date'] <br/>";
       fwrite($myfile, $row["Hours"] . ", ");
+		 echo "Hours: $row['Hours'] <br/>";
       fwrite($myfile, $row["Vacation"] . ", ");
+		 echo "Vacation: $row['Vacation'] <br/>";
       fwrite($myfile, $row["name"] . ", \n");
+		 echo "Name: $row['Name'] <br/>";
     }
       }
       for ($x = 1; $x < 7-date("w",$curdate); $x++) {
