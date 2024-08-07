@@ -214,6 +214,7 @@
       if ($_POST['date'] == '') {
 	echo "<script> checkIncorrect(); </script>";
       }
+	echo "<form action='send_report.php' method='post'>";
       if (isset($_POST['caretakers']) && isset($_POST['date'])) {
 	$name = $_POST['caretakers'];
 	$curdate = strtotime($_POST['date']);
