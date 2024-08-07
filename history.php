@@ -208,7 +208,10 @@
     <a href="#" onclick=removeHidden()>Edit</a>
 	  <?php
   $name = $params['name'];
-      $curdate = strtotime($params['date']);
+      if ($_POST['date'] == '') {
+	echo "<script> checkIncorrect(); </script>";
+      }
+	$curdate = strtotime($params['date']);
       $timestamp = date("m/d",$time);
       echo "<form action='send_report.php' method='post'>";
       echo "<input type='hidden' name='firstdate' value=$timestamp>";
