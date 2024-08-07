@@ -8,8 +8,8 @@ $mins = 24 * 60 * 60;
 //fwrite($myfile, "Date, Hours, Vacation, EmpID\n");
 $timeone = $curdate - date("w",$curdate) * $mins;
 $timetwo = $curdate + date("w",$curdate) * $mins;
-echo $timeone;
+echo date("m/d",$timeone);
 echo "<br/>";
-echo $timetwo;
+echo date("m/d",$timetwo);
       
 ?>
