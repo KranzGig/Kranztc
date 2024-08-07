@@ -21,11 +21,12 @@
   <div class="line">
   </div><br>
   <div class="long">
+	  <form action='send_report.php' method='post'>
     <table id='acc_mng'>
       <tr>
         <th>Week Of:</th>
         <td>
-	  <input type="date" name="date" id="date" required>
+	  <input type="date" name="firstdate" id="firstdate" required>
         </td>
       </tr></select>
       <tr><th> </th>
