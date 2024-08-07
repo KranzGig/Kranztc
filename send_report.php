@@ -3,6 +3,7 @@
 //echo "<br/>";
 //echo $_POST['firstname'];
 $curdate = $_POST['firstdate'];
+echo $curdate;
 $mins = 24 * 60 * 60;
 for ($x = date("w", $curdate); $x >= 0; $x--) {
 	$time = $curdate - $x * $mins;
