@@ -223,7 +223,7 @@
 	$curdate = strtotime($params['date']);
       } 
 	$timestamp = date("m/d",$curdate);
-      echo "<input type='hidden' name='firstdate' value=$timestamp>";
+      echo "<input type='hidden' name='firstdate' value=$curdate>";
       echo "<input type='hidden' name='firstname' value=$name>";
       echo "<input type='submit' value='Send Report'>";
       echo "</form>";?>
