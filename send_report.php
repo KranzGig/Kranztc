@@ -2,6 +2,7 @@
 //echo $_POST['firstdate'];
 //echo "<br/>";
 //echo $_POST['firstname'];
+echo "hi";
 $curdate = strtotime($_POST['firstdate']);
 $mins = 24 * 60 * 60;
 $myfile = fopen("result.csv", "w");
