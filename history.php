@@ -199,14 +199,6 @@
       echo "<tr><td><input type='submit' value='Save' id='save' class='hidden' hidden></td>";
       echo "</form>";
       echo "<td><button id='save' class='hidden' onclick=addHidden() hidden>Cancel</button></td></tr>";
-      $name = $params['name'];
-      $curdate = strtotime($params['date']);
-      $timestamp = date("m/d",$time);
-      echo "<form action='send_report.php' method='post'>";
-      echo "<input type='hidden' name='firstdate' value=$timestamp>";
-      echo "<input type='hidden' name='firstname' value=$name>";
-      echo "<input type='submit' value='Send Report'>";
-      echo "</form>";
     ?>
   </table>
   <div class="button1">
@@ -214,6 +206,15 @@
       /
     </button>
     <a href="#" onclick=removeHidden()>Edit</a>
+	  <?php
+  $name = $params['name'];
+      $curdate = strtotime($params['date']);
+      $timestamp = date("m/d",$time);
+      echo "<form action='send_report.php' method='post'>";
+      echo "<input type='hidden' name='firstdate' value=$timestamp>";
+      echo "<input type='hidden' name='firstname' value=$name>";
+      echo "<input type='submit' value='Send Report'>";
+      echo "</form>";?>
   </div>
   <br /><br />		  
 </body>
