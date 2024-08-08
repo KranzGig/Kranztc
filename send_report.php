@@ -55,7 +55,7 @@ $servername = "127.0.0.1:3306";
     $mail->addAttachment('result.csv');
     if (!$mail->send()) {
       echo 'Mailer Error: ' . $mail->ErrorInfo;
-    } else {?>
+    } ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,6 +84,4 @@ $servername = "127.0.0.1:3306";
 	<div class="button2"><a href="report.php"><button id='save'>Back</button></a></div>
 </body>
 </html>
-   <?php }
-      
-?>
+
