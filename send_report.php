@@ -70,9 +70,9 @@ $servername = "127.0.0.1:3306";
 </head>
 <body onload="checkIncorrect()">
   <ul>
-    <li id="current_tab"><a href="accounts.php">Accounts</a></li>
+    <li><a href="accounts.php">Accounts</a></li>
     <li><a href="history.php">History</a></li>
-    <li><a href="report.php">Manual Report</a></li>
+    <li id="current_tab"><a href="report.php">Manual Report</a></li>
     <li id="right"><a href="logout.php">Log Out</a></li>
     <?php
 	session_start();
@@ -80,6 +80,7 @@ $servername = "127.0.0.1:3306";
 	echo "<li id='joe'>".$name."</li>";
     ?>
   </ul>
+	<h1>The report has been sent</h1>
 </body>
 </html>
    <?php }
