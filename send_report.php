@@ -81,7 +81,7 @@ $servername = "127.0.0.1:3306";
     ?>
   </ul>
 	<h1>The report has been sent</h1>
-	<a href="report.php"><button id='save'>Back</button></a>
+	<div class="button2"><a href="report.php"><button id='save'>Back</button></a></div>
 </body>
 </html>
    <?php }
