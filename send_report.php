@@ -23,7 +23,7 @@ $servername = "127.0.0.1:3306";
     }
     //$sql = "SELECT * FROM Hours INTO OUTFILE '/usr/bin/php /home/u751975974/public_html/result.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'";
     $sql = "SELECT Hours.Date, Hours.Hours, Hours.Vacation, accounts.name FROM Hours INNER JOIN accounts ON Hours.EmpID=accounts.id WHERE Date>=' $firstdate' AND Date<=' $seconddate' ORDER BY EmpID, Date";
-    echo $sql;
+    //echo $sql;
     $result = $conn->query($sql);
     $myfile = fopen("result.csv", "w");
     fwrite($myfile, "Date, Hours, Vacation, Name\n");
@@ -55,18 +55,33 @@ $servername = "127.0.0.1:3306";
     $mail->addAttachment('result.csv');
     if (!$mail->send()) {
       echo 'Mailer Error: ' . $mail->ErrorInfo;
-    } else {
-      echo '<head>';
-      echo '<meta charset="utf-8">';
-      echo '<title>Time Tracker Mailer</title>';
-      echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
-      echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
-      echo '<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">';
-      echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
-      echo '<link rel="stylesheet" type="text/css" href="style.css">';
-      echo '<link rel="icon" href="http://documenthours.com/favicon.png">';
-      echo '</head>';
-      echo '<p>The email message was sent.</p>';
-    }
+    } else {?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Time Tracker Accounts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css?v3.0">
+  <link rel="icon" href="http://documenthours.com/favicon.png">
+</head>
+<body onload="checkIncorrect()">
+  <ul>
+    <li id="current_tab"><a href="accounts.php">Accounts</a></li>
+    <li><a href="history.php">History</a></li>
+    <li><a href="report.php">Manual Report</a></li>
+    <li id="right"><a href="logout.php">Log Out</a></li>
+    <?php
+	session_start();
+	$name = $_SESSION['name'];
+	echo "<li id='joe'>".$name."</li>";
+    ?>
+  </ul>
+</body>
+</html>
+   <?php }
       
 ?>
