@@ -38,6 +38,7 @@
       $sql = "INSERT INTO Hours VALUES ($date, $hours, $vacation, $id)";
       echo $sql;
       conn->query($sql);
+      echo "ok";
     }
   }
   header('Location: submitted.html');
