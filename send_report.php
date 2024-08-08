@@ -68,7 +68,7 @@ $servername = "127.0.0.1:3306";
   <link rel="stylesheet" type="text/css" href="style.css?v3.0">
   <link rel="icon" href="http://documenthours.com/favicon.png">
 </head>
-<body onload="checkIncorrect()">
+<body>
   <ul>
     <li><a href="accounts.php">Accounts</a></li>
     <li><a href="history.php">History</a></li>
