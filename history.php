@@ -206,27 +206,6 @@
       /
     </button>
     <a href="#" onclick=removeHidden()>Edit</a>
-	  <?php
-  session_start();
-      $url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-      $url_components = parse_url($url);
-      parse_str($url_components['query'], $params);
-      if ($_POST['date'] == '') {
-	echo "<script> checkIncorrect(); </script>";
-      }
-	echo "<form action='send_report.php' method='post'>";
-      if (isset($_POST['caretakers']) && isset($_POST['date'])) {
-	$name = $_POST['caretakers'];
-	$curdate = strtotime($_POST['date']);
-      } else if (isset($params['name']) && isset($params['date'])){
-	$name = $params['name'];
-	$curdate = strtotime($params['date']);
-      } 
-	$timestamp = date("m/d",$curdate);
-      echo "<input type='hidden' name='firstdate' value=$curdate>";
-      echo "<input type='hidden' name='firstname' value=$name>";
-      echo "<input type='submit' value='Send Report'>";
-      echo "</form>";?>
   </div>
   <br /><br />		  
 </body>
