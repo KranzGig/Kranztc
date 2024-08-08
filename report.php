@@ -16,6 +16,11 @@
     <li><a href="history.php">History</a></li>
     <li id="current_tab"><a href="report.php">Manual Report</a></li>
     <li id="right"><a href="logout.php">Log Out</a></li>
+    <?php
+	session_start();
+	$name = $_SESSION['name'];
+	echo "<li id='joe'>".$name."</li>";
+    ?>
   </ul>
   <h1>Manually Send Report</h1>
   <div class="line">
