@@ -15,6 +15,7 @@
   $days = array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
   foreach ($days as $day) {
     $date = $_POST[$day . '-date'];
+    echo $date;
     $time = strtotime(substr($date, strpos($date, ' ')));
     //echo $date;
     $date = '"'.date($time,"m/d/Y").'"';
