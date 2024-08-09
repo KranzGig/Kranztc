@@ -49,13 +49,18 @@ $servername = "127.0.0.1:3306";
     $mail->Password = 'DragonSandd0gs-';
     $mail->setFrom('automail@kranztc.com', 'Kranz Tech Consulting');
     $mail->addReplyTo('automail@kranztc.com', 'Kranz Tech Consulting');
-    $mail->addAddress('kranz.amber1@gmail.com', 'Amber Kranz');
-    $mail->Subject = 'Caretaker hours';
-    $mail->Body = 'Caretaker hours';
-    $mail->addAttachment('result.csv');
-    if (!$mail->send()) {
-      echo 'Mailer Error: ' . $mail->ErrorInfo;
-    } ?>
+    $sql = "Select email,name FROM accounts WHERE admin=1";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()) {
+      $mail->addAddress($row['email'], $row['name']);
+      $mail->Subject = 'Caretaker hours';
+      $mail->Body = 'Caretaker hours';
+      $mail->addAttachment('result.csv');
+	    if (!$mail->send()) {
+	      echo 'Mailer Error: ' . $mail->ErrorInfo;
+	    }
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
