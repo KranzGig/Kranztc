@@ -54,7 +54,7 @@ $servername = "127.0.0.1:3306";
     while($row = $result->fetch_assoc()) {
       $mail->addAddress($row['email'], $row['name']);
       $mail->Subject = "Martha Carter - Caretaker Hours Logged for Week of ".$firstdate;
-      $mail->Body = "Hi ".$row['name'].",\nAttached is Martha Carter's caretaker time-tracking report for the week of ".$firstdate.".\nIf you have any questions or concerns, please contact Cathy Limbach.\nThanks and Best Regards,\nDocument Hours Time Tracking Team";      
+      $mail->Body = "Hi ".$row['name'].",\nAttached is Martha Carter's caretaker time-tracking report for the week of ".$firstdate.".\nIf you have any questions or concerns, please contact Cathy Limbach at 303-378-5589.\nThanks and Best Regards,\nDocument Hours Time Tracking Team";      
 	    $mail->addAttachment('result.csv');      $mail->addAttachment('result.csv');
 	    if (!$mail->send()) {
 	      echo 'Mailer Error: ' . $mail->ErrorInfo;
