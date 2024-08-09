@@ -40,7 +40,7 @@
       if (!$mail->send()) {
         echo 'Mailer Error: ' . $mail->ErrorInfo;
       } else {
-        //echo "Email sent";
+        echo "Email sent";
           }
     }
   ?>
