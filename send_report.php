@@ -36,7 +36,7 @@ $servername = "127.0.0.1:3306";
       fwrite($myfile, $row["Vacation"] . ", ");
       fwrite($myfile, $row["name"] . ", \n");
     }
-    
+    echo "three";
     fclose($myfile);
    
     require 'vendor/autoload.php';
