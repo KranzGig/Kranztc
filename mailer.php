@@ -23,7 +23,7 @@
     $firstdate = date("m/d",time()-2*$week);
     $seconddate = date("m/d",time());
     $sql = "SELECT Hours.Date, Hours.Hours, Hours.Vacation, accounts.name FROM Hours INNER JOIN accounts ON Hours.EmpID=accounts.id WHERE Date>=' $firstdate' AND Date<=' $seconddate' ORDER BY EmpID, Date";
-    echo $sql;
+    //echo $sql;
     $result = $conn->query($sql);
     $myfile = fopen("result.csv", "w");
     fwrite($myfile, "Date, Hours, Vacation, Name\n");
@@ -49,6 +49,11 @@
     $mail->Password = 'DragonSandd0gs-';
     $mail->setFrom('automail@kranztc.com', 'Kranz Tech Consulting');
     $mail->addReplyTo('automail@kranztc.com', 'Kranz Tech Consulting');
+    $sql = "Select email FROM accounts WHERE admin=1";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()) {
+        echo $row['email'];
+    }
     $mail->addAddress('kranz.amber1@gmail.com', 'Amber Kranz');
     $mail->Subject = 'Caretaker hours';
     $mail->Body = 'Caretaker hours';
