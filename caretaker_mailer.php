@@ -16,7 +16,7 @@
     $mail->setFrom('automail@kranztc.com', 'Kranz Tech Consulting');
     $mail->addReplyTo('automail@kranztc.com', 'Kranz Tech Consulting');
     $sql = "Select email,name FROM accounts WHERE admin=0";
-    echo "zero";
+    echo $sql;
     $result = $conn->query($sql);
     echo "one";
     while($row = $result->fetch_assoc()) {
