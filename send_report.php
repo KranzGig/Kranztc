@@ -26,7 +26,7 @@ $servername = "127.0.0.1:3306";
     //echo $sql;
     $result = $conn->query($sql);
     echo "one";
-    $name = "Martha Carter - Caretaker Hours Logged for Week of ".$firstdate.".csv";
+    $name = "Martha Carter - Caretaker Hours Logged for Week of ".str_replace("/","-",$firstdate).".csv";
 echo $name;
     $myfile = fopen($name, "w");
     echo "two";
