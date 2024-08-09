@@ -137,7 +137,7 @@
 	$day = $name[date("w",$time)];
 	$timestamp = date("m/d/Y",$time);
 	$date = $day." ".date("m/d",$time);
-	$sql = "SELECT Hours,Vacation FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
+	$sql = "SELECT Hours,Vacation FROM Hours WHERE Date='$timestamp' AND EmpID=$id";
 	//echo $timestamp;
 	$result = $conn->query($sql);
 	$num = 0;
@@ -169,7 +169,7 @@
 	$day = $name[date("w",$time)];
 	$timestamp = date("m/d/Y",$time);
 	$date = $day." ".date("m/d",$time);
-	$sql = "SELECT Hours,Vacation FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
+	$sql = "SELECT Hours,Vacation FROM Hours WHERE Date='$timestamp' AND EmpID=$id";
 	//echo $timestamp;
 	$result = $conn->query($sql);
 	$num = 0;
