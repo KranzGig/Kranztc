@@ -15,8 +15,9 @@
   $days = array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
   foreach ($days as $day) {
     $date = $_POST[$day . '-date'];
+    $time = strtotime(substr($date, strpos($date, ' ')));
     //echo $date;
-    $date = '"'.substr($date, strpos($date, ' ')).'"';
+    $date = '"'.date($time,"m/d/Y").'"';
     $id = $_POST['id'];
     $hours = $_POST[$day . '-hours'];
     $vacation = 0;
