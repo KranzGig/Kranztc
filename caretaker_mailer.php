@@ -28,7 +28,9 @@
                     - Document Hours Time Tracking Team";      
       if (!$mail->send()) {
         echo 'Mailer Error: ' . $mail->ErrorInfo;
-      } 
+      } else {
+        echo "Email sent"
+          }
     }
   ?>
 </body>
