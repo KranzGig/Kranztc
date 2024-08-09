@@ -18,6 +18,7 @@
     $sql = "Select email,name FROM accounts WHERE admin=0";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
+      echo $row['email'];
       $mail->addAddress($row['email'], $row['name']);
       $mail->Subject = "REMINDER:  Log Care-taking Hours";
       $mail->Body = "Hi ".$row['name'].",\This is a quick reminder to log all of your care-taking hours for this week before the end of the day on Saturday.\n 
@@ -25,7 +26,8 @@
                     You will be able to enter and change your hours for this week up through today.  Hours for future days this week can be entered on or after those days.\n
                     If you have any questions or problems, please contact Cathy Limbach.\n
                     Thanks and Best Regards,\n
-                    - Document Hours Time Tracking Team";      
+                    - Document Hours Time Tracking Team"; 
+      echo "two";
       if (!$mail->send()) {
         echo 'Mailer Error: ' . $mail->ErrorInfo;
       } else {
