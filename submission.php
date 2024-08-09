@@ -17,7 +17,7 @@
     $date = $_POST[$day . 'date'];
     echo $date;
     $time = strtotime(substr($date, strpos($date, ' ')));
-    echo $time;
+    echo date($time,"m/d/Y");
     //echo $date;
     $date = '"'.date($time,"m/d/Y").'"';
     $id = $_SESSION['id'];
