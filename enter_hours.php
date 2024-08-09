@@ -51,11 +51,11 @@
 
 	  $name = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 	  $mins = 24 * 60 * 60;
-	  date_default_timezone_set("MST");
+	  date_default_timezone_set("MDT");
 	  //echo date('Y-m-d H:i:s',time()-(4*60*60));
 	  $curtime = time();
 	  if (date("w") == '0') {
-	    $curtime = $curtime - (4*60*60);
+	    $curtime = $curtime - (3*60*60);
 	  }
 	  for ($x = date("w",$curtime); $x >= 0; $x--) {
 	    $time = $curtime - $x * $mins;
