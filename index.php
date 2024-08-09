@@ -19,7 +19,7 @@
       <?php
         session_start();
         if (isset($_SESSION['unameset'])) {
-          echo "<input type='text' id='uname' name='uname' value=".$_SESSION['unameset']." placeholder='Email'><br /><br>";
+          echo "<input type='text' id='uname' name='uname' value='".$_SESSION['unameset']."' placeholder='Email'><br /><br>";
         } else {?>
       <input type="text" id="uname" name="uname" placeholder="Email"><br /><br>
                 <?php } ?>
