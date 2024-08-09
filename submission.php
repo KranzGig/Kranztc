@@ -39,10 +39,10 @@
       $conn->query($sql);
     } else {
       $sql = "INSERT INTO Hours VALUES ($date, $hours, $vacation, $id)";
-      //echo $sql;
+      echo $sql;
       $conn->query($sql);
     }
   }
-  header('Location: submitted.html');
+  //header('Location: submitted.html');
   exit;
 ?>
