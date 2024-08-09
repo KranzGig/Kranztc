@@ -28,7 +28,7 @@
     }
     //$vacation = $_POST[$day . 'pvacation'];
     $sql = "SELECT * FROM Hours WHERE Date=$date AND EmpID=$id;";
-    echo $sql;
+    //echo $sql;
     $result = $conn->query($sql);
     if ($hours == '') {
       $hours = 0;
@@ -43,6 +43,6 @@
       $conn->query($sql);
     }
   }
-  //header('Location: submitted.html');
+  header('Location: submitted.html');
   exit;
 ?>
