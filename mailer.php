@@ -20,8 +20,8 @@
     }
     //$sql = "SELECT * FROM Hours INTO OUTFILE '/usr/bin/php /home/u751975974/public_html/result.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'";
     $week = 7*24*60*60;
-    $firstdate = date("m/d",time()-2*$week);
-    $seconddate = date("m/d",time());
+    $firstdate = date("m/d/Y",time()-2*$week);
+    $seconddate = date("m/d/Y",time());
     $sql = "SELECT Hours.Date, Hours.Hours, Hours.Vacation, accounts.name FROM Hours INNER JOIN accounts ON Hours.EmpID=accounts.id WHERE Date>=' $firstdate' AND Date<=' $seconddate' ORDER BY EmpID, Date";
     //echo $sql;
     $result = $conn->query($sql);
