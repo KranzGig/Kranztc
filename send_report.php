@@ -25,13 +25,9 @@ $servername = "127.0.0.1:3306";
     $sql = "SELECT Hours.Date, Hours.Hours, Hours.Vacation, accounts.name FROM Hours INNER JOIN accounts ON Hours.EmpID=accounts.id WHERE Date>=' $firstdate' AND Date<=' $seconddate' ORDER BY EmpID, Date";
     //echo $sql;
     $result = $conn->query($sql);
-    echo "one";
     $name = "Martha Carter - Caretaker Hours Logged for Week of ".str_replace("/","-",$firstdate).".csv";
-echo $name;
     $myfile = fopen($name, "w");
-    echo "two";
     fwrite($myfile, "Date, Hours, Vacation, Name\n");
-    echo "three";
     while($row = $result->fetch_assoc()) {
       //echo $row['Date'];
       fwrite($myfile, $row["Date"] . ", ");
@@ -39,7 +35,6 @@ echo $name;
       fwrite($myfile, $row["Vacation"] . ", ");
       fwrite($myfile, $row["name"] . ", \n");
     }
-    echo "three";
     fclose($myfile);
    
     require 'vendor/autoload.php';
