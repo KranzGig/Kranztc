@@ -35,7 +35,7 @@
       //echo $row['email'];
       $mail->addAddress($row['email'], $row['name']);
       $mail->Subject = "REMINDER:  Log Care-taking Hours";
-      $mail->Body = "Hi ".$row['name'].",\nThis is a quick reminder to log all of your care-taking hours for Martha Carter for this week before the end of the day on Saturday.\nTo log your hours, go to:  <a href='documenthours.com'>DocumentHours.com</a>\nYou will be able to enter and change your hours for this week up through today.  Hours for future days this week can be entered on or after those days.\nIf you have any questions or problems, please contact Cathy Limbach at 303-378-5589.\nThanks and Best Regards,\n- Document Hours Time Tracking Team"; 
+      $mail->Body = "Hi ".$row['name'].",<br/>This is a quick reminder to log all of your care-taking hours for Martha Carter for this week before the end of the day on Saturday.<br/>To log your hours, go to:  <a href='documenthours.com'>DocumentHours.com</a><br/>You will be able to enter and change your hours for this week up through today.  Hours for future days this week can be entered on or after those days.<br/>If you have any questions or problems, please contact Cathy Limbach at 303-378-5589.<br/><br/>Thanks and Best Regards,<br/>- Document Hours Time Tracking Team"; 
       //echo "two";
       if (!$mail->send()) {
         echo 'Mailer Error: ' . $mail->ErrorInfo;
