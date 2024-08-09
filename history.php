@@ -135,7 +135,7 @@
       for ($x = date("w", $curdate); $x >= 0; $x--) {
 	$time = $curdate - $x * $mins;
 	$day = $name[date("w",$time)];
-	$timestamp = date("m/d",$time);
+	$timestamp = date("m/d/Y",$time);
 	$date = $day." ".date("m/d",$time);
 	$sql = "SELECT Hours,Vacation FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
 	//echo $timestamp;
@@ -167,7 +167,7 @@
       for ($x = 1; $x < 7-date("w",$curdate); $x++) {
 	$time = $curdate + $x * $mins;
 	$day = $name[date("w",$time)];
-	$timestamp = date("m/d",$time);
+	$timestamp = date("m/d/Y",$time);
 	$date = $day." ".date("m/d",$time);
 	$sql = "SELECT Hours,Vacation FROM Hours WHERE Date=' $timestamp' AND EmpID=$id";
 	//echo $timestamp;
