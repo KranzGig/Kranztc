@@ -15,9 +15,9 @@
   $days = array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
   foreach ($days as $day) {
     $date = $_POST[$day . 'date'];
-    echo $date;
+    //echo $date;
     $time = strtotime(substr($date, strpos($date, ' ')));
-    echo date("m/d/Y",$time);
+    //echo date("m/d/Y",$time);
     //echo $date;
     $date = '"'.date("m/d/Y",$time).'"';
     $id = $_SESSION['id'];
@@ -28,18 +28,18 @@
     }
     //$vacation = $_POST[$day . 'pvacation'];
     $sql = "SELECT * FROM Hours WHERE Date=$date AND EmpID=$id;";
-    //echo $sql;
+    echo $sql;
     $result = $conn->query($sql);
     if ($hours == '') {
       $hours = 0;
     }
     if ($result->num_rows > 0) {
       $sql = "UPDATE Hours SET Hours=$hours, Vacation=$vacation WHERE Date=$date AND EmpID=$id";
-      echo $sql;
+      //echo $sql;
       $conn->query($sql);
     } else {
       $sql = "INSERT INTO Hours VALUES ($date, $hours, $vacation, $id)";
-      echo $sql;
+      //echo $sql;
       $conn->query($sql);
     }
   }
