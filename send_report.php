@@ -29,6 +29,7 @@ $servername = "127.0.0.1:3306";
     $myfile = fopen("Martha Carter - Caretaker Hours Logged for Week of ".$firstdate.".csv", "w");
     echo "two";
     fwrite($myfile, "Date, Hours, Vacation, Name\n");
+    echo "three";
     while($row = $result->fetch_assoc()) {
       //echo $row['Date'];
       fwrite($myfile, $row["Date"] . ", ");
