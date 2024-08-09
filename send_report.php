@@ -6,8 +6,8 @@ $curdate = strtotime($_POST['firstdate']);
 $mins = 24 * 60 * 60;
 //$myfile = fopen("result.csv", "w");
 //fwrite($myfile, "Date, Hours, Vacation, EmpID\n");
-$firstdate = date("m/d",$curdate - date("w",$curdate) * $mins);
-$seconddate = date("m/d",$curdate + date("w",$curdate) * $mins);
+$firstdate = date("m/d/Y",$curdate - date("w",$curdate) * $mins);
+$seconddate = date("m/d/Y",$curdate + date("w",$curdate) * $mins);
 
 $servername = "127.0.0.1:3306";
     $username = "u751975974_kranz";
