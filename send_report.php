@@ -53,8 +53,8 @@ $servername = "127.0.0.1:3306";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
       $mail->addAddress($row['email'], $row['name']);
-      $mail->Subject = 'Caretaker hours';
-      $mail->Body = 'Caretaker hours';
+      $mail->Subject = $row['name']." - Caretaker Hours Logged for Week of ".$firstdate;
+      $mail->Body = "Attached is ".$row['name']."'s caretaker time-tracking report for the week of ".$firstdate.".\n If you have any questions or concerns, please contact Cathy Limbach.";
       $mail->addAttachment('result.csv');
 	    if (!$mail->send()) {
 	      echo 'Mailer Error: ' . $mail->ErrorInfo;
