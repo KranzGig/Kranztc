@@ -25,7 +25,8 @@
     $sql = "SELECT Hours.Date, Hours.Hours, Hours.Vacation, accounts.name FROM Hours INNER JOIN accounts ON Hours.EmpID=accounts.id WHERE Date>=' $firstdate' AND Date<=' $seconddate' ORDER BY EmpID, Date";
     //echo $sql;
     $result = $conn->query($sql);
-    $myfile = fopen("Martha Carter - Caretaker Hours Logged for Week of ".$firstdate, "w");
+    $name = "Martha Carter - Caretaker Hours Logged for Week of ".str_replace("/","-",$firstdate).".csv";
+    $myfile = fopen($name, "w");
     fwrite($myfile, "Date, Hours, Vacation, Name\n");
     while($row = $result->fetch_assoc()) {
       //echo $row['Date'];
@@ -54,7 +55,8 @@
     while($row = $result->fetch_assoc()) {
       $mail->addAddress($row['email'], $row['name']);
       $mail->Subject = "Martha Carter - Caretaker Hours Logged for Week of ".$firstdate;
-      $mail->Body = "Hi ".$row['name'].",\nAttached is Martha Carter's caretaker time-tracking report for the week of ".$firstdate.".\nIf you have any questions or concerns, please contact Cathy Limbach at 303-378-5589.\nThanks and Best Regards,\nDocument Hours Time Tracking Team";      $mail->addAttachment('result.csv');
+      $mail->Body = "Hi ".$row['name'].",\nAttached is Martha Carter's caretaker time-tracking report for the week of ".$firstdate.".\nIf you have any questions or concerns, please contact Cathy Limbach at 303-378-5589.\nThanks and Best Regards,\nDocument Hours Time Tracking Team";      
+      $mail->addAttachment($name);
       if (!$mail->send()) {
         echo 'Mailer Error: ' . $mail->ErrorInfo;
       } else {
