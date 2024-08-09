@@ -37,7 +37,7 @@
       </button>
     </div>
   </form>
-
+  <p><a href="privacy.html">Privacy Policy</a></p>
   <script type="text/javascript">
     function checkIncorrect() {
       const queryString = window.location.search;
