@@ -25,7 +25,7 @@ $servername = "127.0.0.1:3306";
     $sql = "SELECT Hours.Date, Hours.Hours, Hours.Vacation, accounts.name FROM Hours INNER JOIN accounts ON Hours.EmpID=accounts.id WHERE Date>=' $firstdate' AND Date<=' $seconddate' ORDER BY EmpID, Date";
     //echo $sql;
     $result = $conn->query($sql);
-    $myfile = fopen("Martha Carter - Caretaker Hours Logged for Week of ".$firstdate, "w");
+    $myfile = fopen("Martha Carter - Caretaker Hours Logged for Week of ".$firstdate.".csv", "w");
     fwrite($myfile, "Date, Hours, Vacation, Name\n");
     while($row = $result->fetch_assoc()) {
       //echo $row['Date'];
