@@ -17,9 +17,9 @@
     $date = $_POST[$day . 'date'];
     echo $date;
     $time = strtotime(substr($date, strpos($date, ' ')));
-    echo date($time,"m/d/Y");
+    echo date("m/d/Y",$time);
     //echo $date;
-    $date = '"'.date($time,"m/d/Y").'"';
+    $date = '"'.date("m/d/Y",$time).'"';
     $id = $_SESSION['id'];
     $hours = $_POST[$day . 'hours'];
     $vacation = "False";
