@@ -37,7 +37,7 @@
       </button>
     </div>
   </form>
-  <p></p>
+  <p></p><p></p>
   <p id="small"><a href="privacy.html">Privacy Policy</a></p>
   <script type="text/javascript">
     function checkIncorrect() {
