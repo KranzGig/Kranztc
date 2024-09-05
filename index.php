@@ -38,7 +38,7 @@
     </div>
   </form>
   <p></p>
-  <p id="small"><a href="terms.html">Terms </a><a href="privacy.html">Privacy Policy</a></p>
+  <p id="small"><pre><a href="terms.html">Terms     </a><a href="privacy.html">Privacy Policy</a></pre></p>
   <script type="text/javascript">
     function checkIncorrect() {
       const queryString = window.location.search;
