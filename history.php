@@ -207,6 +207,7 @@
     </button>
     <a href="#" onclick=removeHidden()>Edit</a>
   </div>
-  <br /><br />		  
+  <br /><br />	
+  <p id="small"><a href="terms.html">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacy.html">Privacy Policy</a></p>
 </body>
 </html>
