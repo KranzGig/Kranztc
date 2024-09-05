@@ -127,6 +127,7 @@
   </form>
   <a href="logout.php"><button id='enter'>Logout</button></a>
 </div>
+<br /><br /><br />
 <p id="small"><a href="terms.html">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacy.html">Privacy Policy</a></p>
 </body>
 </html>
